@@ -9,3 +9,7 @@
 - Ajout et configuration de la librairie Tailwind
 - Ajout et configuration de la librairie Prettier
 - Définition des services proposés
+
+### Changed
+
+- Mise en place de la structure de base du projet

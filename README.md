@@ -76,6 +76,18 @@ Plateforme web dynamique pour un établissement multifonctionnel combinant bar, 
 - Événements privés et professionnels
 - Agenda des événements
 
+## Fichiers de Mise à Jour
+
+Ce fichier contient un historique des modifications apportées au projet. Chaque version du projet y est documentée avec les ajouts, améliorations et corrections de bugs. Cela permet de suivre l'évolution du projet et de communiquer les changements à l'équipe ou aux utilisateurs.
+
+- [MISE A JOUR](CHANGELOG.md)
+
+## Fichiers des Tâches
+
+Ce fichier sert à lister les tâches à accomplir pour le projet. Il contient un suivi des fonctionnalités à ajouter, des corrections à effectuer, et des améliorations à apporter. Ce fichier permet de garder une vue d'ensemble sur les objectifs du projet et d'aider à organiser les prochaines étapes de développement.
+
+- [TODO LIST](TODO.md)
+
 ## Contact
 
 - Site web : https://luminescence33.com/

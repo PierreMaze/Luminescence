@@ -1,14 +1,9 @@
-import lumiLogo from './assets/img/Lumi.svg';
+import Home from './pages/Home.jsx';
 
 function App() {
   return (
     <>
-      <div>
-        <a href="https://luminescence33.com/" target="_blank">
-          <img src={lumiLogo} className="logo" alt="Luminescence33 logo" />
-        </a>
-      </div>
-      <h1>Luminescence</h1>
+      <Home />
     </>
   );
 }

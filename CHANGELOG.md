@@ -14,6 +14,8 @@
 
 - Mise en place de la structure de base du projet
 
+#
+
 ## [1.0.1] - 2025-01-31
 
 ### Added
@@ -22,3 +24,12 @@
 - Ajout du fichier `Header.jsx` dans le dossier `layout`
 - Ajout du fichier `Logo.jsx` dans le dossier`components`
 - Mise en plave du `Header` et du `Logo`
+
+#
+
+## [1.0.2] - 2025-01-31
+
+### Added
+
+- Ajout des sections de la page Home avec tous les tableaux de données
+- Ajout des composants `CardEvent` et `FaqAccordion`

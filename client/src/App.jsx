@@ -1,7 +1,7 @@
 import Header from './layout/Header.';
 import Home from './pages/Home.jsx';
 
-function App() {
+export default function App() {
   return (
     <>
       <Header />
@@ -9,5 +9,3 @@ function App() {
     </>
   );
 }
-
-export default App;

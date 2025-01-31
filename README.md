@@ -33,7 +33,7 @@ Clonez ce projet et installez les dépendances avec PNPM ou NPM ou YARN :
 
 Le projet utilise **TailwindCSS** pour la gestion des styles.
 
-Les classes de Tailwind sont définies dans le fichier [client/src/index.css](client/src/index.css).
+Les classes de Tailwind sont définies dans le fichier [src/index.css](client/src/index.css).
 
 Lors du build, Tailwind génère un fichier CSS optimisé qui est ensuite inclus dans la version finale.
 

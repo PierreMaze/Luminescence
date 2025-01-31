@@ -12,6 +12,7 @@
     "remove": "rm -rf node_modules pnpm-lock.yaml package-lock.json dist"
   },
   "dependencies": {
+    "@headlessui/react": "^2.2.0",
     "@tailwindcss/vite": "^4.0.1",
     "prop-types": "^15.8.1",
     "react": "^18.3.1",

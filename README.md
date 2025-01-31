@@ -1,4 +1,4 @@
-# Luminescence33 V.2.0
+# Luminescence33 v.2.0
 
 **Luminescence** est une application pour un client du donmaine de l'événementiel.
 

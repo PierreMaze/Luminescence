@@ -12,4 +12,4 @@
 
 ### Changed
 
-- Mise en place de la structure de base du projet
+- Mise à jour de la mise en place de la structure de base du projet

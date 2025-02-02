@@ -1,29 +1,30 @@
 # Change Log
 
-## [0.1.0] - 2025-01-30
+## [1.0.3] - 2025-02-02
 
-### Added
+### Fixed
 
-- Initial project setup
-- Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
-- Added and configured Tailwind library
-- Added and configured Prettier library
-- Defined services offered
+- Hero section layout and style:
 
-### Changed
+  - Corrected z-index to bring the hero section to the foreground.
+  - Added spacing between subtitles in the hero section.
+  - Updated font color to match the design system (gray -> zinc).
 
-- Set up the basic project structure
+- Rental section styling:
 
-#
+  - Fixed button layout and adjusted font size in the location section of the homepage.
+  - Updated button style on mobile to match the others.
 
-## [1.0.1] - 2025-01-31
+- Events section styling:
 
-### Added
+  - Added a message in the Events section when no events are scheduled.
+  - Fixed CardEvent display bug
+  - Formatted CardEvent content in French using an algorithm
+  - Fixed the props type for the `date` in the `Card` component.
 
-- Added `components` and `layout` folders
-- Added `Header.jsx` file in the `layout` folder
-- Added `Logo.jsx` file in the `components` folder
-- Set up `Header` and `Logo`
+- FAQ section styling:
+
+  - Implemented accordion behavior to close the previously opened item when selecting a new one.
 
 #
 
@@ -52,28 +53,27 @@
 
 #
 
-## [1.0.3] - 2025-02-02
+## [1.0.1] - 2025-01-31
 
-### Fixed
+### Added
 
-- Hero section layout and style:
+- Added `components` and `layout` folders
+- Added `Header.jsx` file in the `layout` folder
+- Added `Logo.jsx` file in the `components` folder
+- Set up `Header` and `Logo`
 
-  - Corrected z-index to bring the hero section to the foreground.
-  - Added spacing between subtitles in the hero section.
-  - Updated font color to match the design system (gray -> zinc).
+#
 
-- Rental section styling:
+## [0.1.0] - 2025-01-30
 
-  - Fixed button layout and adjusted font size in the location section of the homepage.
-  - Updated button style on mobile to match the others.
+### Added
 
-- Events section styling:
+- Initial project setup
+- Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
+- Added and configured Tailwind library
+- Added and configured Prettier library
+- Defined services offered
 
-  - Added a message in the Events section when no events are scheduled.
-  - Fixed CardEvent display bug
-  - Formatted CardEvent content in French using an algorithm
-  - Fixed the props type for the `date` in the `Card` component.
+### Changed
 
-- FAQ section styling:
-
-  - Implemented accordion behavior to close the previously opened item when selecting a new one.
+- Set up the basic project structure

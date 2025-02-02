@@ -70,11 +70,10 @@
 - Events section styling:
 
   - Added a message in the Events section when no events are scheduled.
+  - Fixed CardEvent display bug
+  - Formatted CardEvent content in French using an algorithm
+  - Fixed the props type for the `date` in the `Card` component.
 
-- Fixed CardEvent display bug
+- FAQ section styling:
 
-- Formatted CardEvent content in French using an algorithm
-
-- Implemented accordion behavior to close the previously opened item when selecting a new one.
-
-- Fixed the props type for the `date` in the `Card` component.
+  - Implemented accordion behavior to close the previously opened item when selecting a new one.

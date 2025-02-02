@@ -4,7 +4,7 @@
 
 ### Fixed
 
-- Hero section layout and style:
+- Hero section styling:
 
   - Corrected z-index to bring the hero section to the foreground.
   - Added spacing between subtitles in the hero section.

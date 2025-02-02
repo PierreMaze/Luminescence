@@ -43,7 +43,7 @@ import { parse, format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 // Hook
-import { useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 // Data
 const detailsBar = [
@@ -649,6 +649,20 @@ const normalizeDate = (dateStr) => {
 };
 
 export default function Home() {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      // Vérifie si on clique en dehors de l'accordéon
+      if (!event.target.closest('.faq-accordion')) {
+        setOpenIndex(null);
+      }
+    }
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
   const MAX_DISPLAYED_EVENTS = 3;
 
   // Date du jour sans l'heure
@@ -748,7 +762,11 @@ export default function Home() {
                 </dl>
                 {/* <!--Action button--> */}
                 <a href="/bar-lounge/#la-carte" rel="noopener noreferrer">
-                  <button className="mt-10 duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full mx-auto md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+                  <button
+                    className={
+                      'mt-10 duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full mx-auto md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500'
+                    }
+                  >
                     Consulter notre Carte
                   </button>
                 </a>
@@ -800,7 +818,7 @@ export default function Home() {
             ))}
           </div>
           <a href="location/#contact-business" rel="noopener noreferrer">
-            <button className="flex mt-14 bg-sky-500 items-center justify-center mt-10 duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-full md:w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+            <button className="flex mt-14 items-center justify-center duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-full md:w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
               Votre devis personnalisé
             </button>
           </a>
@@ -877,6 +895,8 @@ export default function Home() {
             key={index}
             question={faq.question}
             answer={faq.answer}
+            isOpen={openIndex === index}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
           />
         ))}
         {/* <!--Action section--> */}
@@ -887,7 +907,7 @@ export default function Home() {
           <a
             href="contact/contacter-nous"
             rel="noopener noreferrer"
-            className="flex justify-center duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+            className="flex justify-center duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
           >
             Contactez-nous
           </a>

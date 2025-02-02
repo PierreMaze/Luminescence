@@ -74,3 +74,7 @@
 - Fixed CardEvent display bug
 
 - Formatted CardEvent content in French using an algorithm
+
+- Implemented accordion behavior to close the previously opened item when selecting a new one.
+
+- Fixed the props type for the `date` in the `Card` component.

@@ -85,7 +85,7 @@ const servicesOffered = [
   {
     name: 'Espaces entièrement modulables',
     description:
-      'Découvrez nos espaces flexibles, conçus pour s’adapter à vos besoins et offrir un cadre optimal pour tout type d’événement.',
+      'Nos espaces flexibles, conçus pour s’adapter à vos besoins et offrir un cadre optimal pour tout type d’événement.',
     icon: FaPuzzlePiece,
   },
   {
@@ -97,13 +97,13 @@ const servicesOffered = [
   {
     name: 'Services personnalisés',
     description:
-      'Nous offrons des services sur mesure pour répondre précisément à vos attentes, assurant une organisation et un résultat à la hauteur de vos attentes.',
+      'Des services sur mesure pour répondre précisément à vos attentes, assurant une organisation et un résultat à la hauteur de vos attentes.',
     icon: HiLightBulb,
   },
   {
     name: "Parking à l'arrière",
     description:
-      "Vous disposez d'un parking public et gratuit situé à l'arrière de notre établissement, offrant une commodité d'accès facile pour notre clientèle.",
+      "Vous disposez d'un parking public et gratuit situé à l'arrière de notre établissement, offrant un accès facile pour notre clientèle.",
     icon: FaSquareParking,
   },
   {
@@ -627,28 +627,28 @@ export default function Home() {
   const todayDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
   const sortedEvents = useMemo(() => {
+    if (!events || events.length === 0) {
+      return { today: [], upcoming: [], past: [] };
+    }
+
     const formattedEvents = events.map((event) => ({
       ...event,
-      parsedDate: parse(event.date, 'MMM dd, yyyy', new Date(), {
-        locale: fr,
-      }),
+      parsedDate: parse(event.date, 'dd/MM/yyyy', new Date(), { locale: fr }),
     }));
 
-    const today = formattedEvents.filter((event) => {
-      const eventDate = event.parsedDate;
-      return (
-        eventDate.getFullYear() === todayDate.getFullYear() &&
-        eventDate.getMonth() === todayDate.getMonth() &&
-        eventDate.getDate() === todayDate.getDate()
-      );
-    });
+    const today = formattedEvents.filter(
+      ({ parsedDate }) =>
+        parsedDate.getFullYear() === todayDate.getFullYear() &&
+        parsedDate.getMonth() === todayDate.getMonth() &&
+        parsedDate.getDate() === todayDate.getDate()
+    );
 
     const upcoming = formattedEvents
-      .filter((event) => event.parsedDate >= now)
+      .filter(({ parsedDate }) => parsedDate >= now)
       .sort((a, b) => a.parsedDate - b.parsedDate);
 
     const past = formattedEvents
-      .filter((event) => event.parsedDate < now)
+      .filter(({ parsedDate }) => parsedDate < now)
       .sort((a, b) => b.parsedDate - a.parsedDate);
 
     return { today, upcoming, past };
@@ -675,7 +675,7 @@ export default function Home() {
           <div className="absolute top-0 w-full h-screen z-1 bg-zinc-950/70"></div>
 
           {/* <!-- Welcome container --> */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-0 text-center">
+          <div className="absolute z-10 inset-0 flex flex-col items-center justify-center gap-0 text-center">
             <img
               src={LogoLumiWhite}
               alt="Logo Luminescence en blanc"
@@ -684,13 +684,14 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-wider text-transparent font-kreon bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text xl:text-6xl 2xl:text-8xl lg:font-semibold">
               LUMINESCENCE
             </h1>
-            <p className="text-base font-medium tracking-wide text-sky-50 lg:text-lg xl:text-xl lg:font-medium">
+            <p className="text-base pt-4 font-medium tracking-wide text-sky-50 lg:text-lg xl:text-xl lg:font-medium">
               Évènementiel & Location d&apos;Espaces
             </p>
-            <p className="text-sm font-semibold tracking-wide text-sky-200 lg:text-md 2xl:text-lg">
+            <div className="w-60 my-1 h-[0.09rem] bg-sky-100"></div>
+            <p className="text-sm font-semibold -pb-4 tracking-wide text-sky-200 lg:text-md 2xl:text-lg">
               BAR LOUNGE & ROOFTOP
             </p>
-            <p className="absolute text-xs font-normal tracking-wider text-center bottom-2 2xl:bottom-4 2xl:text-md text-sky-100">
+            <p className="absolute text-xs font-bold tracking-wider text-center bottom-2 2xl:bottom-4 2xl:text-md text-sky-100">
               GUJAN - MESTRAS
             </p>
           </div>
@@ -711,16 +712,16 @@ export default function Home() {
                   <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 font-kreon sm:text-4xl">
                     BAR-LOUNGE
                   </p>
-                  <p className="mt-6 mr-6 leading-8 text-gray-600 text-md">
+                  <p className="mt-6 mr-6 leading-8 text-zinc-600 text-md">
                     Profitez de notre service de bar-lounge avec notre
                     Open-space et Rooftop.
                   </p>
                 </div>
                 {/* <!--Services offered sections--> */}
-                <dl className="max-w-xl mt-10 space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+                <dl className="max-w-xl mt-10 space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
                   {detailsBar.map((details) => (
                     <div key={details.name} className="relative mr-6 pl-9">
-                      <dt className="inline font-semibold text-gray-900 ">
+                      <dt className="inline font-semibold text-zinc-900 ">
                         <details.icon
                           aria-hidden="true"
                           className="absolute size-5 text-sky-600 left-1 top-1 "
@@ -745,7 +746,7 @@ export default function Home() {
               src={Rooftop}
               width={2432}
               height={1442}
-              className="w-[24rem] max-w-full rounded-xl shadow-xl ring-1 ring-gray-400/10 lg:max-w-none sm:w-[50rem] md:-ml-4 lg:-ml-20 min-[2000px]:w-[60rem] "
+              className="w-[24rem] max-w-full rounded-xl shadow-xl ring-1 ring-zinc-400/10 lg:max-w-none sm:w-[50rem] md:-ml-4 lg:-ml-20 min-[2000px]:w-[60rem] "
             />
           </div>
         </div>
@@ -761,9 +762,8 @@ export default function Home() {
             <p className="mt-2 text-3xl font-bold tracking-tight text-sky-50 font-kreon sm:text-4xl">
               LOCATION
             </p>
-            <p className="mt-4 text-lg leading-6 text-zinc-400">
-              Découvrez nos services de location, conçus pour répondre à toutes
-              vos attentes.
+            <p className="mt-4 text-md leading-6 text-zinc-400">
+              Découvrez nos services de location.
               <br />
               Que vous planifiez un événement privé, professionnel ou culturel,
               nous offrons des solutions flexibles et adaptées à vos besoins.
@@ -786,14 +786,14 @@ export default function Home() {
             ))}
           </div>
           <a href="location/#contact-business" rel="noopener noreferrer">
-            <button className="mt-14 duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-full mx-auto md:w-48 md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+            <button className="flex mt-14 bg-sky-500 items-center justify-center mt-10 duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
               Votre devis personnalisé
             </button>
           </a>
         </div>
       </div>
       {/* <!--Divider Section--> */}
-      <div className="relative flex flex-row 2xl:-mb-20">
+      <div className="relative -mt-1 flex flex-row 2xl:-mb-20">
         <div className="absolute top-0 left-0 right-0 flex items-center justify-center">
           <div className="flex-grow border-t border-zinc-800"></div>
           <span className="mx-4 scale-150 text-sky-500">+</span>
@@ -801,49 +801,49 @@ export default function Home() {
         </div>
       </div>
       {/* Events section */}
-      <div className="py-12 lg:py-24 bg-zinc-900">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8 2xl:max-w-full 2xl:m-20">
+      <section className="py-12 lg:py-24 bg-zinc-900">
+        <div className="px-6 mx-auto max-w-7xl lg:px-8">
           {/* Header section */}
           <div className="text-center">
-            <h2 className="text-lg font-semibold leading-7 text-sky-500">
+            <h2 className="text-lg font-semibold text-sky-500">
               Nos prochains
             </h2>
-            <p className="mt-2 text-3xl font-bold tracking-wider uppercase text-zinc-50 font-kreon sm:text-4xl">
-              Evenements
+            <p className="mt-2 text-3xl font-bold uppercase text-zinc-50">
+              Événements
             </p>
           </div>
 
-          {/* Body section */}
-          <div className="grid max-w-xl gap-8 mx-auto mt-12 lg:grid-cols-2 2xl:grid-cols-2 2xl:gap-12 lg:max-w-6xl 2xl:max-w-full 2xl:mx-60 group">
-            {sortedEvents.today !== 0 && (
-              <>
-                {sortedEvents.today.map((event) => (
-                  <CardEvent key={event.id} event={event} />
-                ))}
-              </>
+          {/* Events Grid */}
+          <div className="grid max-w-4xl gap-8 mx-auto mt-12 lg:grid-cols-2">
+            {sortedEvents.today.length > 0 ? (
+              sortedEvents.today.map((event) => (
+                <CardEvent key={event.id} event={event} />
+              ))
+            ) : sortedEvents.upcoming.length > 0 ? (
+              sortedEvents.upcoming
+                .slice(0, MAX_DISPLAYED_EVENTS)
+                .map((event) => <CardEvent key={event.id} event={event} />)
+            ) : (
+              <p className="text-center text-zinc-400 col-span-2">
+                Aucun événement prévu pour le moment. Revenez bientôt !
+              </p>
             )}
-
-            {sortedEvents.upcoming !== 0 && (
-              <>
-                {sortedEvents.upcoming
-                  .slice(0, MAX_DISPLAYED_EVENTS)
-                  .map((event) => (
-                    <CardEvent key={event.id} props={event} />
-                  ))}
-              </>
-            )}
-            {/* Card Button */}
-            <a
-              href="/evenements"
-              rel="noreferrer"
-              className="flex flex-row items-center justify-center gap-2 px-0 py-6 shadow-lg group bg-sky-700 hover:bg-sky-800 text-sky-200 bg-clip-border rounded-xl sm:grid-cols-2 xl:text-xl"
-            >
-              Voir tous nos événements
-              <HiArrowRightCircle className="ml-2 duration-300 ease-in-out delay-100 border-none rounded-full size-5 ring animate-pulse group-hover:ring-sky-300" />
-            </a>
           </div>
+
+          {/* Voir tous les événements */}
+          {sortedEvents.upcoming.length > 0 && (
+            <div className="flex justify-center mt-8">
+              <a
+                href="/evenements"
+                className="flex items-center gap-2 px-6 py-3 text-white bg-sky-700 rounded-xl hover:bg-sky-800"
+              >
+                Voir tous nos événements
+                <HiArrowRightCircle className="text-lg" />
+              </a>
+            </div>
+          )}
         </div>
-      </div>
+      </section>
       {/* FAQ section */}
       <div className="py-12 lg:py-24 max-w-[960px] px-4 mx-auto">
         {/* <!--Header section--> */}

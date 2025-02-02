@@ -70,7 +70,7 @@ CardEvent.propTypes = {
     description: PropTypes.string.isRequired,
     subtitle: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    parsedDate: PropTypes.number.isRequired,
+    parsedDate: PropTypes.instanceOf(Date),
     author: PropTypes.shape({
       name: PropTypes.string.isRequired,
       schedules: PropTypes.string.isRequired,

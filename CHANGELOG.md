@@ -1,18 +1,18 @@
-# Journal des modifications
+# Change Log
 
 ## [0.1.0] - 2025-01-30
 
-### Ajouté
+### Added
 
-- Création du projet initial
-- Ajout de la structure des fichiers Markdown (Readme, Installation, Changelog, TodoList, ...)
-- Ajout et configuration de la librairie Tailwind
-- Ajout et configuration de la librairie Prettier
-- Définition des services proposés
+- Initial project setup
+- Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
+- Added and configured Tailwind library
+- Added and configured Prettier library
+- Defined services offered
 
 ### Changed
 
-- Mise en place de la structure de base du projet
+- Set up the basic project structure
 
 #
 
@@ -20,10 +20,10 @@
 
 ### Added
 
-- Ajout du dossier `components` et du dossier `layout`
-- Ajout du fichier `Header.jsx` dans le dossier `layout`
-- Ajout du fichier `Logo.jsx` dans le dossier`components`
-- Mise en plave du `Header` et du `Logo`
+- Added `components` and `layout` folders
+- Added `Header.jsx` file in the `layout` folder
+- Added `Logo.jsx` file in the `components` folder
+- Set up `Header` and `Logo`
 
 #
 
@@ -31,34 +31,37 @@
 
 ### Added
 
-- Ajout des sections de la page Home :
+- Added Home page sections:
 
-  - Hero section.
-  - Bar section.
-  - Rental section.
-  - Events section.
-  - FAQ section.
+  - Hero section
+  - Bar section
+  - Rental section
+  - Events section
+  - FAQ section
 
-- Ajout de tous les tableaux de données de toutes les sections de la page Home :
+- Added data tables for all Home page sections:
 
-  - Details Bar data.
-  - Services Offered data.
-  - Events data.
-  - FAQ data.
+  - Details Bar data
+  - Services Offered data
+  - Events data
+  - FAQ data
 
-- Mappage des données de toutes les sections de la page Home.
+- Mapped data for all Home page sections.
 
-- Ajout des composants `CardEvent.jsx` et `FaqAccordion.jsx`
+- Added `CardEvent.jsx` and `FaqAccordion.jsx` components
+
+#
 
 ## [1.0.3] - 2025-02-02
 
 ### Hotfix
 
-- Hero section layout et style :
-  - Correction du z-index dans la hero section pour la mettre au premier plan.
-  - Espacement ajouté entre les sous-titres de la hero section.
-  - Mise à jour de la couleur de la police pour correspondre au design system (gray -> zinc).
-- Style de la section Location :
-  - Correction du layout du bouton et ajustement de la taille de la police dans la section location de la homepage.
-- Style de la section Events :
-  - Ajout d’un message dans la section Events lorsqu'aucun événement n'est prévu.
+- Hero section layout and style:
+  - Corrected z-index to bring the hero section to the foreground.
+  - Added spacing between subtitles in the hero section.
+  - Updated font color to match the design system (gray -> zinc).
+- Rental section styling:
+  - Fixed button layout and adjusted font size in the location section of the homepage.
+  - Updated button style on mobile to match the others.
+- Events section styling:
+  - Added a message in the Events section when no events are scheduled.

@@ -786,7 +786,7 @@ export default function Home() {
             ))}
           </div>
           <a href="location/#contact-business" rel="noopener noreferrer">
-            <button className="flex mt-14 bg-sky-500 items-center justify-center mt-10 duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+            <button className="flex mt-14 bg-sky-500 items-center justify-center mt-10 duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-full md:w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
               Votre devis personnalisé
             </button>
           </a>

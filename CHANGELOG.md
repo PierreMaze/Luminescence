@@ -54,14 +54,23 @@
 
 ## [1.0.3] - 2025-02-02
 
-### Hotfix
+### Fixed
 
 - Hero section layout and style:
+
   - Corrected z-index to bring the hero section to the foreground.
   - Added spacing between subtitles in the hero section.
   - Updated font color to match the design system (gray -> zinc).
+
 - Rental section styling:
+
   - Fixed button layout and adjusted font size in the location section of the homepage.
   - Updated button style on mobile to match the others.
+
 - Events section styling:
+
   - Added a message in the Events section when no events are scheduled.
+
+- Fixed CardEvent display bug
+
+- Formatted CardEvent content in French using an algorithm

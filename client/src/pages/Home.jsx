@@ -39,12 +39,13 @@ import { IoSparklesSharp } from 'react-icons/io5';
 import { TbClockHour8Filled } from 'react-icons/tb';
 import { LiaGlassMartiniAltSolid } from 'react-icons/lia';
 
-import { parse } from 'date-fns';
+import { parse, format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 // Hook
 import { useMemo } from 'react';
 
+// Data
 const detailsBar = [
   {
     name: 'Horaires flexibles.',
@@ -80,7 +81,6 @@ const detailsBar = [
     icon: LiaGlassMartiniAltSolid,
   },
 ];
-
 const servicesOffered = [
   {
     name: 'Espaces entièrement modulables',
@@ -133,12 +133,11 @@ const servicesOffered = [
     icon: HiMiniQuestionMarkCircle,
   },
 ];
-
 const events = [
   {
     id: 1,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 05, 2025',
+    date: 'Fév. 05, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -154,7 +153,7 @@ const events = [
   {
     id: 2,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 06, 2025',
+    date: 'Fév. 06, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -170,7 +169,7 @@ const events = [
   {
     id: 3,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 12, 2025',
+    date: 'Fév. 12, 2025',
     title: 'Apéro sur Toiles',
     subtitle: 'Pascal MANITOBA',
     description:
@@ -178,7 +177,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '19h30 - 22h00',
-      price: '39€',
+      price: '39 €',
       imageUrl: LogoLumi,
     },
     imageUrl: CabinetManitobaBg,
@@ -186,7 +185,7 @@ const events = [
   {
     id: 4,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 07, 2025',
+    date: 'Fév. 07, 2025',
     title: 'KFÉE MEDIUMNIQUE',
     subtitle: 'Marion MEDIUM',
     description:
@@ -194,7 +193,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '19h00 - 22h00',
-      price: '18€',
+      price: '18 €',
       imageUrl: LogoLumi,
     },
     imageUrl: KfeeMediumBg,
@@ -202,7 +201,7 @@ const events = [
   {
     id: 5,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 08, 2025',
+    date: 'Fév. 08, 2025',
     title: 'Soirée Magie',
     subtitle: 'SHORTY',
     description:
@@ -218,7 +217,7 @@ const events = [
   {
     id: 6,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 09, 2025',
+    date: 'Fév. 09, 2025',
     title: "Cercle l'amour de soi",
     subtitle: 'Emmanuel BERTON',
     description:
@@ -226,7 +225,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '14h00 - 17h30',
-      price: '45€',
+      price: '45 €',
       imageUrl: LogoLumi,
     },
     imageUrl: CercleBertonBg,
@@ -234,7 +233,7 @@ const events = [
   {
     id: 7,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 10, 2025',
+    date: 'Fév. 10, 2025',
     title: 'ATELIER - Retour à la source',
     subtitle: 'Roseline GAUCHET',
     description:
@@ -242,7 +241,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '09h30 - 18h00',
-      price: '150€',
+      price: '150 €',
       imageUrl: LogoLumi,
     },
     imageUrl: AtelierGauchetBg,
@@ -250,7 +249,7 @@ const events = [
   {
     id: 8,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 11, 2025',
+    date: 'Fév. 11, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -266,7 +265,7 @@ const events = [
   {
     id: 9,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 12, 2025',
+    date: 'Fév. 12, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -282,7 +281,7 @@ const events = [
   {
     id: 10,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 13, 2025',
+    date: 'Fév. 13, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -298,7 +297,7 @@ const events = [
   {
     id: 11,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 13, 2025',
+    date: 'Fév. 13, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -314,7 +313,7 @@ const events = [
   {
     id: 12,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 14, 2025',
+    date: 'Fév. 14, 2025',
     title: 'Cabinet Public',
     subtitle: 'Yohane WELTER',
     description:
@@ -322,7 +321,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '20h00 - 22h30',
-      price: '15€',
+      price: '15 €',
       imageUrl: LogoLumi,
     },
     imageUrl: CabinetWelterBg,
@@ -330,7 +329,7 @@ const events = [
   {
     id: 13,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 15, 2025',
+    date: 'Fév. 15, 2025',
     title: 'CONFÉRENCE - Métamorphose',
     subtitle: 'Florence MEURIC & Frédérique CAIGNARD',
     description:
@@ -338,7 +337,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '19h30 - 22h00',
-      price: '15€',
+      price: '15 €',
       imageUrl: LogoLumi,
     },
     imageUrl: ConferenceCaignardMeuricBg,
@@ -346,7 +345,7 @@ const events = [
   {
     id: 14,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 16, 2025',
+    date: 'Fév. 16, 2025',
     title: 'ATELIER - Métamorphose',
     subtitle: 'Florence MEURIC & Fréderique CAIGNARD',
     description:
@@ -354,7 +353,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '10h00 - 18h00',
-      price: '160€',
+      price: '160 €',
       imageUrl: LogoLumi,
     },
     imageUrl: AtelierCaignardMeuricBg,
@@ -362,7 +361,7 @@ const events = [
   {
     id: 15,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 18, 2025',
+    date: 'Fév. 18, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -378,7 +377,7 @@ const events = [
   {
     id: 16,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 19, 2025',
+    date: 'Fév. 19, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -394,7 +393,7 @@ const events = [
   {
     id: 17,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 20, 2025',
+    date: 'Fév. 20, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -410,7 +409,7 @@ const events = [
   {
     id: 18,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 20, 2025',
+    date: 'Fév. 20, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -426,7 +425,7 @@ const events = [
   {
     id: 19,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 21, 2025',
+    date: 'Fév. 21, 2025',
     title: 'ATELIER - Chemin de vie',
     subtitle: 'Marion MEDIUM',
     description:
@@ -434,7 +433,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '18h30 - 22h30',
-      price: '90€',
+      price: '90 €',
       imageUrl: LogoLumi,
     },
     imageUrl: AtelierMediumBg,
@@ -442,7 +441,7 @@ const events = [
   {
     id: 20,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 23, 2025',
+    date: 'Fév. 23, 2025',
     title: 'FESTIVAL OCEAN BLUE DAY & Marché de Noël',
     subtitle: 'Soirée Tout Public',
     description:
@@ -458,7 +457,7 @@ const events = [
   {
     id: 21,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 25, 2025',
+    date: 'Fév. 25, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -474,7 +473,7 @@ const events = [
   {
     id: 22,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 26, 2025',
+    date: 'Fév. 26, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -490,7 +489,7 @@ const events = [
   {
     id: 23,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 27, 2025',
+    date: 'Fév. 27, 2025',
     title: 'Salon de Thé',
     subtitle: 'Journée Tout Public',
     description:
@@ -506,7 +505,7 @@ const events = [
   {
     id: 24,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 27, 2025',
+    date: 'Fév. 27, 2025',
     title: "L'intelligence des cellules & leurs pouvoirs de guérison",
     subtitle: 'Jacques ANTONIN',
     description:
@@ -514,7 +513,7 @@ const events = [
     author: {
       name: 'Luminescence',
       schedules: '19h00 - 22h00',
-      price: '18€',
+      price: '18 €',
       imageUrl: LogoLumi,
     },
     imageUrl: AtelierAntoninBg,
@@ -522,7 +521,7 @@ const events = [
   {
     id: 25,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 28, 2025',
+    date: 'Fév. 28, 2025',
     title: 'Bar & grignotages',
     subtitle: 'Soirée Tout Public',
     description:
@@ -538,7 +537,7 @@ const events = [
   {
     id: 25,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 29, 2025',
+    date: 'Fév. 29, 2025',
     title: 'EXPOSITION / VENTE / VERNISSAGE',
     subtitle: 'Nour BOUGUERRA & Roseline GAUCHET',
     description:
@@ -554,7 +553,7 @@ const events = [
   {
     id: 26,
     link: 'https://calendar.google.com/calendar/embed?src=luminescence33%40outlook.fr&ctz=Europe%2FParis',
-    date: 'Fev. 30, 2025',
+    date: 'Fév. 30, 2025',
     title: 'EXPOSITION / VENTE / VERNISSAGE',
     subtitle: 'Nour BOUGUERRA & Roseline GAUCHET',
     description:
@@ -584,7 +583,6 @@ const events = [
     imageUrl: ExpositionGauchetBouguerraBg,
   },
 ];
-
 const faqs = [
   {
     question: "Qu'est ce que le Cabinet de soins ?",
@@ -621,38 +619,54 @@ const faqs = [
   },
 ];
 
+// Fonction pour normaliser les dates (conversion des mois français)
+const monthMap = {
+  Janv: 'Jan',
+  Fév: 'Feb',
+  Mars: 'Mar',
+  Avril: 'Apr',
+  Mai: 'May',
+  Juin: 'Jun',
+  Juil: 'Jul',
+  Août: 'Aug',
+  Sept: 'Sep',
+  Oct: 'Oct',
+  Nov: 'Nov',
+  Déc: 'Dec',
+};
+
+const normalizeDate = (dateStr) => {
+  const regex = /([\wÀ-ÿ]+)\. (\d+), (\d+)/;
+  const match = dateStr.match(regex);
+  if (!match) return null;
+  const [, month, day, year] = match;
+  const normalizedMonth = monthMap[month] || month;
+  return parse(
+    `${normalizedMonth} ${day}, ${year}`,
+    'MMM dd, yyyy',
+    new Date()
+  );
+};
+
 export default function Home() {
-  const MAX_DISPLAYED_EVENTS = 2;
-  const now = new Date();
-  const todayDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  const MAX_DISPLAYED_EVENTS = 3;
+
+  // Date du jour sans l'heure
+  const todayDate = useMemo(() => {
+    const now = new Date();
+    return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  }, []);
 
   const sortedEvents = useMemo(() => {
-    if (!events || events.length === 0) {
-      return { today: [], upcoming: [], past: [] };
-    }
-
-    const formattedEvents = events.map((event) => ({
-      ...event,
-      parsedDate: parse(event.date, 'dd/MM/yyyy', new Date(), { locale: fr }),
-    }));
-
-    const today = formattedEvents.filter(
-      ({ parsedDate }) =>
-        parsedDate.getFullYear() === todayDate.getFullYear() &&
-        parsedDate.getMonth() === todayDate.getMonth() &&
-        parsedDate.getDate() === todayDate.getDate()
-    );
-
-    const upcoming = formattedEvents
-      .filter(({ parsedDate }) => parsedDate >= now)
+    return events
+      .map((event) => ({ ...event, parsedDate: normalizeDate(event.date) }))
+      .filter(
+        (event) => event.parsedDate !== null && event.parsedDate >= todayDate
+      )
       .sort((a, b) => a.parsedDate - b.parsedDate);
+  }, [todayDate]);
 
-    const past = formattedEvents
-      .filter(({ parsedDate }) => parsedDate < now)
-      .sort((a, b) => b.parsedDate - a.parsedDate);
-
-    return { today, upcoming, past };
-  }, [now, todayDate]);
+  const eventsToDisplay = sortedEvents.slice(0, MAX_DISPLAYED_EVENTS);
 
   return (
     <>
@@ -800,50 +814,48 @@ export default function Home() {
           <div className="flex-grow border-t border-zinc-800"></div>
         </div>
       </div>
-      {/* Events section */}
-      <section className="py-12 lg:py-24 bg-zinc-900">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8">
+      {/* Section des événements */}
+      <div className="py-12 lg:py-24 bg-zinc-900">
+        <div className="px-6 mx-auto max-w-7xl lg:px-8 2xl:max-w-full 2xl:m-20">
           {/* Header section */}
           <div className="text-center">
-            <h2 className="text-lg font-semibold text-sky-500">
+            <h2 className="text-lg font-semibold leading-7 text-sky-500">
               Nos prochains
             </h2>
-            <p className="mt-2 text-3xl font-bold uppercase text-zinc-50">
-              Événements
+            <p className="mt-2 text-3xl font-bold tracking-wider uppercase text-zinc-50 font-kreon sm:text-4xl">
+              Evenements
             </p>
           </div>
 
-          {/* Events Grid */}
-          <div className="grid max-w-4xl gap-8 mx-auto mt-12 lg:grid-cols-2">
-            {sortedEvents.today.length > 0 ? (
-              sortedEvents.today.map((event) => (
-                <CardEvent key={event.id} event={event} />
+          {/* Body section */}
+          <div className="grid gap-8 mt-12 lg:grid-cols-2">
+            {eventsToDisplay.length > 0 ? (
+              eventsToDisplay.map((event) => (
+                <CardEvent
+                  key={event.id}
+                  event={{
+                    ...event,
+                    date: format(event.parsedDate, 'dd MMMM yyyy', {
+                      locale: fr,
+                    }),
+                  }}
+                />
               ))
-            ) : sortedEvents.upcoming.length > 0 ? (
-              sortedEvents.upcoming
-                .slice(0, MAX_DISPLAYED_EVENTS)
-                .map((event) => <CardEvent key={event.id} event={event} />)
             ) : (
-              <p className="text-center text-zinc-400 col-span-2">
-                Aucun événement prévu pour le moment. Revenez bientôt !
-              </p>
+              <p>Aucun événement à venir pour le moment.</p>
             )}
+            {/* Card Button - Ne pas toucher */}
+            <a
+              href="/evenements"
+              rel="noreferrer"
+              className="flex flex-row items-center justify-center gap-2 px-0 py-6 shadow-lg group bg-sky-700 hover:bg-sky-800 text-sky-200 bg-clip-border rounded-xl sm:grid-cols-2 xl:text-xl"
+            >
+              Voir tous nos événements
+              <HiArrowRightCircle className="ml-2 duration-300 ease-in-out delay-100 border-none rounded-full size-5 ring animate-pulse group-hover:ring-sky-300" />
+            </a>
           </div>
-
-          {/* Voir tous les événements */}
-          {sortedEvents.upcoming.length > 0 && (
-            <div className="flex justify-center mt-8">
-              <a
-                href="/evenements"
-                className="flex items-center gap-2 px-6 py-3 text-white bg-sky-700 rounded-xl hover:bg-sky-800"
-              >
-                Voir tous nos événements
-                <HiArrowRightCircle className="text-lg" />
-              </a>
-            </div>
-          )}
         </div>
-      </section>
+      </div>
       {/* FAQ section */}
       <div className="py-12 lg:py-24 max-w-[960px] px-4 mx-auto">
         {/* <!--Header section--> */}

@@ -5,10 +5,12 @@
 ### Added
 
 - Added text truncation for the description in `CardEvent`
+- Added lazy loading to images and components with `Suspense`
 
 ### Changed
 
 - Replaced `div` elements with `section` tags in all sections
+- Updated image import to use <img> tag with lazy loading
 
 #
 

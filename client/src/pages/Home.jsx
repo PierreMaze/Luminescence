@@ -1,7 +1,3 @@
-// Components
-import CardEvent from '../components/CardEvent.jsx';
-import FaqAccordion from '../components/FaqAccordion.jsx';
-
 // Logo
 import LogoLumiWhite from '../assets/img/LumiWhite.svg';
 import LogoLumi from '../assets/img/lumi.svg';
@@ -43,7 +39,11 @@ import { parse, format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
 // Hook
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
+
+// Components Lazy Loading.
+const CardEvent = lazy(() => import('../components/CardEvent.jsx'));
+const FaqAccordion = lazy(() => import('../components/FaqAccordion.jsx'));
 
 // Data
 const detailsBar = [
@@ -686,43 +686,38 @@ export default function Home() {
     <>
       {/* <!--Hero Section--> */}
       <section className="relative">
-        <div
-          className="aspect-auto"
-          style={{
-            backgroundImage: `url('../assets/images/LocalWelcome.webp')`,
-          }}
-        >
-          {/* <!--Picture local BG--> */}
+        {/* <!--Picture local BG--> */}
+        <img
+          src={BgHero}
+          loading="lazy"
+          alt="Photo du local Luminescence"
+          className="object-cover w-full h-screen"
+        />
+
+        {/* <!--Blur screen--> */}
+        <div className="absolute top-0 w-full h-screen z-1 bg-zinc-950/70"></div>
+
+        {/* <!-- Welcome container --> */}
+        <div className="absolute z-10 inset-0 flex flex-col items-center justify-center gap-0 text-center">
           <img
-            src={BgHero}
-            alt="Photo du local Luminescence"
-            className="object-cover w-full h-screen"
+            src={LogoLumiWhite}
+            loading="lazy"
+            alt="Logo Luminescence en blanc"
+            className="mb-4 w-60 lg:w-72 2xl::w-96"
           />
-
-          {/* <!--Blur screen--> */}
-          <div className="absolute top-0 w-full h-screen z-1 bg-zinc-950/70"></div>
-
-          {/* <!-- Welcome container --> */}
-          <div className="absolute z-10 inset-0 flex flex-col items-center justify-center gap-0 text-center">
-            <img
-              src={LogoLumiWhite}
-              alt="Logo Luminescence en blanc"
-              className="mb-4 w-60 lg:w-72 2xl::w-96"
-            />
-            <h1 className="text-4xl font-bold tracking-wider text-transparent font-kreon bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text xl:text-6xl 2xl:text-8xl lg:font-semibold">
-              LUMINESCENCE
-            </h1>
-            <p className="text-base pt-4 font-medium tracking-wide text-sky-50 lg:text-lg xl:text-xl lg:font-medium">
-              Évènementiel & Location d&apos;Espaces
-            </p>
-            <div className="w-60 my-1 h-[0.09rem] bg-sky-100"></div>
-            <p className="text-sm font-semibold -pb-4 tracking-wide text-sky-200 lg:text-md 2xl:text-lg">
-              BAR LOUNGE & ROOFTOP
-            </p>
-            <p className="absolute text-xs font-bold tracking-wider text-center bottom-2 2xl:bottom-4 2xl:text-md text-sky-100">
-              GUJAN - MESTRAS
-            </p>
-          </div>
+          <h1 className="text-4xl font-bold tracking-wider text-transparent font-kreon bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text xl:text-6xl 2xl:text-8xl lg:font-semibold">
+            LUMINESCENCE
+          </h1>
+          <p className="text-base pt-4 font-medium tracking-wide text-sky-50 lg:text-lg xl:text-xl lg:font-medium">
+            Évènementiel & Location d&apos;Espaces
+          </p>
+          <div className="w-60 my-1 h-[0.09rem] bg-sky-100"></div>
+          <p className="text-sm font-semibold -pb-4 tracking-wide text-sky-200 lg:text-md 2xl:text-lg">
+            BAR LOUNGE & ROOFTOP
+          </p>
+          <p className="absolute text-xs font-bold tracking-wider text-center bottom-2 2xl:bottom-4 2xl:text-md text-sky-100">
+            GUJAN - MESTRAS
+          </p>
         </div>
       </section>
       {/* <!--Bar Section--> */}
@@ -774,8 +769,9 @@ export default function Home() {
             </div>
             {/* <!--Picture Rooftop container--> */}
             <img
-              alt="Rooftop(= Terasse sur le toit) de luminescence."
               src={Rooftop}
+              loading="lazy"
+              alt="Rooftop(= Terasse sur le toit) de luminescence."
               width={2432}
               height={1442}
               className="w-[24rem] max-w-full rounded-xl shadow-xl ring-1 ring-zinc-400/10 lg:max-w-none sm:w-[50rem] md:-ml-4 lg:-ml-20 min-[2000px]:w-[60rem] "
@@ -847,21 +843,23 @@ export default function Home() {
 
           {/* Body section */}
           <div className="grid gap-8 mt-12 lg:grid-cols-2">
-            {eventsToDisplay.length > 0 ? (
-              eventsToDisplay.map((event) => (
-                <CardEvent
-                  key={event.id}
-                  event={{
-                    ...event,
-                    date: format(event.parsedDate, 'dd MMMM yyyy', {
-                      locale: fr,
-                    }),
-                  }}
-                />
-              ))
-            ) : (
-              <p>Aucun événement à venir pour le moment.</p>
-            )}
+            <Suspense fallback={<p>Chargement des événements...</p>}>
+              {eventsToDisplay.length > 0 ? (
+                eventsToDisplay.map((event) => (
+                  <CardEvent
+                    key={event.id}
+                    event={{
+                      ...event,
+                      date: format(event.parsedDate, 'dd MMMM yyyy', {
+                        locale: fr,
+                      }),
+                    }}
+                  />
+                ))
+              ) : (
+                <p>Aucun événement à venir pour le moment.</p>
+              )}
+            </Suspense>
             {/* Card Button - Ne pas toucher */}
             <a
               href="/evenements"
@@ -890,15 +888,17 @@ export default function Home() {
           </p>
         </div>
         {/* <!--FAQ Accordion component--> */}
-        {faqs.map((faq, index) => (
-          <FaqAccordion
-            key={index}
-            question={faq.question}
-            answer={faq.answer}
-            isOpen={openIndex === index}
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-          />
-        ))}
+        <Suspense fallback={<p>Chargement des questions...</p>}>
+          {faqs.map((faq, index) => (
+            <FaqAccordion
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            />
+          ))}
+        </Suspense>
         {/* <!--Action section--> */}
         <div className="flex flex-col items-center gap-6 pt-8">
           <p className="italic">

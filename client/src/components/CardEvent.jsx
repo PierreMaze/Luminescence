@@ -18,6 +18,7 @@ export default function CardEvent({ event }) {
       <div className="relative overflow-hidden bg-clip-border rounded-xl">
         <img
           src={event.imageUrl}
+          loading="lazy"
           alt={event.title}
           className="object-cover w-full h-full min-[1900px]:max-h-80 2xl:max-h-64 l:h-80"
         />

@@ -11,6 +11,8 @@
 
 - Replaced `div` elements with `section` tags in all sections
 - Updated image import to use <img> tag with lazy loading
+- Moved data arrays for each section of Home page to `src/data/home.data.jsx`
+- Added margin-x to the events section for consistent spacing
 
 #
 

@@ -30,7 +30,7 @@ export default function CardEvent({ event }) {
           {event.subtitle}
         </p>
 
-        <p className="block antialiased font-sans text-base min[1900px]:text-xl 2xl:text-md leading-relaxed 2xl:mb-4 font-normal !text-gray-500">
+        <p className="block antialiased font-sans !line-clamp-3 text-sm min[1900px]:text-xl 2xl:text-md leading-relaxed 2xl:mb-4 font-normal !text-gray-500">
           {event.description}
         </p>
         <div className="flex mt-4 items-center gap-2 2xl:justify-start 2xl:mr-4 2xl:mt-4 min[1900px]:mt-14">

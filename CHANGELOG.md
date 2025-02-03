@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.4] - 2025-02-03
+
+### Added
+
+- Added text truncation for the description in `CardEvent`
+
+#
+
 ## [1.0.3] - 2025-02-02
 
 ### Fixed

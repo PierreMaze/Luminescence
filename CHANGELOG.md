@@ -6,6 +6,10 @@
 
 - Added text truncation for the description in `CardEvent`
 
+### Changed
+
+- Replaced `div` elements with `section` tags in all sections
+
 #
 
 ## [1.0.3] - 2025-02-02

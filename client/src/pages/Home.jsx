@@ -685,7 +685,7 @@ export default function Home() {
   return (
     <>
       {/* <!--Hero Section--> */}
-      <div className="relative">
+      <section className="relative">
         <div
           className="aspect-auto"
           style={{
@@ -724,9 +724,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </div>
+      </section>
       {/* <!--Bar Section--> */}
-      <div className="py-12 overflow-hidden sm:py-24">
+      <section className="py-12 overflow-hidden sm:py-24">
         <div className="px-6 mx-auto max-w-7xl md:px-8 lg:px-10 xl:px-14 2xl:px-18">
           <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {/* <!--details container--> */}
@@ -782,9 +782,9 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </section>
       {/* <!--Rental Section--> */}
-      <div className="py-12 text-white lg:py-24 bg-zinc-900">
+      <section className="py-12 text-white lg:py-24 bg-zinc-900">
         <div className="px-6 mx-3 max-w-8xl md:px-8 lg:px-10 xl:px-14 2xl:mx-80">
           {/* <!--Header section--> */}
           <div className="text-start">
@@ -823,17 +823,17 @@ export default function Home() {
             </button>
           </a>
         </div>
-      </div>
+      </section>
       {/* <!--Divider Section--> */}
-      <div className="relative -mt-1 flex flex-row 2xl:-mb-20">
+      <section className="relative -mt-1 flex flex-row 2xl:-mb-20">
         <div className="absolute top-0 left-0 right-0 flex items-center justify-center">
           <div className="flex-grow border-t border-zinc-800"></div>
           <span className="mx-4 scale-150 text-sky-500">+</span>
           <div className="flex-grow border-t border-zinc-800"></div>
         </div>
-      </div>
+      </section>
       {/* Section des événements */}
-      <div className="py-12 lg:py-24 bg-zinc-900">
+      <section className="py-12 lg:py-24 bg-zinc-900">
         <div className="px-6 mx-auto max-w-7xl lg:px-8 2xl:max-w-full 2xl:m-20">
           {/* Header section */}
           <div className="text-center">
@@ -873,9 +873,9 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
       {/* FAQ section */}
-      <div className="py-12 lg:py-24 max-w-[960px] px-4 mx-auto">
+      <section className="py-12 lg:py-24 max-w-[960px] px-4 mx-auto">
         {/* <!--Header section--> */}
         <div id="notre-faq" className="text-center">
           <h2 className="text-lg font-semibold leading-7 text-sky-800">
@@ -912,7 +912,7 @@ export default function Home() {
             Contactez-nous
           </a>
         </div>
-      </div>
+      </section>
       {/* <!--Divider section--> */}
       <div className="relative flex flex-row">
         <div className="absolute bottom-0 left-0 right-0 flex items-center justify-center">

@@ -46,7 +46,7 @@ AnchorButton.propTypes = {
   className: PropTypes.string,
 };
 
-export const AnchorButtonIcon = ({
+export const MapLinkIcon = ({
   children,
   icon: Icon,
   href,
@@ -68,7 +68,7 @@ export const AnchorButtonIcon = ({
   );
 };
 
-AnchorButtonIcon.propTypes = {
+MapLinkIcon.propTypes = {
   children: PropTypes.node.isRequired,
   icon: PropTypes.node.isRequired,
   href: PropTypes.string.isRequired,

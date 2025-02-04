@@ -23,6 +23,18 @@
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
 
+- Fix iframe Google Maps display issue and improve interaction :
+
+  - Fixed Google Maps iframe not being interactive
+  - Adjusted iframe width to 100% for full-page responsiveness
+  - Improved button positioning over the map
+
+- Restructure FindUs component and organize files :
+  - Moved `FindUs.jsx` to `components/components/`
+  - Created `features/google/` directory for Google integrations
+  - Added `GoogleMaps.jsx` to handle the iframe separately
+  - Improved project structure for better maintainability
+
 #
 
 ## [1.0.4] - 2025-02-03

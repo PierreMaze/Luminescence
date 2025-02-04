@@ -1,8 +1,8 @@
-import GoogleMap from "../features/google/GoogleMap.jsx";
+import GoogleMap from '../features/google/GoogleMap.jsx';
 
 const FindUs = () => {
   return (
-    <div className="pt-12 lg:pt-24">
+    <div className="pt-12 lg:pt-24 bg-sky-50">
       <div className="px-6 mx-3 max-w-8xl lg:px-12 2xl:mx-80">
         <div className=" text-start">
           <h2 className="text-lg font-semibold text-sky-800">Où nous</h2>
@@ -22,7 +22,7 @@ const FindUs = () => {
           </div>
         </div>
       </div>
-      < GoogleMap />
+      <GoogleMap />
     </div>
   );
 };

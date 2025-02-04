@@ -22,6 +22,8 @@
 
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
+- Updated footer background color from white to `bg-sky-50` for a softer appearance.
+- Improved visual consistency and readability.
 
 - Fix iframe Google Maps display issue and improve interaction :
 

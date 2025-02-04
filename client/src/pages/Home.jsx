@@ -92,7 +92,7 @@ export default function Home() {
   const eventsToDisplay = sortedEvents.slice(0, MAX_DISPLAYED_EVENTS);
 
   return (
-    <>
+    <div className="bg-sky-50">
       {/* <!--Hero Section--> */}
       <section className="relative">
         {/* <!--Picture local BG--> */}
@@ -332,6 +332,6 @@ export default function Home() {
           <div className="flex-grow border-t border-zinc-200"></div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

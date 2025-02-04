@@ -19,7 +19,6 @@ Le site présente ses services de Bar-Lounge, Salon thé, Location d'espaces, et
 Avant de commencer, assurez-vous que vous avez les outils suivants installés :
 
 - **Node.js** : Version 16 ou supérieure.
-- **PNPM** : Si ce n'est pas déjà installé, vous pouvez l'installer avec la commande indiquée.
 
 ## 📥 Installation
 

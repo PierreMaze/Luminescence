@@ -60,6 +60,7 @@ const detailsBar = [
     icon: LiaGlassMartiniAltSolid,
   },
 ];
+
 const servicesOffered = [
   {
     name: 'Espaces entièrement modulables',
@@ -115,6 +116,7 @@ const servicesOffered = [
     icon: HiMiniQuestionMarkCircle,
   },
 ];
+
 const events = [
   {
     id: 1,
@@ -565,6 +567,7 @@ const events = [
     imageUrl: ExpositionGauchetBouguerraBg,
   },
 ];
+
 const faqs = [
   {
     question: "Qu'est ce que le Cabinet de soins ?",

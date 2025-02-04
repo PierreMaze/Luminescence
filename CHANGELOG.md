@@ -8,6 +8,15 @@
 - Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
 - Applied Tailwind's scroll-smooth class to the HTML element for smooth scrolling on anchor links.
 - Added support for accessibility features like `aria-label` and focus states.
+- Smooth accordion animation with CSS transitions.
+- Implemented **footer** with a completed form.
+- Added **underlines** for clickable lines to improve user interaction.
+
+- **FAQ section** :
+
+  - Created a new `features/accordeon/` directory to organize the FAQ component separately.
+  - Moved `Faq.jsx` into `features/accordeon/` to improve code structure and maintainability.
+  - Implemented an accordion system within `Faq.jsx` for better user experience.
 
 - Added **FindUs** section to the page, including:
 
@@ -15,15 +24,14 @@
   - An interactive Google Maps embed.
   - A button to redirect to Google Maps with an interactive icon.
 
-- Implemented **footer** with a completed form.
-- Added **underlines** for clickable lines to improve user interaction.
-
 ### Changed
 
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
 - Updated footer background color from white to `bg-sky-50` for a softer appearance.
 - Improved visual consistency and readability.
+- Replaced static visibility toggle with animated height transition
+- Enhanced user experience with fluid open/close motion
 
 - Fix iframe Google Maps display issue and improve interaction :
 

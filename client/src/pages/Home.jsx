@@ -55,7 +55,7 @@ const normalizeDate = (dateStr) => {
 
 // Components Lazy Loading.
 const CardEvent = lazy(() => import('../components/CardEvent.jsx'));
-const FaqAccordion = lazy(() => import('../components/FaqAccordion.jsx'));
+const Faq = lazy(() => import('../features/accordeon/Faq.jsx'));
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -301,7 +301,7 @@ export default function Home() {
         {/* <!--FAQ Accordion component--> */}
         <Suspense fallback={<p>Chargement des questions...</p>}>
           {faqs.map((faq, index) => (
-            <FaqAccordion
+            <Faq
               key={index}
               question={faq.question}
               answer={faq.answer}

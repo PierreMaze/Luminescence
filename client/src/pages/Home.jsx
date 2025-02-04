@@ -14,10 +14,6 @@ import { fr } from 'date-fns/locale';
 // Hook
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 
-// Components Lazy Loading.
-const CardEvent = lazy(() => import('../components/CardEvent.jsx'));
-const FaqAccordion = lazy(() => import('../components/FaqAccordion.jsx'));
-
 // Data
 import {
   detailsBar,
@@ -54,6 +50,12 @@ const normalizeDate = (dateStr) => {
     new Date()
   );
 };
+
+import { AnchorButton } from '../components/Button.jsx';
+
+// Components Lazy Loading.
+const CardEvent = lazy(() => import('../components/CardEvent.jsx'));
+const FaqAccordion = lazy(() => import('../components/FaqAccordion.jsx'));
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -163,15 +165,13 @@ export default function Home() {
                   ))}
                 </dl>
                 {/* <!--Action button--> */}
-                <a href="/bar-lounge/#la-carte" rel="noopener noreferrer">
-                  <button
-                    className={
-                      'mt-10 duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full mx-auto md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500'
-                    }
-                  >
-                    Consulter notre Carte
-                  </button>
-                </a>
+                <AnchorButton
+                  href="/bar-lounge/#la-carte"
+                  label="Consulter notre carte du bar-lounge"
+                  className="mt-10 w-full md:w-50"
+                >
+                  Consulter notre Carte
+                </AnchorButton>
               </div>
             </div>
             {/* <!--Picture Rooftop container--> */}
@@ -220,11 +220,15 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <a href="location/#contact-business" rel="noopener noreferrer">
-            <button className="flex mt-14 items-center justify-center duration-300 ease-in-out delay-100 space-y-8 leading-7 text-sky-50 rounded-md bg-sky-500 w-full md:w-fit mx-auto px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500">
+          <div className="flex items-center justify-center">
+            <AnchorButton
+              href="/bar-lounge/#la-carte"
+              label="Consulter notre carte du bar-lounge"
+              className="mt-14 w-full md:w-60"
+            >
               Votre devis personnalisé
-            </button>
-          </a>
+            </AnchorButton>
+          </div>
         </div>
       </section>
       {/* <!--Divider Section--> */}
@@ -311,13 +315,13 @@ export default function Home() {
           <p className="italic">
             Vous ne trouvez pas votre réponse dans la FAQ ?
           </p>
-          <a
-            href="contact/contacter-nous"
-            rel="noopener noreferrer"
-            className="flex justify-center duration-300 ease-in-out delay-100  space-y-8 leading-7 text-sky-50 lg:max-w-none  rounded-md bg-sky-500 w-full md:w-44  md:px-3.5 py-2.5 text-sm font-semibold shadow-sm hover:bg-sky-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500"
+          <AnchorButton
+            href="/bar-lounge/#la-carte"
+            label="Consulter notre carte du bar-lounge"
+            className="flex justify-center  mt-10 w-full md:w-50"
           >
             Contactez-nous
-          </a>
+          </AnchorButton>
         </div>
       </section>
       {/* <!--Divider section--> */}

@@ -37,7 +37,7 @@ const detailsBar = [
           target="_blank"
           rel="noreferrer"
           alt="Page Facebook"
-          className="font-medium text-sky-600"
+          className="font-medium text-sky-600 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
         >
           notre page Facebook
         </a>
@@ -96,13 +96,16 @@ const servicesOffered = [
     description: (
       <>
         N&apos;hésitez pas à consulter notre{' '}
-        <a href="#notre-faq" className="text-sky-400 hover:underline">
+        <a
+          href="#notre-faq"
+          className="text-sky-400 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+        >
           FAQ
         </a>
         , si vous ne trouvez pas de réponse,{' '}
         <a
           href="/contact/contacter-nous"
-          className="text-sky-400 hover:underline"
+          className="text-sky-400 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
         >
           contactez-nous
         </a>{' '}

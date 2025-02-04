@@ -1,4 +1,5 @@
 import FindUs from './components/FindUs';
+import { Footer } from './layout/Footer';
 import Header from './layout/Header.';
 import Home from './pages/Home.jsx';
 
@@ -8,6 +9,7 @@ export default function App() {
       <Header />
       <Home />
       <FindUs />
+      <Footer />
     </>
   );
 }

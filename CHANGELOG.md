@@ -10,9 +10,13 @@
 - Added support for accessibility features like `aria-label` and focus states.
 
 - Added **FindUs** section to the page, including:
+
   - A descriptive text with the business address.
   - An interactive Google Maps embed.
   - A button to redirect to Google Maps with an interactive icon.
+
+- Implemented **footer** with a completed form.
+- Added **underlines** for clickable lines to improve user interaction.
 
 ### Changed
 

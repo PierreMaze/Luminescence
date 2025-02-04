@@ -40,7 +40,7 @@ export default function CardEvent({ event }) {
             <TbClockHour2Filled />
           </div>
           <div className="flex flex-col">
-            <p className="antialiased text-base capitalize 2xl:text-xl text-blue-gray-900 mb-0.5 font-semibold">
+            <p className="antialiased text-sm capitalize 2xl:text-xl text-blue-gray-900 mb-0.5 font-semibold">
               <time dateTime={event.date}>
                 {event.parsedDate
                   ? format(event.parsedDate, 'dd MMMM yyyy', { locale: fr })
@@ -52,7 +52,7 @@ export default function CardEvent({ event }) {
             </p>
           </div>
           <div className="flex flex-row  align-items ml-16 md:ml-4 w-14">
-            <p className="px-2 py-1 mx-0 lining-nums text-base antialiased font-semibold border-none text-zinc-100 2xl:text-md rounded-xl ring-offset-sky-600 ring-2 bg-sky-600">
+            <p className="px-2 py-1 mx-0 lining-nums text-sm antialiased font-semibold border-none text-zinc-100 2xl:text-md rounded-xl ring-offset-sky-600 ring-2 bg-sky-600">
               {event.author.price}
             </p>
           </div>

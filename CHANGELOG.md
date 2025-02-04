@@ -1,5 +1,20 @@
 # Change Log
 
+## [1.0.5] - 2025-02-04
+
+### Added
+
+- Created reusable `Button`, `AnchorButton`, `IconButton`, `SubmitButton`, and `DisabledButton` components.
+- Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
+- Added support for accessibility features like `aria-label` and focus states.
+
+### Changed
+
+- Updated button components to support customizable styles through the `className` prop
+- Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
+
+#
+
 ## [1.0.4] - 2025-02-03
 
 ### Added

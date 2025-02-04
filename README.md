@@ -1,6 +1,6 @@
 # Luminescence33 v.2.0
 
-**Luminescence** est une application pour un client du donmaine de l'événementiel.
+**Luminescence** est une application pour un client du domaine de l'événementiel.
 
 Le site présente ses services de Bar-Lounge, Salon thé, Location d'espaces, etc., tout en mettant l'accent sur la simplicité et la réactivité.
 

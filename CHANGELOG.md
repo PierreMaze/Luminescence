@@ -6,6 +6,7 @@
 
 - Created reusable `Button`, `AnchorButton`, `IconButton`, `SubmitButton`, and `DisabledButton` components.
 - Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
+- Applied Tailwind's scroll-smooth class to the HTML element for smooth scrolling on anchor links.
 - Added support for accessibility features like `aria-label` and focus states.
 
 ### Changed

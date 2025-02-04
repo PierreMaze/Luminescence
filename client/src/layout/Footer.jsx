@@ -155,19 +155,19 @@ export const Footer = () => {
         </div>
 
         {/* <!--Newsletter section--> */}
-        <div className="py-16 md:mx-10 2xl:mx-2 isolate sm:py-24 border-sky-200">
+        <div className="pt-8 pb-16 md:mx-10 2xl:mx-2 isolate sm:pb-24 border-sky-200">
           <div className="w-full px-8 mx-auto lg:max-w-7xl lg:px-8">
             <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
               <div className="max-w-2xl lg:max-w-lg">
                 <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl font-kreon">
                   Abonnez-vous à notre newsletter.
                 </h2>
-                <p className="mt-4 text-lg leading-8 text-gray-300">
+                <p className="mt-4 leading-8 text-gray-300">
                   En vous abonnant à notre newsletter, vous profitez de contenus
-                  exclusifs, d&apos;avant-premières, d&apos;offres spéciales et
-                  des dernières mises à jour.
+                  exclusifs, d&apos;avant-premières et des dernières mises à
+                  jour.
                 </p>
-                <p className="text-sky-300">
+                <p className="text-xs text-sky-300">
                   Soyez les premiers à en être informés !
                 </p>
                 <form
@@ -210,7 +210,7 @@ export const Footer = () => {
                   </Button>
                 </form>
                 <p className="pt-2 text-xs">
-                  En soumettant ce formulaire, j&apos;accepte que Luminescence
+                  En soumettant ce formulaire, vous acceptez que Luminescence
                   collecte, traite et conserve mes données conformément à sa{' '}
                   <a
                     href="/politique-confidentialite"
@@ -257,135 +257,120 @@ export const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* <!-- Main container div: holds the entire content of the footer, including four sections (TW Elements, Products, Useful links, and Contact), with responsive styling and appropriate padding/margins. --> */}
-        <div className="mx-6 text-sm text-center 2xl:mx-80 lg:mx-20 2xl:text-md lg md:text-left">
-          <div className="grid gap-8 grid-1 md:grid-cols-2 lg:grid-cols-4">
-            {/* <!-- LUMINESCENCE section --> */}
-            <a
-              href="/"
-              rel="noopener noreferrer"
-              className="pb-8 font-light font-kreon lg:pb-0"
-            >
-              <img
-                src={LogoLumi}
-                alt="Logo luminescence"
-                className="w-24 pb-6 m-auto md:m-0"
-              />
-              <h6 className="text-3xl font-normal tracking-wider text-transparent bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text">
+        {/* NavBar */}
+        <section className="w-60 mx-auto mb-12 flex flex-col justify-center ">
+          {/* <!-- Logo section --> */}
+          <a
+            href="/"
+            rel="noopener noreferrer"
+            className="pb-8 font-light font-kreon lg:pb-0"
+          >
+            <img
+              src={LogoLumi}
+              alt="Logo luminescence"
+              className="w-24 pb-6 mx-auto"
+            />
+            <div className="text-start">
+              <p className="text-3xl font-semibold tracking-wider text-transparent bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text">
                 LUMINESCENCE
-              </h6>
+              </p>
               <p className="text-xs italic tracking-wider">
                 La culture sous toutes ses coutures...
               </p>
+            </div>
+          </a>
+        </section>
+        <nav className="place-self-center grid gap-8 grid-1 md:grid-cols-3">
+          {/* <!-- BAR-LOUNGE section --> */}
+          <div className="flex flex-col justify-center lg:justify-start">
+            <h6 className="mb-4 font-semibold uppercase text-sky-500">
+              Navigation
+            </h6>
+            <a
+              href="/"
+              rel="noopener noreferrer"
+              className="mb-4 mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Accueil
             </a>
-            {/* <!-- BAR-LOUNGE section --> */}
-            <div className="">
-              <h6 className="flex justify-center mb-4 font-semibold uppercase text-sky-500 md:justify-start">
-                Navigation
-              </h6>
-              <p className="mb-4">
-                <a
-                  href="/"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Accueil
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="/bar-lounge"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Bar-Lounge
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="/location"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Location
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="/evenements"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Événements
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="/contact"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Contact
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="/a-propos"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  A propos
-                </a>
-              </p>
-            </div>
-            {/* <!-- LEGAL section --> */}
-            <div className="">
-              <h6 className="flex justify-center mb-4 font-semibold uppercase text-sky-500 md:justify-start">
-                Legal
-              </h6>
-              <p className="mb-4">
-                <a
-                  href="mentions-legales"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Mentions légales
-                </a>
-              </p>
-              <p className="mb-4">
-                <a
-                  href="politique-confidentialite"
-                  rel="noopener noreferrer"
-                  className="text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-                >
-                  Politique de confidentialité
-                </a>
-              </p>
-            </div>
-            {/* <!-- CONTACT section --> */}
-            <div>
-              <h6 className="flex justify-center mb-4 font-semibold uppercase text-sky-500 md:justify-start">
-                Contact
-              </h6>
-              <a
-                href="mailto:contact@luminescence33.com"
-                rel="noreferrer"
-                className="flex items-center justify-center mb-4 md:justify-start hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-              >
-                <MdEmail className="size-5 mr-2" />
-                {'contact@luminescence33.com'}
-              </a>
-              <a
-                href="tel:+33 6 46 84 93 52"
-                rel="noreferrer"
-                className="flex items-center justify-center mb-4 tabular-nums md:justify-start hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
-              >
-                <MdLocalPhone className="size-5 mr-2" /> {'+ 33 6 46 84 93 52'}
-              </a>
-            </div>
+            <a
+              href="/bar-lounge"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Bar-Lounge
+            </a>
+            <a
+              href="/location"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Location
+            </a>
+            <a
+              href="/evenements"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Événements
+            </a>
+            <a
+              href="/contact"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Contact
+            </a>
+            <a
+              href="/a-propos"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              A propos
+            </a>
           </div>
-        </div>
+          {/* <!-- LEGAL section --> */}
+          <div className="flex flex-col justify-center md:justify-start">
+            <h6 className="mb-4 font-semibold uppercase text-sky-500 ">
+              Legal
+            </h6>
+            <a
+              href="mentions-legales"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Mentions légales
+            </a>
+            <a
+              href="politique-confidentialite"
+              rel="noopener noreferrer"
+              className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              Politique de confidentialité
+            </a>
+          </div>
+          {/* <!-- CONTACT section --> */}
+          <div className="flex flex-col inline-block justify-center md:justify-start">
+            <h6 className=" mb-4 font-semibold uppercase text-sky-500 ">
+              Contact
+            </h6>
+            <a
+              href="mailto:contact@luminescence33.com"
+              rel="noreferrer"
+              className="flex justify-center md:justify-start mb-4 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              <MdEmail className="size-5 mr-2" />
+              {'contact@luminescence33.com'}
+            </a>
+            <a
+              href="tel:+33 6 46 84 93 52"
+              rel="noreferrer"
+              className="flex justify-center md:justify-start mb-4 tabular-nums hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+            >
+              <MdLocalPhone className="size-5 mr-2" /> {'+ 33 6 46 84 93 52'}
+            </a>
+          </div>
+        </nav>
         {/* <!-- BG  Gradiant linear --> */}
         <div
           aria-hidden="true"

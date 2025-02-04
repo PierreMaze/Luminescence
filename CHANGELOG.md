@@ -30,10 +30,15 @@
   - Improved button positioning over the map
 
 - Restructure FindUs component and organize files :
+
   - Moved `FindUs.jsx` to `components/components/`
   - Created `features/google/` directory for Google integrations
   - Added `GoogleMaps.jsx` to handle the iframe separately
   - Improved project structure for better maintainability
+
+- Fix Footer :
+  - Improved footer layout using TailwindCSS for better structure and intuitiveness.
+  - Enhanced overall user experience by making the footer more organized and readable.
 
 #
 
@@ -130,4 +135,3 @@
 ### Changed
 
 - Set up the basic project structure
-

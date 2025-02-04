@@ -46,6 +46,37 @@ AnchorButton.propTypes = {
   className: PropTypes.string,
 };
 
+export const AnchorButtonIcon = ({
+  children,
+  icon: Icon,
+  href,
+  target = '_self',
+  className = '',
+  label,
+}) => {
+  return (
+    <a
+      href={href}
+      target={target}
+      rel={target === '_blank' ? 'noopener noreferrer' : undefined}
+      aria-label={label}
+      className={`inline-flex duration-300 ease-in-out delay-100 leading-7 py-2.5 px-2 lg:py-3 2xl:px-4 2xl:py-3.5 text-sm lg:text-base font-medium text-black bg-zinc-50 hover:bg-zinc-900 hover:text-white ring-2 outline-none ring-zinc-800 rounded-md text-center  ${className}`}
+    >
+      {children}
+      <Icon className="text-current size-5 ml-2 mt-1" />
+    </a>
+  );
+};
+
+AnchorButtonIcon.propTypes = {
+  children: PropTypes.node.isRequired,
+  icon: PropTypes.node.isRequired,
+  href: PropTypes.string.isRequired,
+  target: PropTypes.oneOf(['_self', '_blank', '_parent', '_top']),
+  label: PropTypes.string.isRequired,
+  className: PropTypes.string,
+};
+
 export const IconButton = ({ icon, onClick, className = '' }) => {
   return (
     <button

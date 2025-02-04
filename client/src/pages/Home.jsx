@@ -22,6 +22,8 @@ import {
   faqs,
 } from '../data/Home.data.jsx';
 
+import { AnchorButton } from '../components/Button.jsx';
+
 // Fonction pour normaliser les dates (conversion des mois français)
 const monthMap = {
   Janv: 'Jan',
@@ -50,8 +52,6 @@ const normalizeDate = (dateStr) => {
     new Date()
   );
 };
-
-import { AnchorButton } from '../components/Button.jsx';
 
 // Components Lazy Loading.
 const CardEvent = lazy(() => import('../components/CardEvent.jsx'));

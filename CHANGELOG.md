@@ -9,6 +9,11 @@
 - Applied Tailwind's scroll-smooth class to the HTML element for smooth scrolling on anchor links.
 - Added support for accessibility features like `aria-label` and focus states.
 
+- Added **FindUs** section to the page, including:
+  - A descriptive text with the business address.
+  - An interactive Google Maps embed.
+  - A button to redirect to Google Maps with an interactive icon.
+
 ### Changed
 
 - Updated button components to support customizable styles through the `className` prop

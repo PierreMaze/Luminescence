@@ -2,6 +2,8 @@ import { useState, useCallback } from 'react';
 import { HiCalendarDays, HiArrowPath } from 'react-icons/hi2';
 import emailjs from '@emailjs/browser';
 
+import NewsletterForm from '../../components/form/NewsletterForm.jsx';
+
 export default function Newsletter() {
   const {
     VITE_SERVICE_ID_EMAILJS,
@@ -46,6 +48,22 @@ export default function Newsletter() {
     }
   };
 
+  // 📌 Objet de mapping des champs du formulaire (RESTE DANS `Newsletter.jsx`)
+  const newsletterFields = [
+    {
+      name: 'from_name',
+      type: 'text',
+      placeholder: 'Nom / Entreprise',
+      autoComplete: 'name',
+    },
+    {
+      name: 'email',
+      type: 'email',
+      placeholder: 'johndoe@exemple.com',
+      autoComplete: 'email',
+    },
+  ];
+
   return (
     <div className="pt-8 pb-16 md:mx-10 2xl:mx-2 isolate sm:pb-24 border-sky-200">
       <div className="w-full px-8 mx-auto lg:max-w-7xl lg:px-8">
@@ -62,50 +80,13 @@ export default function Newsletter() {
               Soyez les premiers à en être informés !
             </p>
 
-            <form
+            <NewsletterForm
+              fields={newsletterFields}
+              formData={formData}
+              onChange={handleChange}
               onSubmit={handleSubmit}
-              className="flex flex-col max-w-xs gap-4 mx-auto mt-6 lg:mx-0 lg:max-w-xl lg:flex-row lg:gap-x-4"
-            >
-              {[
-                {
-                  name: 'from_name',
-                  type: 'text',
-                  placeholder: 'Nom / Entreprise',
-                  autoComplete: 'name',
-                },
-                {
-                  name: 'email',
-                  type: 'email',
-                  placeholder: 'johndoe@exemple.com',
-                  autoComplete: 'email',
-                },
-              ].map(({ name, type, placeholder, autoComplete }) => (
-                <input
-                  key={name}
-                  name={name}
-                  type={type}
-                  placeholder={placeholder}
-                  autoComplete={autoComplete}
-                  value={formData[name]}
-                  onChange={handleChange}
-                  className="min-w-0 flex-auto rounded-md bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-sky-500 sm:text-sm sm:leading-6"
-                />
-              ))}
-              <button
-                type="submit"
-                className="flex-none rounded-md bg-sky-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600"
-              >
-                S&apos;abonner
-              </button>
-            </form>
-
-            {message && (
-              <p
-                className={`mt-2 text-sm ${message.isSuccess ? 'text-sky-200' : 'text-orange-500'}`}
-              >
-                {message.text}
-              </p>
-            )}
+              message={message}
+            />
           </div>
 
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">

@@ -1,6 +1,24 @@
 # Change Log
 
-## [1.0.7] - 2025-02-06
+## [1.0.8] - 2025-02-05
+
+### **Improvements :**
+
+- **Newsletter Feature** :
+  - Extracted `NewsletterForm` into a reusable component under `src/component/form/`.
+  - Passed form fields as props to improve flexibility and reusability.
+  - Kept the `newsletterFields` mapping inside `Newsletter.jsx` for better control.
+  - Improved prop validation using `PropTypes`.
+  - Enhanced modularity while maintaining code clarity.
+
+### **Fixes :**
+
+- **Newsletter Feature** :
+  - Ensured form validation still works correctly after refactoring.
+  - Fixed potential edge cases where the form state might not reset properly.
+  - Improved accessibility and consistency in input handling.
+
+## [1.0.7] - 2025-02-05
 
 ### <u>Improvements :</u>
 

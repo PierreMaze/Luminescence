@@ -17,6 +17,11 @@
 
 ### <u>**Fixes :**</u>
 
+- **Event Card** :
+
+  - Fixed incorrect date formatting.
+  - Corrected price display to ensure accuracy.
+
 - **Newsletter Feature** :
   - Ensured form validation still works correctly after refactoring.
   - Fixed potential edge cases where the form state might not reset properly.

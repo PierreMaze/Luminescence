@@ -39,7 +39,7 @@ export default function CardEvent({ event }) {
             <HiMiniCalendarDays />
             <TbClockHour2Filled />
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-full">
             <p className="antialiased text-sm capitalize 2xl:text-xl text-blue-gray-900 mb-0.5 font-semibold">
               <time dateTime={event.date}>
                 {event.parsedDate
@@ -47,11 +47,11 @@ export default function CardEvent({ event }) {
                   : event.date}
               </time>
             </p>
-            <p className="mx-0 text-sm antialiased font-normal text-gray-700 2xl:text-md">
+            <p className=" text-sm antialiased font-normal text-gray-700 2xl:text-md">
               {event.author.schedules}
             </p>
           </div>
-          <div className="flex flex-row  align-items ml-16 md:ml-4 w-14">
+          <div className="flex flex-row text-nowrap align-items ml-2 md:ml-4 w-14">
             <p className="px-2 py-1 mx-0 lining-nums text-sm antialiased font-semibold border-none text-zinc-100 2xl:text-md rounded-xl ring-offset-sky-600 ring-2 bg-sky-600">
               {event.author.price}
             </p>

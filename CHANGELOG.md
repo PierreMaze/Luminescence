@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.0.6] - 2025-02-05
+
+### Added
+
+- Created `Newsletter.jsx` in `src/feature/emailjs`
+- Implemented a functional newsletter subscription form
+- Configured EmailJS templates and environment variables
+- Added required environment variables to `.env.sample`
+- Imported the newsletter feature into the `Footer`
+
 ## [1.0.5] - 2025-02-04
 
 ### Added

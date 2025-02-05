@@ -1,8 +1,29 @@
 # Change Log
 
+## [1.0.7] - 2025-02-06
+
+### <u>Improvements :</u>
+
+- **Newsletter Feature** :
+
+  - Renamed env variables to uppercase for better readability.
+  - Used useCallback to optimize handleChange and avoid unnecessary re-renders.
+  - Refactored form inputs using .map() for cleaner and more maintainable code.
+  - Improved form reset on successful submission.
+  - Enhanced code readability and consistency.
+
+### <u>Fixes :</u>
+
+- **Newsletter Feature** :
+
+  - Changed name to from_name to match EmailJS expectations.
+  - Improved error handling to provide better user feedback.
+
+#
+
 ## [1.0.6] - 2025-02-05
 
-### Added
+### <u>Added :</u>
 
 - **Newsletter Feature** :
 
@@ -13,27 +34,28 @@
   - Imported the newsletter feature into the `Footer`
 
 - **Footer Links Feature** :
+
   - Created `feature/social-network/` directory
   - Added `LinkFooter.jsx` component for social network links
   - Structured `layout/footer/` for better organization
 
-### Changed
+### <u>Changed :</u>
 
 - **Footer Links Feature** :
+
   - Updated `Footer.jsx` to use the new `LinkFooter.jsx` component
 
 #
 
 ## [1.0.5] - 2025-02-04
 
-### Added
+### <u>Added :</u>
 
 - Created reusable `Button`, `AnchorButton`, `IconButton`, `SubmitButton`, and `DisabledButton` components.
 - Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
 - Applied Tailwind's scroll-smooth class to the HTML element for smooth scrolling on anchor links.
 - Added support for accessibility features like `aria-label` and focus states.
 - Smooth accordion animation with CSS transitions.
-- Implemented **footer** with a completed form.
 - Added **underlines** for clickable lines to improve user interaction.
 
 - **FAQ section** :
@@ -48,7 +70,7 @@
   - An interactive Google Maps embed.
   - A button to redirect to Google Maps with an interactive icon.
 
-### Changed
+### <u>Changed :</u>
 
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
@@ -57,12 +79,6 @@
 - Replaced static visibility toggle with animated height transition
 - Enhanced user experience with fluid open/close motion
 
-- Fix iframe Google Maps display issue and improve interaction :
-
-  - Fixed Google Maps iframe not being interactive
-  - Adjusted iframe width to 100% for full-page responsiveness
-  - Improved button positioning over the map
-
 - Restructure FindUs component and organize files :
 
   - Moved `FindUs.jsx` to `components/components/`
@@ -70,20 +86,29 @@
   - Added `GoogleMaps.jsx` to handle the iframe separately
   - Improved project structure for better maintainability
 
-- Fix Footer :
+### <u> Fixes : </u>
+
+- Fix iframe Google Maps display issue and improve interaction :
+
+  - Fixed Google Maps iframe not being interactive
+  - Adjusted iframe width to 100% for full-page responsiveness
+  - Improved button positioning over the map
+
+- **Footer Layout** :
   - Improved footer layout using TailwindCSS for better structure and intuitiveness.
   - Enhanced overall user experience by making the footer more organized and readable.
+  - Implemented **footer** with a completed form.
 
 #
 
 ## [1.0.4] - 2025-02-03
 
-### Added
+### <u>Added :</u>
 
 - Added text truncation for the description in `CardEvent`
 - Added lazy loading to images and components with `Suspense`
 
-### Changed
+### <u>Changed :</u>
 
 - Replaced `div` elements with `section` tags in all sections
 - Updated image import to use <img> tag with lazy loading
@@ -94,7 +119,7 @@
 
 ## [1.0.3] - 2025-02-02
 
-### Fixed
+### <u> Fixes : </u>
 
 - Hero section styling:
 
@@ -122,7 +147,7 @@
 
 ## [1.0.2] - 2025-02-01
 
-### Added
+### <u>Added :</u>
 
 - Added Home page sections:
 
@@ -147,7 +172,7 @@
 
 ## [1.0.1] - 2025-01-31
 
-### Added
+### <u>Added :</u>
 
 - Added `components` and `layout` folders
 - Added `Header.jsx` file in the `layout` folder
@@ -156,9 +181,9 @@
 
 #
 
-## [0.1.0] - 2025-01-30
+## [1.0.0] - 2025-01-30
 
-### Added
+### <u>Added :</u>
 
 - Initial project setup
 - Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
@@ -166,6 +191,6 @@
 - Added and configured Prettier library
 - Defined services offered
 
-### Changed
+### <u>Changed :</u>
 
 - Set up the basic project structure

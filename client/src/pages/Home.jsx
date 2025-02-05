@@ -114,7 +114,7 @@ export default function Home() {
             alt="Logo Luminescence en blanc"
             className="mb-4 w-60 lg:w-72 2xl::w-96"
           />
-          <h1 className="text-4xl font-bold tracking-wider text-transparent font-kreon bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text xl:text-6xl 2xl:text-8xl lg:font-semibold">
+          <h1 className="text-4xl tracking-wider text-transparent font-kreon bg-gradient-to-r from-sky-500 via-sky-100 to-sky-50 bg-clip-text xl:text-6xl 2xl:text-8xl font-semibold">
             LUMINESCENCE
           </h1>
           <p className="text-base pt-4 font-medium tracking-wide text-sky-50 lg:text-lg xl:text-xl lg:font-medium">

@@ -2,7 +2,11 @@
 
 ## [1.0.8] - 2025-02-05
 
-### **Improvements :**
+### <u>**Improvements :**</u>
+
+- **Hero Section** :
+
+  - Updated title font weight from `font-bold` to `font-semibold` for better design consistency.
 
 - **Newsletter Feature** :
   - Extracted `NewsletterForm` into a reusable component under `src/component/form/`.
@@ -11,7 +15,7 @@
   - Improved prop validation using `PropTypes`.
   - Enhanced modularity while maintaining code clarity.
 
-### **Fixes :**
+### <u>**Fixes :**</u>
 
 - **Newsletter Feature** :
   - Ensured form validation still works correctly after refactoring.

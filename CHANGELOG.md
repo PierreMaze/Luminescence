@@ -2,7 +2,7 @@
 
 ## [1.0.6] - 2025-02-05
 
-### Added
+### Added :
 
 - **Newsletter Feature** :
 
@@ -18,7 +18,7 @@
   - Added `LinkFooter.jsx` component for social network links
   - Structured `layout/footer/` for better organization
 
-### Changed
+### Changed :
 
 - **Footer Links Feature** :
   
@@ -28,7 +28,7 @@
 
 ## [1.0.5] - 2025-02-04
 
-### Added
+### Added :
 
 - Created reusable `Button`, `AnchorButton`, `IconButton`, `SubmitButton`, and `DisabledButton` components.
 - Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
@@ -49,7 +49,7 @@
   - An interactive Google Maps embed.
   - A button to redirect to Google Maps with an interactive icon.
 
-### Changed
+### Changed :
 
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
@@ -65,7 +65,7 @@
   - Added `GoogleMaps.jsx` to handle the iframe separately
   - Improved project structure for better maintainability
 
-### Fixed
+### Fixed :
 
 - Fix iframe Google Maps display issue and improve interaction :
   - Fixed Google Maps iframe not being interactive
@@ -81,12 +81,12 @@
 
 ## [1.0.4] - 2025-02-03
 
-### Added
+### Added :
 
 - Added text truncation for the description in `CardEvent`
 - Added lazy loading to images and components with `Suspense`
 
-### Changed
+### Changed :
 
 - Replaced `div` elements with `section` tags in all sections
 - Updated image import to use <img> tag with lazy loading
@@ -97,7 +97,7 @@
 
 ## [1.0.3] - 2025-02-02
 
-### Fixed
+### Fixed :
 
 - Hero section styling:
 
@@ -125,7 +125,7 @@
 
 ## [1.0.2] - 2025-02-01
 
-### Added
+### Added :
 
 - Added Home page sections:
 
@@ -150,7 +150,7 @@
 
 ## [1.0.1] - 2025-01-31
 
-### Added
+### Added :
 
 - Added `components` and `layout` folders
 - Added `Header.jsx` file in the `layout` folder
@@ -161,7 +161,7 @@
 
 ## [1.0.0] - 2025-01-30
 
-### Added
+### Added :
 
 - Initial project setup
 - Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
@@ -169,6 +169,6 @@
 - Added and configured Prettier library
 - Defined services offered
 
-### Changed
+### Changed :
 
 - Set up the basic project structure

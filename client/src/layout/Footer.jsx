@@ -1,99 +1,16 @@
 import { MdLocalPhone, MdEmail } from 'react-icons/md';
-import {
-  IoLogoFacebook,
-  IoLogoInstagram,
-  IoLogoTiktok,
-  IoLogoLinkedin,
-  IoLogoYoutube,
-  IoLogoWhatsapp,
-} from 'react-icons/io5';
 
 import LogoLumi from '../assets/img/Lumi.svg';
 import Newsletter from '../features/emailjs/Newsletter.jsx';
+import LinkFooter from '../features/social-networks/LinkFooter';
 
 export const Footer = () => {
   return (
     <footer className="gap-3 text-center bg-zinc-950 text-neutral-50 lg:text-left">
       <div className="relative py-1 overflow-hidden z-10 bg-zinc-950 isolate sm:py-14 lg:py-10">
-        {/* <!-- Social network container --> */}
-        <div className="flex items-center justify-center p-6 2xl:mx-80 lg:ml-12 lg:justify-start ">
-          <div className="hidden mr-2 lg:block">
-            <span>Rejoignez-nous sur les réseaux sociaux : </span>
-          </div>
-          {/* <!-- Social network icons container --> */}
-          <div className="flex justify-center gap-4">
-            {/* <!-- Facebook icons container --> */}
-            <a
-              href="https://www.facebook.com/profile.php?id=61560269117702"
-              target="_blank"
-              rel="noreferrer"
-              title="Page Facebook"
-              alt="Page Facebook"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoFacebook />
-            </a>
-            {/* <!-- Instagram icons container --> */}
-            <a
-              href="https://www.instagram.com/luminescence333"
-              target="_blank"
-              rel="noreferrer"
-              title="Page Instagram"
-              alt="Page Instagram"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoInstagram />
-            </a>
-            {/* <!-- Tik Tok icons container --> */}
-            <a
-              href="https://www.tiktok.com/@luminescence.gujan?_t=8nIvyDlMPVR&_r=1"
-              target="_blank"
-              rel="noreferrer"
-              title="Page Tik Tok"
-              alt="Page Tik Tok"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoTiktok />
-            </a>
-            {/* <!-- Linkedin icons container --> */}
-            <a
-              href="https://www.linkedin.com/in/frederique-caignard-609a22159/"
-              target="_blank"
-              rel="noreferrer"
-              title="Page Linkedin"
-              alt="Page Linkedin"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoLinkedin />
-            </a>
-            {/* <!-- Youtuube icons container --> */}
-            <a
-              href=""
-              target="_blank"
-              rel="noreferrer"
-              title="Page Youtube"
-              alt="Page Youtube"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoYoutube />
-            </a>
-            {/* <!-- Whatsapp icons container --> */}
-            <a
-              href=""
-              target="_blank"
-              rel="noreferrer"
-              title="Notre groupe whatsapp"
-              alt="Notre groupe whatsapp"
-              className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
-            >
-              <IoLogoWhatsapp />
-            </a>
-          </div>
-        </div>
-
-        {/* <!--Newsletter section--> */}
+        <LinkFooter />
         <Newsletter />
-        {/* NavBar */}
+        {/* <!-- Logo section --> */}
         <section className="w-60 mx-auto mb-12 flex flex-col justify-center ">
           {/* <!-- Logo section --> */}
           <a

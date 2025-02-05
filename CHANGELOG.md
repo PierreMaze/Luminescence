@@ -4,11 +4,25 @@
 
 ### Added
 
-- Created `Newsletter.jsx` in `src/feature/emailjs`
-- Implemented a functional newsletter subscription form
-- Configured EmailJS templates and environment variables
-- Added required environment variables to `.env.sample`
-- Imported the newsletter feature into the `Footer`
+- **Newsletter Feature** :
+
+  - Created `Newsletter.jsx` in `src/feature/emailjs`
+  - Implemented a functional newsletter subscription form
+  - Configured EmailJS templates and environment variables
+  - Added required environment variables to `.env.sample`
+  - Imported the newsletter feature into the `Footer`
+
+- **Footer Links Feature** :
+  - Created `feature/social-network/` directory
+  - Added `LinkFooter.jsx` component for social network links
+  - Structured `layout/footer/` for better organization
+
+### Changed
+
+- **Footer Links Feature** :
+  - Updated `Footer.jsx` to use the new `LinkFooter.jsx` component
+
+#
 
 ## [1.0.5] - 2025-02-04
 

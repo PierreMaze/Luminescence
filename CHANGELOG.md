@@ -13,6 +13,7 @@
   - Imported the newsletter feature into the `Footer`
 
 - **Footer Links Feature** :
+  
   - Created `feature/social-network/` directory
   - Added `LinkFooter.jsx` component for social network links
   - Structured `layout/footer/` for better organization
@@ -33,7 +34,6 @@
 - Applied Tailwind's scroll-smooth class to the HTML element for smooth scrolling on anchor links.
 - Added support for accessibility features like `aria-label` and focus states.
 - Smooth accordion animation with CSS transitions.
-- Implemented **footer** with a completed form.
 - Added **underlines** for clickable lines to improve user interaction.
 
 - **FAQ section** :
@@ -57,12 +57,6 @@
 - Replaced static visibility toggle with animated height transition
 - Enhanced user experience with fluid open/close motion
 
-- Fix iframe Google Maps display issue and improve interaction :
-
-  - Fixed Google Maps iframe not being interactive
-  - Adjusted iframe width to 100% for full-page responsiveness
-  - Improved button positioning over the map
-
 - Restructure FindUs component and organize files :
 
   - Moved `FindUs.jsx` to `components/components/`
@@ -70,9 +64,17 @@
   - Added `GoogleMaps.jsx` to handle the iframe separately
   - Improved project structure for better maintainability
 
-- Fix Footer :
+### Fixed
+
+- Fix iframe Google Maps display issue and improve interaction :
+  - Fixed Google Maps iframe not being interactive
+  - Adjusted iframe width to 100% for full-page responsiveness
+  - Improved button positioning over the map
+
+- **Footer Layout** :
   - Improved footer layout using TailwindCSS for better structure and intuitiveness.
   - Enhanced overall user experience by making the footer more organized and readable.
+  - Implemented **footer** with a completed form.
 
 #
 

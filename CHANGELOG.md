@@ -21,6 +21,7 @@
 ### Changed
 
 - **Footer Links Feature** :
+  
   - Updated `Footer.jsx` to use the new `LinkFooter.jsx` component
 
 #

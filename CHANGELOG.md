@@ -1,8 +1,148 @@
 # Change Log
 
+## [1.0.9] - 2025-02-06
+
+### <u>Changed :</u>
+
+- Updated import paths in all files of the `barlounge` project by adding "../" to correct relative paths.
+
+### <u>Improvements :</u>
+
+- **Home Page Structure**:
+
+  - Created new `/pages/home/` directory for better organization
+  - Created dedicated `/home/components/` directory for Home-specific components
+  - Moved `CardEvent.jsx` into `/home/components/`
+  - Implemented lazy loading for CardEvent component
+
+- **Code Organization**:
+
+  - Improved component isolation and reusability
+  - Enhanced project structure consistency with BarLounge page
+  - Better separation of concerns between page and components
+
+### <u>Fixes :</u>
+
+- **Code Cleanup**:
+
+  - Updated import paths for relocated components
+  - Ensured proper lazy loading implementation
+  - Maintained consistent project structure
+
+#
+
+## [1.0.8] - 2025-02-06
+
+### <u>Added :</u>
+
+- **BarLounge Page Creation**:
+
+  - Implemented the `BarLounge` page with a structured layout
+  - Added a **hero section** with background image and introductory text
+  - Ensured a **responsive design** for better adaptability across devices
+
+- **New BarLounge Components**:
+  - Created `LinkList` Component for dynamic navigation links
+  - Created `StatsList` Component to display bar statistics
+  - Created `CallButton` Component for quick direct calls
+  - Created `BarImage` Component for bar-related images
+  - Created `InfoList` Component for bar information structure
+  - Created `DrinkMenu` Component with lazy-loaded assets
+
+### <u>Improvements :</u>
+
+- **Component Structure & Organization**:
+
+  - Created new `/components/card/` directory and moved `CardEvent.jsx`
+  - Created new `/components/button/` directory for `Button.jsx` and `AnchorButton.jsx`
+  - Deleted three unused button components
+  - Improved component reusability by lifting state where necessary
+
+- **Form Handling**:
+
+  - Moved `msg` state to parent component
+  - Enhanced state management and reusability
+
+- **Performance & Optimization**:
+
+  - Implemented **lazy-loading** for images
+  - Reduced redundant code through refactoring
+  - Improved component structure for better maintainability
+
+- **Footer Social Links**:
+
+  - Refactored using array and `.map()` to remove duplication
+  - Moved static data outside component
+  - Centralized social links configuration
+
+- **Google Maps Integration**:
+
+  - Streamlined button implementation within Google Maps component
+
+- **SEO & Accessibility**:
+  - Added meaningful `alt` attributes to images
+  - Improved color contrast for readability
+  - Added `aria-label` to social links
+  - Removed redundant `alt` attributes from `<a>` elements
+
+### <u>Fixes :</u>
+
+- **Code Cleanup & Optimization**:
+
+  - Removed unnecessary imports
+  - Fixed minor layout shifts
+  - Ensured proper message rendering after form submission
+  - Optimized re-renders
+  - Updated import paths
+  - Improved overall code structure
+
+- **UI/UX Improvements**:
+  - Adjusted text sizes and spacing
+  - Enhanced hover effects for interactive elements
+  - Ensured consistent hover effect across icons
+  - Ensured all links open correctly with proper feedback
+
+## [1.0.7] - 2025-02-05
+
+### <u>Improvements :</u>
+
+- **Hero Section** :
+
+  - Updated title font weight from `font-bold` to `font-semibold` for better design consistency.
+
+- **Newsletter Feature** :
+
+  - Renamed env variables to uppercase for better readability.
+  - Used useCallback to optimize handleChange and avoid unnecessary re-renders.
+  - Refactored form inputs using .map() for cleaner and more maintainable code.
+  - Improved form reset on successful submission.
+  - Enhanced code readability and consistency.
+  - Extracted `NewsletterForm` into a reusable component under `src/component/form/`.
+  - Passed form fields as props to improve flexibility and reusability.
+  - Kept the `newsletterFields` mapping inside `Newsletter.jsx` for better control.
+  - Improved prop validation using `PropTypes`.
+  - Enhanced modularity while maintaining code clarity.
+
+### <u>Fixes :</u>
+
+- **Newsletter Feature** :
+
+  - Changed name to from_name to match EmailJS expectations.
+  - Improved error handling to provide better user feedback.
+  - Ensured form validation still works correctly after refactoring.
+  - Fixed potential edge cases where the form state might not reset properly.
+  - Improved accessibility and consistency in input handling.
+
+- **Event Card** :
+
+  - Fixed incorrect date formatting.
+  - Corrected price display to ensure accuracy.
+
+#
+
 ## [1.0.6] - 2025-02-05
 
-### Added :
+### <u>Added :</u>
 
 - **Newsletter Feature** :
 
@@ -13,22 +153,22 @@
   - Imported the newsletter feature into the `Footer`
 
 - **Footer Links Feature** :
-  
+
   - Created `feature/social-network/` directory
   - Added `LinkFooter.jsx` component for social network links
   - Structured `layout/footer/` for better organization
 
-### Changed :
+### <u>Changed :</u>
 
 - **Footer Links Feature** :
-  
+
   - Updated `Footer.jsx` to use the new `LinkFooter.jsx` component
 
 #
 
 ## [1.0.5] - 2025-02-04
 
-### Added :
+### <u>Added :</u>
 
 - Created reusable `Button`, `AnchorButton`, `IconButton`, `SubmitButton`, and `DisabledButton` components.
 - Applied TailwindCSS for styling, including hover, focus, and active states for improved interactivity.
@@ -49,7 +189,7 @@
   - An interactive Google Maps embed.
   - A button to redirect to Google Maps with an interactive icon.
 
-### Changed :
+### <u>Changed :</u>
 
 - Updated button components to support customizable styles through the `className` prop
 - Updated the font size of the `event date` on the `event card` for better readability and consistency with design.
@@ -65,9 +205,10 @@
   - Added `GoogleMaps.jsx` to handle the iframe separately
   - Improved project structure for better maintainability
 
-### Fixed :
+### <u> Fixes : </u>
 
 - Fix iframe Google Maps display issue and improve interaction :
+
   - Fixed Google Maps iframe not being interactive
   - Adjusted iframe width to 100% for full-page responsiveness
   - Improved button positioning over the map
@@ -81,12 +222,12 @@
 
 ## [1.0.4] - 2025-02-03
 
-### Added :
+### <u>Added :</u>
 
 - Added text truncation for the description in `CardEvent`
 - Added lazy loading to images and components with `Suspense`
 
-### Changed :
+### <u>Changed :</u>
 
 - Replaced `div` elements with `section` tags in all sections
 - Updated image import to use <img> tag with lazy loading
@@ -97,7 +238,7 @@
 
 ## [1.0.3] - 2025-02-02
 
-### Fixed :
+### <u> Fixes : </u>
 
 - Hero section styling:
 
@@ -125,7 +266,7 @@
 
 ## [1.0.2] - 2025-02-01
 
-### Added :
+### <u>Added :</u>
 
 - Added Home page sections:
 
@@ -150,7 +291,7 @@
 
 ## [1.0.1] - 2025-01-31
 
-### Added :
+### <u>Added :</u>
 
 - Added `components` and `layout` folders
 - Added `Header.jsx` file in the `layout` folder
@@ -161,7 +302,7 @@
 
 ## [1.0.0] - 2025-01-30
 
-### Added :
+### <u>Added :</u>
 
 - Initial project setup
 - Added file structure for Markdown files (Readme, Installation, Changelog, TodoList, etc.)
@@ -169,6 +310,6 @@
 - Added and configured Prettier library
 - Defined services offered
 
-### Changed :
+### <u>Changed :</u>
 
 - Set up the basic project structure

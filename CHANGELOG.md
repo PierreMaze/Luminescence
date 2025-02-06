@@ -4,6 +4,11 @@
 
 ### <u>Improvements :</u>
 
+- **Component Structure** :
+
+  - Created a new `/components/card/` directory for better organization.
+  - Moved `CardEvent.jsx` into the `/components/card/` folder.
+
 - **Google Maps Integration** :
 
   - Removed the separate `Button` component and directly placed the button inside the Google Maps implementation.
@@ -30,6 +35,8 @@
 
   - Improved component structure for better maintainability.
   - Removed redundant button components to streamline the project.
+  - Improved project structure for better maintainability.
+  - Ensured import paths are updated accordingly.
 
 - **General Optimization** :
   - Ensured consistent hover effect across all icons.

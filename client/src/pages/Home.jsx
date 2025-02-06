@@ -24,6 +24,10 @@ import {
 
 import { AnchorButton } from '../components/button/AnchorButton.jsx';
 
+// Components Lazy Loading.
+const CardEvent = lazy(() => import('../components/card/CardEvent.jsx'));
+const Faq = lazy(() => import('../features/accordeon/Faq.jsx'));
+
 // Fonction pour normaliser les dates (conversion des mois français)
 const monthMap = {
   Janv: 'Jan',
@@ -52,10 +56,6 @@ const normalizeDate = (dateStr) => {
     new Date()
   );
 };
-
-// Components Lazy Loading.
-const CardEvent = lazy(() => import('../components/CardEvent.jsx'));
-const Faq = lazy(() => import('../features/accordeon/Faq.jsx'));
 
 export default function Home() {
   const [openIndex, setOpenIndex] = useState(null);

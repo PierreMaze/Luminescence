@@ -1,9 +1,9 @@
 // Logo
-import LogoLumiWhite from '../assets/img/LumiWhite.svg';
+import LogoLumiWhite from '../../assets/img/LumiWhite.svg';
 
 // Pictures
-import BgHero from '../assets/img/LocalWelcome.webp';
-import Rooftop from '../assets/img/Rooftop.webp';
+import BgHero from '../../assets/img/LocalWelcome.webp';
+import Rooftop from '../../assets/img/Rooftop.webp';
 
 // Libs React Icons and date-fns
 import { HiArrowRightCircle } from 'react-icons/hi2';
@@ -20,13 +20,13 @@ import {
   servicesOffered,
   events,
   faqs,
-} from '../data/Home.data.jsx';
+} from '../../data/Home.data.jsx';
 
-import { AnchorButton } from '../components/button/AnchorButton.jsx';
+import { AnchorButton } from '../../components/button/AnchorButton.jsx';
 
 // Components Lazy Loading.
-const CardEvent = lazy(() => import('../components/card/CardEvent.jsx'));
-const Faq = lazy(() => import('../features/accordeon/Faq.jsx'));
+const CardEvent = lazy(() => import('./components/CardEvent.jsx'));
+const Faq = lazy(() => import('../../features/accordeon/Faq.jsx'));
 
 // Fonction pour normaliser les dates (conversion des mois français)
 const monthMap = {

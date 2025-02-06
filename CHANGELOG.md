@@ -1,5 +1,32 @@
 # Change Log
 
+## [1.0.9] - 2025-02-06
+
+### Improvements:
+
+- **Home Page Structure**:
+
+  - Created new `/pages/home/` directory for better organization
+  - Created dedicated `/home/components/` directory for Home-specific components
+  - Moved `CardEvent.jsx` into `/home/components/`
+  - Implemented lazy loading for CardEvent component
+
+- **Code Organization**:
+
+  - Improved component isolation and reusability
+  - Enhanced project structure consistency with BarLounge page
+  - Better separation of concerns between page and components
+
+### Fixes:
+
+- **Code Cleanup**:
+
+  - Updated import paths for relocated components
+  - Ensured proper lazy loading implementation
+  - Maintained consistent project structure
+
+#
+
 ## [1.0.8] - 2025-02-06
 
 ### Added:

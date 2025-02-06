@@ -2,57 +2,74 @@
 
 ## [1.0.8] - 2025-02-06
 
-### <u>Improvements :</u>
+### Added:
 
-- **Form Handling** :
+- **BarLounge Page Creation**:
 
-  - Moved the `msgg` state outside of the form and into the parent component for better state management.
-  - Improved component structure by lifting state up to enhance reusability and maintainability.
+  - Implemented the `BarLounge` page with a structured layout
+  - Added a **hero section** with background image and introductory text
+  - Ensured a **responsive design** for better adaptability across devices
 
-- **Component Structure** :
+- **New BarLounge Components**:
+  - Created `LinkList` Component for dynamic navigation links
+  - Created `StatsList` Component to display bar statistics
+  - Created `CallButton` Component for quick direct calls
+  - Created `BarImage` Component for bar-related images
+  - Created `InfoList` Component for bar information structure
+  - Created `DrinkMenu` Component with lazy-loaded assets
 
-  - Created a new `/components/card/` directory for better organization.
-  - Moved `CardEvent.jsx` into the `/components/card/` folder.
+### Improvements:
 
-- **Google Maps Integration** :
+- **Component Structure & Organization**:
 
-  - Removed the separate `Button` component and directly placed the button inside the Google Maps implementation.
+  - Created new `/components/card/` directory and moved `CardEvent.jsx`
+  - Created new `/components/button/` directory for `Button.jsx` and `AnchorButton.jsx`
+  - Deleted three unused button components
+  - Improved component reusability by lifting state where necessary
 
-- **Component Structure** :
+- **Form Handling**:
 
-  - Created a new `/components/button/` directory for better organization.
-  - Moved `Button.jsx` and `AnchorButton.jsx` into the `/components/button/` folder.
-  - Deleted three unused button components to clean up the codebase.
+  - Moved `msg` state to parent component
+  - Enhanced state management and reusability
 
-- **Footer Social Links** :
+- **Performance & Optimization**:
 
-  - Refactored component by using an array and `.map()` to remove code duplication.
-  - Moved static data outside the component to optimize performance and prevent unnecessary re-creations.
-  - Improved readability and maintainability by centralizing social links configuration.
+  - Implemented **lazy-loading** for images
+  - Reduced redundant code through refactoring
+  - Improved component structure for better maintainability
 
-- **Accessibility** :
-  - Added `aria-label` to social links for better screen reader support.
-  - Removed redundant `alt` attributes from `<a>` elements.
+- **Footer Social Links**:
 
-### <u>Fixes :</u>
+  - Refactored using array and `.map()` to remove duplication
+  - Moved static data outside component
+  - Centralized social links configuration
 
-- **State Management** :
+- **Google Maps Integration**:
 
-  - Ensured proper message rendering after form submission.
-  - Optimized re-renders by managing state at the correct level.
+  - Streamlined button implementation within Google Maps component
 
-- **Code Cleanup** :
+- **SEO & Accessibility**:
+  - Added meaningful `alt` attributes to images
+  - Improved color contrast for readability
+  - Added `aria-label` to social links
+  - Removed redundant `alt` attributes from `<a>` elements
 
-  - Improved component structure for better maintainability.
-  - Removed redundant button components to streamline the project.
-  - Improved project structure for better maintainability.
-  - Ensured import paths are updated accordingly.
+### Fixes:
 
-- **General Optimization** :
-  - Ensured consistent hover effect across all icons.
-  - Improved overall structure for cleaner and more modular code.
+- **Code Cleanup & Optimization**:
 
-#
+  - Removed unnecessary imports
+  - Fixed minor layout shifts
+  - Ensured proper message rendering after form submission
+  - Optimized re-renders
+  - Updated import paths
+  - Improved overall code structure
+
+- **UI/UX Improvements**:
+  - Adjusted text sizes and spacing
+  - Enhanced hover effects for interactive elements
+  - Ensured consistent hover effect across icons
+  - Ensured all links open correctly with proper feedback
 
 ## [1.0.7] - 2025-02-05
 

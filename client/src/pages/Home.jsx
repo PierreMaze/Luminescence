@@ -22,7 +22,7 @@ import {
   faqs,
 } from '../data/Home.data.jsx';
 
-import { AnchorButton } from '../components/Button.jsx';
+import { AnchorButton } from '../components/button/AnchorButton.jsx';
 
 // Fonction pour normaliser les dates (conversion des mois français)
 const monthMap = {

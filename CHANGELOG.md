@@ -4,6 +4,16 @@
 
 ### <u>Improvements :</u>
 
+- **Google Maps Integration** :
+
+  - Removed the separate `Button` component and directly placed the button inside the Google Maps implementation.
+
+- **Component Structure** :
+
+  - Created a new `/components/button/` directory for better organization.
+  - Moved `Button.jsx` and `AnchorButton.jsx` into the `/components/button/` folder.
+  - Deleted three unused button components to clean up the codebase.
+
 - **Footer Social Links** :
 
   - Refactored component by using an array and `.map()` to remove code duplication.
@@ -15,6 +25,11 @@
   - Removed redundant `alt` attributes from `<a>` elements.
 
 ### <u>Fixes :</u>
+
+- **Code Cleanup** :
+
+  - Improved component structure for better maintainability.
+  - Removed redundant button components to streamline the project.
 
 - **General Optimization** :
   - Ensured consistent hover effect across all icons.

@@ -5,8 +5,8 @@ export default function Faq({ question, answer, isOpen, onClick }) {
     <div className="flex flex-col">
       <div
         className={`faq-accordion py-4 md:my-1 lg:mx-10 rounded-lg border-none
-        hover:border-transparent hover:ring hover:ring-2 hover:ring-sky-200 hover:bg-sky-100 
-        ${isOpen ? 'ring ring-2 ring-sky-200 bg-sky-100' : ''} duration-300 ease-in-out delay-100`}
+        hover:border-transparent hover:ring-2 hover:ring-sky-200 hover:bg-sky-100 
+        ${isOpen ? ' ring-2 ring-sky-200 bg-sky-100' : ''} duration-300 ease-in-out delay-100`}
       >
         <button
           className="flex items-center justify-between w-full px-6 text-left"

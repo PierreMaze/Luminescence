@@ -1,6 +1,7 @@
 import { MdLocalPhone, MdEmail } from 'react-icons/md';
 
 import LogoLumi from '../assets/img/Lumi.svg';
+
 import Newsletter from '../features/emailjs/Newsletter.jsx';
 import LinkFooter from '../features/social-networks/LinkFooter';
 

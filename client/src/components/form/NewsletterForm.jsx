@@ -5,7 +5,6 @@ export default function NewsletterForm({
   formData,
   onChange,
   onSubmit,
-  message,
 }) {
   return (
     <form
@@ -30,13 +29,6 @@ export default function NewsletterForm({
       >
         S&apos;abonner
       </button>
-      {message && (
-        <p
-          className={`mt-2 text-sm ${message.isSuccess ? 'text-sky-200' : 'text-orange-500'}`}
-        >
-          {message.text}
-        </p>
-      )}
     </form>
   );
 }

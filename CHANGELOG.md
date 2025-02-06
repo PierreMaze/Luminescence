@@ -4,6 +4,11 @@
 
 ### <u>Improvements :</u>
 
+- **Form Handling** :
+
+  - Moved the `msgg` state outside of the form and into the parent component for better state management.
+  - Improved component structure by lifting state up to enhance reusability and maintainability.
+
 - **Component Structure** :
 
   - Created a new `/components/card/` directory for better organization.
@@ -30,6 +35,11 @@
   - Removed redundant `alt` attributes from `<a>` elements.
 
 ### <u>Fixes :</u>
+
+- **State Management** :
+
+  - Ensured proper message rendering after form submission.
+  - Optimized re-renders by managing state at the correct level.
 
 - **Code Cleanup** :
 

@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { HiMiniCurrencyEuro, HiClock } from 'react-icons/hi2';
 import { TbGlassFullFilled } from 'react-icons/tb';
 
@@ -55,14 +54,3 @@ export default function InfoList() {
     </ul>
   );
 }
-
-InfoList.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
-      icon: PropTypes.elementType.isRequired,
-      title: PropTypes.string.isRequired,
-      description: PropTypes.string.isRequired,
-      link: PropTypes.shape({ text: PropTypes.string, href: PropTypes.string }),
-    })
-  ).isRequired,
-};

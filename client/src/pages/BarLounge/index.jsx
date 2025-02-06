@@ -17,12 +17,12 @@ export default function BarLounge() {
           alt="Picture Background Bar-lounge"
           src={BgBarlounge}
           loading="lazy"
-          className="absolute inset-0 object-cover w-full h-full"
+          className="absolute z-0 inset-0 object-cover w-full h-full"
         />
-        <div className="px-6 pt-40 mx-auto max-w-7xl lg:px-12">
-          <h2 className="text-4xl font-bold tracking-tight text-sky-50 sm:text-6xl">
+        <div className="relative px-6 pt-35 md:pt-20 z-10 mx-auto max-w-7xl lg:px-12">
+          <h1 className="text-4xl font-bold tracking-tight text-sky-50 sm:text-6xl">
             Découvrez notre Bar
-          </h2>
+          </h1>
           <p className="my-6 text-lg text-zinc-300">
             Que ce soit pour un apéritif décontracté ou une soirée festive,
             laissez-vous séduire par notre sélection de boissons.
@@ -31,6 +31,7 @@ export default function BarLounge() {
           <StatsList />
         </div>
       </section>
+
       <section className="relative mx-6 md:mx-0 py-24 overflow-hidden isolate sm:py-32 lg:overflow-visible lg:pl-12">
         <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
           <div className="lg:pr-4" id="a-propos-bar-lounge">
@@ -84,13 +85,14 @@ export default function BarLounge() {
             href="tel:+33 6 46 84 93 52"
             target="_blank"
             aria-label="Appeler l'entreprise."
-            className="flex flex-row  justify-center items-center duration-300 ease-in-out delay-100 leading-7 py-2.5 pl-6 lg:py-3 2xl:px-4 2xl:py-3.5 text-sm lg:text-base font-medium text-white bg-sky-600 hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-sky-300  rounded-md text-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800 w-full md:w-44"
+            className="flex flex-row   md:mt-0 justify-center items-center -mt-8 w-full md:w-52 text-center py-2.5 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
           >
             Nous appeler
             <IoCall className="size-4 ml-4 text-sky-50" />
           </a>
         </div>
       </section>
+
       <section className="mx-6 lg:mx-12">
         <div className="lg:max-w-xl" id="la-carte-des-boissons">
           <p className="text-base font-semibold text-sky-600">La Carte des</p>

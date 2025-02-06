@@ -1,5 +1,5 @@
-import TarifsBoissonsP1 from '../../assets/img/TarifsBoissonsP1.webp';
-import TarifsBoissonsP2 from '../../assets/img/TarifsBoissonsP2.webp';
+import TarifsBoissonsP1 from '../../../assets/img/TarifsBoissonsP1.webp';
+import TarifsBoissonsP2 from '../../../assets/img/TarifsBoissonsP2.webp';
 
 export default function DrinkMenu() {
   return (

@@ -2,7 +2,11 @@
 
 ## [1.0.9] - 2025-02-06
 
-### Improvements:
+### <u>Changed :</u>
+
+- Updated import paths in all files of the `barlounge` project by adding "../" to correct relative paths.
+
+### <u>Improvements :</u>
 
 - **Home Page Structure**:
 
@@ -17,7 +21,7 @@
   - Enhanced project structure consistency with BarLounge page
   - Better separation of concerns between page and components
 
-### Fixes:
+### <u>Fixes :</u>
 
 - **Code Cleanup**:
 
@@ -29,7 +33,7 @@
 
 ## [1.0.8] - 2025-02-06
 
-### Added:
+### <u>Added :</u>
 
 - **BarLounge Page Creation**:
 
@@ -45,7 +49,7 @@
   - Created `InfoList` Component for bar information structure
   - Created `DrinkMenu` Component with lazy-loaded assets
 
-### Improvements:
+### <u>Improvements :</u>
 
 - **Component Structure & Organization**:
 
@@ -81,7 +85,7 @@
   - Added `aria-label` to social links
   - Removed redundant `alt` attributes from `<a>` elements
 
-### Fixes:
+### <u>Fixes :</u>
 
 - **Code Cleanup & Optimization**:
 

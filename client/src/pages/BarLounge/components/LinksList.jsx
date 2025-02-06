@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export default function LinkList() {
   const links = [
     { name: 'A propos du bar-lounge', href: '#a-propos-bar-lounge' },
@@ -20,12 +18,3 @@ export default function LinkList() {
     </div>
   );
 }
-
-LinkList.propTypes = {
-  links: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      href: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};

@@ -1,5 +1,3 @@
-import PropTypes from 'prop-types';
-
 export default function StatsList() {
   const stats = [
     { name: 'Superficie totale', value: '150m²' },
@@ -32,13 +30,3 @@ export default function StatsList() {
     </dl>
   );
 }
-
-StatsList.propTypes = {
-  stats: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.oneOfType([PropTypes.string, PropTypes.element])
-        .isRequired,
-      value: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-};

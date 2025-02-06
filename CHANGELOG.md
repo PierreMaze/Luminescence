@@ -1,35 +1,34 @@
 # Change Log
 
-## [1.0.8] - 2025-02-05
+## [1.0.8] - 2025-02-06
 
-### <u>**Improvements :**</u>
+### <u>Improvements :</u>
 
-- **Hero Section** :
+- **Footer Social Links** :
 
-  - Updated title font weight from `font-bold` to `font-semibold` for better design consistency.
+  - Refactored component by using an array and `.map()` to remove code duplication.
+  - Moved static data outside the component to optimize performance and prevent unnecessary re-creations.
+  - Improved readability and maintainability by centralizing social links configuration.
 
-- **Newsletter Feature** :
-  - Extracted `NewsletterForm` into a reusable component under `src/component/form/`.
-  - Passed form fields as props to improve flexibility and reusability.
-  - Kept the `newsletterFields` mapping inside `Newsletter.jsx` for better control.
-  - Improved prop validation using `PropTypes`.
-  - Enhanced modularity while maintaining code clarity.
+- **Accessibility** :
+  - Added `aria-label` to social links for better screen reader support.
+  - Removed redundant `alt` attributes from `<a>` elements.
 
-### <u>**Fixes :**</u>
+### <u>Fixes :</u>
 
-- **Event Card** :
+- **General Optimization** :
+  - Ensured consistent hover effect across all icons.
+  - Improved overall structure for cleaner and more modular code.
 
-  - Fixed incorrect date formatting.
-  - Corrected price display to ensure accuracy.
-
-- **Newsletter Feature** :
-  - Ensured form validation still works correctly after refactoring.
-  - Fixed potential edge cases where the form state might not reset properly.
-  - Improved accessibility and consistency in input handling.
+#
 
 ## [1.0.7] - 2025-02-05
 
 ### <u>Improvements :</u>
+
+- **Hero Section** :
+
+  - Updated title font weight from `font-bold` to `font-semibold` for better design consistency.
 
 - **Newsletter Feature** :
 
@@ -38,6 +37,11 @@
   - Refactored form inputs using .map() for cleaner and more maintainable code.
   - Improved form reset on successful submission.
   - Enhanced code readability and consistency.
+  - Extracted `NewsletterForm` into a reusable component under `src/component/form/`.
+  - Passed form fields as props to improve flexibility and reusability.
+  - Kept the `newsletterFields` mapping inside `Newsletter.jsx` for better control.
+  - Improved prop validation using `PropTypes`.
+  - Enhanced modularity while maintaining code clarity.
 
 ### <u>Fixes :</u>
 
@@ -45,6 +49,14 @@
 
   - Changed name to from_name to match EmailJS expectations.
   - Improved error handling to provide better user feedback.
+  - Ensured form validation still works correctly after refactoring.
+  - Fixed potential edge cases where the form state might not reset properly.
+  - Improved accessibility and consistency in input handling.
+
+- **Event Card** :
+
+  - Fixed incorrect date formatting.
+  - Corrected price display to ensure accuracy.
 
 #
 

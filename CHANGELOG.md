@@ -1,5 +1,32 @@
 # Change Log
 
+# Change Log
+
+## [1.0.10] - 2025-02-07
+
+### <u>Changed :</u>
+
+- **Home Page Data Structure**:
+  - Refactored and reorganized data files for better structure and clarity
+  - Moved the following data into their respective files under `data/`:
+    - `bar-details`
+    - `services-offered`
+    - `event-images`
+    - `events-details`
+    - `faq-section`
+
+### <u>Improvements :</u>
+
+- **Code Organization**:
+  - Improved maintainability by isolating data specific to the Home page into dedicated files
+  - Enhanced data management for easy updates and better scalability
+
+### <u>Fixes :</u>
+
+- **Data Management**:
+  - Removed redundant or outdated data imports
+  - Corrected paths for consistent data retrieval
+
 ## [1.0.9] - 2025-02-06
 
 ### <u>Changed :</u>

@@ -10,7 +10,7 @@ export default function LinkList() {
         <a
           key={index}
           href={href}
-          className="duration-300 ease-linear delay-75 underline lg:underline-none hover:underline hover:text-sky-200 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-200"
+          className="duration-300 ease-linear delay-75 underline md:no-underline hover:underline hover:text-sky-200 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-200"
         >
           {name} <span aria-hidden="true">&rarr;</span>
         </a>

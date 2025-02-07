@@ -15,12 +15,10 @@ import { fr } from 'date-fns/locale';
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 
 // Data
-import {
-  detailsBar,
-  servicesOffered,
-  events,
-  faqs,
-} from '../../data/Home.data.jsx';
+import detailsBar from './data/services-section/BarDetails.jsx';
+import servicesOffered from './data/services-section/ServicesOffered.jsx';
+import events from './data/events-section/EventsDetails.jsx';
+import faqs from './data/FaqSection.jsx';
 
 import { AnchorButton } from '../../components/button/AnchorButton.jsx';
 

@@ -2,6 +2,14 @@
 
 ## [1.0.12] - 2025-02-10
 
+### <u>Refactored :</u>
+
+- **Optimized `OrganizeEvent` component**:
+  - Replaced repetitive list items with a structured array to improve maintainability.
+  - Extracted icons and texts into an iterable array for cleaner JSX.
+  - Improved readability by reducing redundant class names and structuring the code more effectively.
+  - Added an `alt` attribute to the event image for better accessibility.
+
 ### <u>Changed :</u>
 
 - **ImageCarousel Component**:
@@ -10,6 +18,11 @@
   - Updated `RentalLocalSection.jsx` and `Cabinet.jsx` to pass the correct images as props.
 
 ### <u>Improvements :</u>
+
+- **Code Organization**:
+
+  - Increased modularity for future scalability.
+  - Enhanced maintainability by making the feature list easier to modify.
 
 - **Component Reusability**:
   - `ImageCarousel` can now be used across multiple sections without modification.

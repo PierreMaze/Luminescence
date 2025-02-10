@@ -26,7 +26,7 @@ export default function OrganizeEvent() {
           </div>
         </div>
         {/* <!-- Picture section --> */}
-        <div className="py-0 lg:px-8 lg:p-12 lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+        <div className="py-0 lg:px-8 lg:p-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <img
             className=" size-80 lg:w-[28rem] lg:h-[28rem] flex-shrink-0 object-cover xl:w-[30rem] xl:h-[30rem] rounded-full 2xl:w-[40rem] 2xl:h-[40rem]"
             src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
@@ -43,47 +43,40 @@ export default function OrganizeEvent() {
                 besoin pour votre événement.
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <li className="flex gap-x-3">
-                  <RiStarSmileFill
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Un espace sur-mesure pour chaque occasion.
-                    </strong>{' '}
-                    Que vous ayez besoin d&apos;une ambiance intime ou d&apos;un
-                    lieu grandiose, nous avons l&apos;espace idéal pour vous.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <PiRocketLaunchFill
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Équipements de pointe pour un impact maximal.
-                    </strong>{' '}
-                    Nos installations sont dotées d&apos;une connexion Wi-Fi, et
-                    de tout le matériel nécessaire pour des présentations /
-                    projections.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <HiBriefcase
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Un service personnalisé, modulable selon vos désirs.
-                    </strong>{' '}
-                    De la planification initiale à la coordination le jour J,
-                    nous nous occupons de tout : décoration, bar & grignotages,
-                    support technique, et plus encore.
-                  </span>
-                </li>
+                {[
+                  {
+                    icon: (
+                      <RiStarSmileFill className="w-5 h-5 text-sky-600 flex-none mt-1" />
+                    ),
+                    title: 'Un espace sur-mesure pour chaque occasion.',
+                    text: "Que vous ayez besoin d'une ambiance intime ou d'un lieu grandiose, nous avons l'espace idéal pour vous.",
+                  },
+                  {
+                    icon: (
+                      <PiRocketLaunchFill className="w-5 h-5 text-sky-600 flex-none mt-1" />
+                    ),
+                    title: 'Équipements de pointe pour un impact maximal.',
+                    text: "Nos installations sont dotées d'une connexion Wi-Fi et de tout le matériel nécessaire pour des présentations / projections.",
+                  },
+                  {
+                    icon: (
+                      <HiBriefcase className="w-5 h-5 text-sky-600 flex-none mt-1" />
+                    ),
+                    title:
+                      'Un service personnalisé, modulable selon vos désirs.',
+                    text: 'De la planification initiale à la coordination le jour J, nous nous occupons de tout : décoration, bar & grignotages, support technique, et plus encore.',
+                  },
+                ].map((item, index) => (
+                  <li key={index} className="flex gap-x-3">
+                    {item.icon}
+                    <span>
+                      <strong className="font-semibold text-gray-900">
+                        {item.title}
+                      </strong>{' '}
+                      {item.text}
+                    </span>
+                  </li>
+                ))}
               </ul>
               <p className="mt-8">
                 <span className="font-semibold">

@@ -1,6 +1,40 @@
 # Change Log
 
-# Change Log
+## [1.0.11] - 2025-02-10
+
+### <u>Added :</u>
+
+- Created the following new component files under `components/`:
+
+  - `RentalCabinetSection.jsx`
+  - `RentalContactSection.jsx`
+  - `RentalEventSection.jsx`
+  - `RentalHeader.jsx`
+  - `RentalLocalSection.jsx`
+  - `CarousselLocal.jsx`
+
+  ### <u>Changed :</u>
+
+- **Carousel component section Rental**:
+  Added propTypes for ArrowButton and ImageCarousel to improve type safety and prevent runtime errors.
+
+- **Rental Page Structure**:
+  - Refactored `Rental/index.jsx` by extracting sections into separate component files
+
+### <u>Improvements :</u>
+
+- **Code Organization**:
+  - Improved modularity by separating concerns into distinct components
+  - Enhanced maintainability by isolating sections for better readability and scalability
+
+### <u>Fixes :</u>
+
+- **Data Management**:
+  - Moved static image and data files under `data/` for better separation of concerns
+  - Created:
+    - `CabinetImages.jsx`
+    - `LocalImages.jsx`
+  - Ensured proper imports across the Rental page to avoid redundancy
 
 ## [1.0.10] - 2025-02-07
 

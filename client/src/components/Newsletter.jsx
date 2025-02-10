@@ -1,49 +1,36 @@
-import { useState, useCallback } from 'react';
+import { useState } from 'react';
 import { HiCalendarDays, HiArrowPath } from 'react-icons/hi2';
-import emailjs from '@emailjs/browser';
+import { sendEmail } from '../features/emailjs/EmailService.jsx';
 
-import NewsletterForm from '../../components/form/NewsletterForm.jsx';
+import NewsletterForm from './form/NewsletterForm.jsx';
 
 export default function Newsletter() {
-  const {
-    VITE_SERVICE_ID_EMAILJS,
-    VITE_TEMPLATE_ID_EMAILJS,
-    VITE_PUBLIC_KEY_EMAILJS,
-  } = import.meta.env;
+  const [formData, setFormData] = useState({
+    from_name: '',
+    email: '',
+    conditionsAccepted: false,
+  });
 
-  const [formData, setFormData] = useState({ from_name: '', email: '' });
   const [message, setMessage] = useState(null);
 
-  const handleChange = useCallback(
-    (e) => {
-      setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-      if (message) setMessage(null);
-    },
-    [message]
-  );
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (!formData.from_name || !formData.email) {
-      return setMessage({
-        text: 'Veuillez remplir tous les champs requis.',
-        isSuccess: false,
-      });
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-    try {
-      await emailjs.send(
-        VITE_SERVICE_ID_EMAILJS,
-        VITE_TEMPLATE_ID_EMAILJS,
-        formData,
-        VITE_PUBLIC_KEY_EMAILJS
-      );
-      setMessage({ text: 'Merci pour votre inscription !', isSuccess: true });
-      setFormData({ from_name: '', email: '' });
-    } catch {
-      setMessage({
-        text: "Une erreur s'est produite, veuillez réessayer plus tard...",
-        isSuccess: false,
+    const success = await sendEmail(formData, setMessage);
+
+    if (success) {
+      setFormData({
+        from_name: '',
+        email: '',
+        conditionsAccepted: false,
       });
     }
   };
@@ -93,6 +80,23 @@ export default function Newsletter() {
                 {message.text}
               </p>
             )}
+
+            <p className="pt-2 text-xs">
+              En soumettant ce formulaire, j&apos;accepte que Luminescence
+              collecte, traite et conserve mes données conformément à sa{' '}
+              <a
+                href="/politique-confidentialite"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-400 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
+              >
+                Politique de Confidentialité
+              </a>
+              .
+            </p>
+            <p className="text-xs mt-2 italic text-sky-50">
+              (Uniquement pour l&apos;envoi de la newsletter)
+            </p>
           </div>
 
           <dl className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:pt-2">

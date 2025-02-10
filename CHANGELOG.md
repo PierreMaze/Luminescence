@@ -1,5 +1,44 @@
 # Change Log
 
+## [1.0.13] - 2025-02-10
+
+### <u>Refactored :</u>
+
+- **Contact Form (`ContactRentalForm.jsx`)**:
+
+  - Extracted EmailJS logic into a separate file (`feature/emailjs/emailService.js`) for better maintainability.
+  - Improved readability and debugging by passing the email-sending function as a prop.
+  - Replaced repeated input fields with a mapped array structure for cleaner JSX.
+
+- **Newsletter Component**:
+  - Moved the newsletter form to `feature/emailjs/Newsletter.jsx`.
+  - Converted the newsletter logic into a reusable component.
+
+### <u>Changed :</u>
+
+- **General Form Improvements**:
+  - Added validation conditions to the newsletter form.
+  - Ensured better state handling for form submissions.
+
+### <u>Improvements :</u>
+
+- **Code Modularity**:
+
+  - Separated concerns by isolating logic into dedicated files.
+  - Improved future scalability by making components more reusable.
+
+- **Form UX Enhancements**:
+  - Ensured proper form resets after successful submissions.
+  - Improved error handling for failed submissions.
+
+### <u>Fixes :</u>
+
+- **Form Handling Issues**:
+  - Fixed issues with state management causing incorrect form resets.
+  - Ensured `ReCAPTCHA` validation is properly checked before sending emails.
+
+#
+
 ## [1.0.12] - 2025-02-10
 
 ### <u>Refactored :</u>

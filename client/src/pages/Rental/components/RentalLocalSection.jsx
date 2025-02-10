@@ -1,6 +1,24 @@
 import { HiPuzzlePiece } from 'react-icons/hi2';
 
-import CarousselLocal from './CarousselLocal.jsx';
+import ImageCarousel from '../../../components/ImageCarousel.jsx';
+
+import {
+  LocalPictureRentalCaroussel_1,
+  LocalPictureRentalCaroussel_2,
+  LocalPictureRentalCaroussel_3,
+  LocalPictureRentalCaroussel_4,
+  LocalPictureRentalCaroussel_5,
+  LocalPictureRentalCaroussel_6,
+} from '../data/LocalImages.jsx';
+
+const localImages = [
+  LocalPictureRentalCaroussel_1,
+  LocalPictureRentalCaroussel_2,
+  LocalPictureRentalCaroussel_3,
+  LocalPictureRentalCaroussel_4,
+  LocalPictureRentalCaroussel_5,
+  LocalPictureRentalCaroussel_6,
+];
 
 export default function RentalLocalSection() {
   return (
@@ -25,8 +43,9 @@ export default function RentalLocalSection() {
             </div>
           </div>
         </div>
-        <CarousselLocal />
-        {/* <!-- Body section --> */}
+
+        <ImageCarousel images={localImages} />
+
         <div className="lg:col-span-2 2xl:mx-80 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-zinc-700 lg:max-w-lg">

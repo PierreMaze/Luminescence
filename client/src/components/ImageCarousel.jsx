@@ -2,24 +2,6 @@ import { useCallback } from 'react';
 import PropTypes from 'prop-types';
 import { Carousel, IconButton } from '@material-tailwind/react';
 
-import {
-  LocalPictureRentalCaroussel_1,
-  LocalPictureRentalCaroussel_2,
-  LocalPictureRentalCaroussel_3,
-  LocalPictureRentalCaroussel_4,
-  LocalPictureRentalCaroussel_5,
-  LocalPictureRentalCaroussel_6,
-} from '../../data/LocalImages.jsx';
-
-const imageLocal = [
-  LocalPictureRentalCaroussel_1,
-  LocalPictureRentalCaroussel_2,
-  LocalPictureRentalCaroussel_3,
-  LocalPictureRentalCaroussel_4,
-  LocalPictureRentalCaroussel_5,
-  LocalPictureRentalCaroussel_6,
-];
-
 const ArrowButton = ({ onClick, direction }) => (
   <IconButton
     variant="text"
@@ -56,7 +38,7 @@ ArrowButton.propTypes = {
   direction: PropTypes.oneOf(['left', 'right']).isRequired,
 };
 
-export default function ImageCarousel() {
+export default function ImageCarousel({ images }) {
   const handlePrev = useCallback((handlePrevFn) => handlePrevFn(), []);
   const handleNext = useCallback((handleNextFn) => handleNextFn(), []);
 
@@ -77,7 +59,7 @@ export default function ImageCarousel() {
           />
         )}
       >
-        {imageLocal.map((image, index) => (
+        {images.map((image, index) => (
           <img
             key={index}
             src={image}
@@ -91,5 +73,5 @@ export default function ImageCarousel() {
 }
 
 ImageCarousel.propTypes = {
-  imageLocal: PropTypes.arrayOf(PropTypes.string).isRequired,
+  images: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

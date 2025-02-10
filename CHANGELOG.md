@@ -1,5 +1,28 @@
 # Change Log
 
+## [1.0.12] - 2025-02-10
+
+### <u>Changed :</u>
+
+- **ImageCarousel Component**:
+  - Refactored `ImageCarousel.jsx` to accept `images` as a prop instead of using hardcoded values.
+  - Improved reusability by allowing dynamic image sources.
+  - Updated `RentalLocalSection.jsx` and `Cabinet.jsx` to pass the correct images as props.
+
+### <u>Improvements :</u>
+
+- **Component Reusability**:
+  - `ImageCarousel` can now be used across multiple sections without modification.
+  - Eliminated hardcoded image dependencies, enhancing flexibility.
+
+### <u>Fixes :</u>
+
+- **Image Display Issues**:
+  - Resolved issue where `ImageCarousel` always displayed the same images regardless of the section.
+  - Ensured proper image updates when switching between different rental sections.
+
+#
+
 ## [1.0.11] - 2025-02-10
 
 ### <u>Added :</u>

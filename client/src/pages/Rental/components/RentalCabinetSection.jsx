@@ -1,6 +1,7 @@
 import { HiMusicalNote, HiMiniSparkles } from 'react-icons/hi2';
 import { MdCleanHands } from 'react-icons/md';
-import { Carousel, IconButton } from '@material-tailwind/react';
+
+import ImageCarousel from '../../../components/ImageCarousel.jsx';
 
 import {
   CabinetPictureRentalCaroussel_1,
@@ -13,6 +14,18 @@ import {
   CabinetPictureRentalCaroussel_8,
   CabinetPictureRentalCaroussel_9,
 } from '../data/CabinetImages.jsx';
+
+const cabinetImages = [
+  CabinetPictureRentalCaroussel_1,
+  CabinetPictureRentalCaroussel_2,
+  CabinetPictureRentalCaroussel_3,
+  CabinetPictureRentalCaroussel_4,
+  CabinetPictureRentalCaroussel_5,
+  CabinetPictureRentalCaroussel_6,
+  CabinetPictureRentalCaroussel_7,
+  CabinetPictureRentalCaroussel_8,
+  CabinetPictureRentalCaroussel_9,
+];
 
 export default function Cabinet() {
   return (
@@ -37,106 +50,9 @@ export default function Cabinet() {
             </div>
           </div>
         </div>
-        {/* <!-- Carrousel section --> */}
-        <div className="px-8 -ml-12 lg:scale-[0.8] lg:px-12 lg:sticky lg:top-24 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
-          <Carousel
-            className="w-screen -ml-2 lg:w-full rounded-xl"
-            prevArrow={({ handlePrev }) => (
-              <IconButton
-                variant="text"
-                color="white"
-                size="lg"
-                onClick={handlePrev}
-                className="!absolute top-2/4 flex justify-center items-center size-1  bg-sky-950/25 hover:bg-sky-950/50 left-0 lg:left-4 -translate-y-2/4"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
-                  />
-                </svg>
-              </IconButton>
-            )}
-            nextArrow={({ handleNext }) => (
-              <IconButton
-                variant="text"
-                color="white"
-                size="lg"
-                onClick={handleNext}
-                className="!absolute top-2/4 flex justify-center items-center size-1  bg-sky-950/25 hover:bg-sky-950/50 right-4 lg:!right-4 -translate-y-2/4"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </IconButton>
-            )}
-          >
-            <img
-              src={CabinetPictureRentalCaroussel_1}
-              alt="image 1"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_2}
-              alt="image 2"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_3}
-              alt="image 3"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_4}
-              alt="image 4"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_5}
-              alt="image 5"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_6}
-              alt="image 6"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_7}
-              alt="image 7"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_8}
-              alt="image 8"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-            <img
-              src={CabinetPictureRentalCaroussel_9}
-              alt="image 9"
-              className="object-contain lg:object-cover w-full lg:h-[600px] 2xl:h-[1000px]"
-            />
-          </Carousel>
-        </div>
+
+        <ImageCarousel images={cabinetImages} />
+
         {/* <!-- Body section --> */}
         <div className="lg:col-span-2 2xl:mx-80 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
@@ -147,52 +63,34 @@ export default function Cabinet() {
                 ce soit pour une session de détente ou un soin spécifique, nous
                 créons un environnement adapté et sur mesure pour vous.
               </p>
-              <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                <li className="flex gap-x-3">
-                  <HiMiniSparkles
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Table de massage.
-                    </strong>{' '}
-                    Profitez de notre table de massage, pour allier confort et
-                    efficacité. Elle est le choix idéal pour transformer chaque
-                    soin en un véritable moment de relaxation, que vous soyez un
-                    professionnel ou un particulier.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <MdCleanHands
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Confort et hygiène.
-                    </strong>{' '}
-                    Nous vous mettons à disposition une source d&apos;eau pour
-                    votre hygiène. Chaque espace est soigneusement nettoyé et
-                    désinfecté, garantissant un environnement sain et relaxant
-                    pour chaque visite.
-                  </span>
-                </li>
-                <li className="flex gap-x-3">
-                  <HiMusicalNote
-                    aria-hidden="true"
-                    className="flex-none w-5 h-5 mt-1 text-sky-600"
-                  />
-                  <span>
-                    <strong className="font-semibold text-gray-900">
-                      Enceinte Bluetooth.
-                    </strong>{' '}
-                    Notre enceinte Bluetooth offre une connectivité facile. Elle
-                    vous permet de personnaliser l&apos;ambiance de vos séances
-                    avec la musique de votre choix, ajoutant une touche de
-                    détente supplémentaire à chaque moment.
-                  </span>
-                </li>
+              <ul className="mt-8 space-y-8 text-gray-600">
+                {[
+                  {
+                    icon: <HiMiniSparkles className="w-5 h-5 text-sky-600" />,
+                    title: 'Table de massage.',
+                    text: 'Profitez de notre table de massage pour allier confort et efficacité.',
+                  },
+                  {
+                    icon: <MdCleanHands className="w-5 h-5 text-sky-600" />,
+                    title: 'Confort et hygiène.',
+                    text: 'Chaque espace est soigneusement nettoyé et désinfecté, garantissant un environnement sain.',
+                  },
+                  {
+                    icon: <HiMusicalNote className="w-5 h-5 text-sky-600" />,
+                    title: 'Enceinte Bluetooth.',
+                    text: 'Personnalisez l’ambiance de vos séances avec la musique de votre choix.',
+                  },
+                ].map((item, index) => (
+                  <li key={index} className="flex gap-x-3">
+                    {item.icon}
+                    <span>
+                      <strong className="font-semibold text-gray-900">
+                        {item.title}
+                      </strong>{' '}
+                      {item.text}
+                    </span>
+                  </li>
+                ))}
               </ul>
               <p className="mt-8">
                 Notre gamme d&apos;équipements est conçue pour maximiser votre

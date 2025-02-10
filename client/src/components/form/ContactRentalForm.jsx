@@ -1,78 +1,26 @@
-import { useState, useRef } from 'react';
+import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { sendEmail } from '../../features/emailjs/EmailService.jsx';
 
-export default function ContactForm() {
-  const recaptchaRef = useRef();
-  const { VITE_ENV, VITE_CAPTCHA_KEY } = import.meta.env;
-  const fakeKeyCaptcha = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
-
-  const [formData, setFormData] = useState({
-    from_name: '',
-    email: '',
-    phone: '',
-    category: 'création atelier',
-    message: '',
-    conditionsAccepted: false,
-  });
-
-  const [message, setMessage] = useState(null);
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!formData.conditionsAccepted) {
-      setMessage({
-        text: 'Vous devez accepter les politiques de confidentialité.',
-        isSuccess: false,
-      });
-      return;
-    }
-
-    const recaptchaValue = recaptchaRef.current.getValue();
-    if (!recaptchaValue) {
-      setMessage({ text: 'Veuillez vérifier le Captcha.', isSuccess: false });
-      return;
-    }
-
-    const success = await sendEmail(formData, setMessage);
-
-    if (success) {
-      setFormData({
-        from_name: '',
-        email: '',
-        phone: '',
-        category: 'création atelier',
-        message: '',
-        conditionsAccepted: false,
-      });
-    }
-  };
-
+export default function ContactForm({
+  fields,
+  formData,
+  onChange,
+  onSubmit,
+  recaptchaRef,
+  siteKey,
+  message,
+}) {
   return (
     <div className="p-8 rounded-lg lg:mx-24 2xl:mr-80 bg-zinc-800 md:w-1/2">
-      <form className="space-y-4" onSubmit={handleSubmit}>
-        {[
-          { name: 'from_name', type: 'text', placeholder: 'Nom / Entreprise' },
-          { name: 'email', type: 'email', placeholder: 'Email' },
-          { name: 'phone', type: 'tel', placeholder: 'N° Téléphone' },
-          { name: 'message', type: 'textarea', placeholder: 'Message' },
-        ].map(({ name, type, placeholder }) =>
+      <form className="space-y-4" onSubmit={onSubmit}>
+        {fields.map(({ name, type, placeholder }) =>
           type === 'textarea' ? (
             <textarea
               key={name}
               name={name}
               placeholder={placeholder}
               value={formData[name]}
-              onChange={handleChange}
+              onChange={onChange}
               className="w-full p-2 bg-gray-700 border border-gray-600 rounded"
             />
           ) : (
@@ -82,7 +30,7 @@ export default function ContactForm() {
               type={type}
               placeholder={placeholder}
               value={formData[name]}
-              onChange={handleChange}
+              onChange={onChange}
               required
               className="w-full p-2 bg-gray-700 border border-gray-600 rounded"
             />
@@ -94,7 +42,7 @@ export default function ContactForm() {
             type="checkbox"
             name="conditionsAccepted"
             checked={formData.conditionsAccepted}
-            onChange={handleChange}
+            onChange={onChange}
             className="mr-2"
           />
           <label>J&apos;accepte la politique de confidentialité.</label>
@@ -102,9 +50,7 @@ export default function ContactForm() {
 
         <ReCAPTCHA
           ref={recaptchaRef}
-          sitekey={
-            VITE_ENV === 'production' ? VITE_CAPTCHA_KEY : fakeKeyCaptcha
-          }
+          sitekey={siteKey}
           className="-ml-8 scale-75 lg:ml-0 lg:scale-100"
         />
 
@@ -126,3 +72,22 @@ export default function ContactForm() {
     </div>
   );
 }
+
+ContactForm.propTypes = {
+  fields: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      placeholder: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  formData: PropTypes.object.isRequired,
+  onChange: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  recaptchaRef: PropTypes.object.isRequired,
+  siteKey: PropTypes.string.isRequired,
+  message: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    isSuccess: PropTypes.bool.isRequired,
+  }),
+};

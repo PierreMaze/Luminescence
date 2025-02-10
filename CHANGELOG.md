@@ -1,5 +1,34 @@
 # Change Log
 
+## [1.0.14] - 2025-02-10
+
+### <u>Refactored :</u>
+
+- **Optimized `ContactRentalForm` component**:
+  - Moved form state management to `ContactRentalSection` for better separation of concerns.
+  - Passed form fields, handlers, and ReCAPTCHA reference as props for improved modularity.
+  - Implemented PropTypes validation for better debugging and maintainability.
+
+### <u>Changed :</u>
+
+- **Enhanced Code Readability**:
+  - Removed inline form logic from `ContactRentalForm` and centralized it in the parent component.
+  - Improved the reusability of `ContactRentalForm` by making it independent of internal state.
+
+### <u>Improvements :</u>
+
+- **Component Decoupling**:
+  - `ContactRentalForm` now purely renders the UI based on props, making it more flexible.
+  - Future modifications to form logic can be done directly in `ContactRentalSection` without modifying the form component.
+
+### <u>Fixes :</u>
+
+- **State Synchronization Issues**:
+  - Ensured form state resets correctly upon successful submission.
+  - Prevented unnecessary re-renders by optimizing state updates.
+
+#
+
 ## [1.0.13] - 2025-02-10
 
 ### <u>Refactored :</u>

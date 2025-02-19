@@ -142,7 +142,7 @@ export const Footer = () => {
 
       {/* <!--Copyright section--> */}
       <div className="p-6 text-center bg-zinc-950 ">
-        <span>© 2024 Copyright : </span>
+        <span>© 2025 Copyright : </span>
         <a
           href="/"
           rel="noopener noreferrer"

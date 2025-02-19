@@ -66,17 +66,29 @@ export default function Cabinet() {
               <ul className="mt-8 space-y-8 text-gray-600">
                 {[
                   {
-                    icon: <HiMiniSparkles className="w-5 h-5 text-sky-600" />,
+                    icon: (
+                      <div className="size-6">
+                        <HiMiniSparkles className="text-sky-600" />
+                      </div>
+                    ),
                     title: 'Table de massage.',
                     text: 'Profitez de notre table de massage pour allier confort et efficacité.',
                   },
                   {
-                    icon: <MdCleanHands className="w-5 h-5 text-sky-600" />,
+                    icon: (
+                      <div className="size-6">
+                        <MdCleanHands className="text-sky-600" />
+                      </div>
+                    ),
                     title: 'Confort et hygiène.',
                     text: 'Chaque espace est soigneusement nettoyé et désinfecté, garantissant un environnement sain.',
                   },
                   {
-                    icon: <HiMusicalNote className="w-5 h-5 text-sky-600" />,
+                    icon: (
+                      <div className="size-6">
+                        <HiMusicalNote className="text-sky-600" />
+                      </div>
+                    ),
                     title: 'Enceinte Bluetooth.',
                     text: 'Personnalisez l’ambiance de vos séances avec la musique de votre choix.',
                   },

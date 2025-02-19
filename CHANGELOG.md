@@ -4,6 +4,12 @@
 
 ### <u>Refactored :</u>
 
+- **Location**: Adjusted icon size in the care office section using Tailwind's `size-6` class for better formatting.
+
+## [1.0.14] - 2025-02-10
+
+### <u>Refactored :</u>
+
 - **Optimized `ContactRentalForm` component**:
   - Moved form state management to `ContactRentalSection` for better separation of concerns.
   - Passed form fields, handlers, and ReCAPTCHA reference as props for improved modularity.

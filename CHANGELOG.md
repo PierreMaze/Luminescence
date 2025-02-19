@@ -1,6 +1,10 @@
 # Change Log
 
-## [1.0.14] - 2025-02-10
+## [1.0.15] - 2025-02-19
+
+### <u>Changed :</u>
+
+- **Footer**: Updated copyright year from 2024 to 2025.
 
 ### <u>Refactored :</u>
 

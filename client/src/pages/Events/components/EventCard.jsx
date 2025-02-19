@@ -26,10 +26,9 @@ export default function EventCard({ title, description, Icon, link = null }) {
   );
 }
 
-// Validation des props
 EventCard.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  Icon: PropTypes.elementType.isRequired, // Un composant React (ex: icône)
-  link: PropTypes.string, // Optionnel
+  Icon: PropTypes.elementType.isRequired,
+  link: PropTypes.string,
 };

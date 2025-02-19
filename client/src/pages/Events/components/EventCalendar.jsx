@@ -1,4 +1,3 @@
-// EventCalendar.jsx
 import { useMemo } from 'react';
 import { calendarUrls } from '../data/eventData';
 

@@ -2,6 +2,14 @@
 
 ## [1.0.15] - 2025-02-19
 
+### <u>Added :</u>
+
+- **Factored Event page**: Separated logic into modular components for better maintainability.
+- **Created EventCard component**: Now handles props efficiently with JavaScript default parameters.
+- **Optimized event detection**: Improved performance by debouncing the resize event.
+- **Enhanced prop validation**: Used `PropTypes` for type safety and better debugging.
+- **Better debugging & independence**: Structured files into `components/` and `data/` for easier debugging.
+
 ### <u>Changed :</u>
 
 - **Footer**: Updated copyright year from 2024 to 2025.

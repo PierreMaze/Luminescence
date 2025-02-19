@@ -16,7 +16,7 @@
 
 ### <u>Refactored :</u>
 
-- **Location**: Adjusted icon size in the care office section using Tailwind's `size-6` class for better formatting.
+- **Rental**: Adjusted icon size in the care office section using Tailwind's `size-6` class for better formatting.
 
 ## [1.0.14] - 2025-02-10
 

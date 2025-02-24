@@ -1,5 +1,29 @@
 # Change Log
 
+## [1.0.21] - 2025-02-24
+
+### <u>Added :</u>
+
+- **FormButton Component**:
+  - Created a reusable `FormButton.jsx` component with a built-in loading spinner.
+  - Automatically disables the button when `isLoading` is `true` to prevent multiple submissions.
+  - Supports a dynamic label via the `label` prop, defaulting to `"Envoyer"`.
+
+### <u>Changed :</u>
+
+- **ContactRentalForm**:
+
+  - Replaced the inline submit button with the new `FormButton` component.
+  - Passed `isLoading` from `useContactForm.jsx` to ensure consistent UI feedback.
+
+- **Other Forms**:
+  - Updated other related forms to use `FormButton` for better code reusability and maintainability.
+
+### <u>Fixed :</u>
+
+- Prevented duplicate form submissions by ensuring the submit button is properly disabled while processing.
+- Improved user experience by standardizing the loading spinner across multiple forms.
+
 ## [1.0.20] - 2025-02-24
 
 ### <u>Added :</u>

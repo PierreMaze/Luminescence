@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { InputField } from '../../utils/InputField.jsx';
+import FormButton from '../button/FormButton.jsx';
 
 export default function ContactCollabForm({
   fields,
@@ -91,13 +92,7 @@ export default function ContactCollabForm({
         </div>
 
         {/* Bouton de soumission */}
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform rounded-md text-zinc-50 bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 disabled:opacity-50"
-        >
-          {isLoading ? 'Envoi en cours…' : 'Envoyer'}
-        </button>
+        <FormButton isLoading={isLoading} label="Envoyer" />
       </form>
 
       {message && (
@@ -132,5 +127,6 @@ ContactCollabForm.propTypes = {
     text: PropTypes.string.isRequired,
     isSuccess: PropTypes.bool.isRequired,
   }),
+  label: PropTypes.string,
   isLoading: PropTypes.bool.isRequired,
 };

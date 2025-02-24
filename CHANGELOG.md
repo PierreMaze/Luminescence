@@ -1,5 +1,330 @@
 # Change Log
 
+## [1.0.22] - 2025-02-24
+
+### <u>Added :</u>
+
+- **SocialLinks Component**:
+  - Created a reusable `SocialLinks.jsx` component to display social media links.
+  - Designed with TailwindCSS for a consistent look across the project.
+  - Supports dynamic props for flexibility in different pages.
+
+### <u>Changed :</u>
+
+- **ContactCollab Page**:
+  - Integrated the `SocialLinks` component to display social media links on the contact page.
+  - Ensured responsive design and styling consistency with the existing UI.
+
+## [1.0.21] - 2025-02-24
+
+### <u>Added :</u>
+
+- **FormButton Component**:
+  - Created a reusable `FormButton.jsx` component with a built-in loading spinner.
+  - Automatically disables the button when `isLoading` is `true` to prevent multiple submissions.
+  - Supports a dynamic label via the `label` prop, defaulting to `"Envoyer"`.
+
+### <u>Changed :</u>
+
+- **ContactRentalForm**:
+
+  - Replaced the inline submit button with the new `FormButton` component.
+  - Passed `isLoading` from `useContactForm.jsx` to ensure consistent UI feedback.
+
+- **Other Forms**:
+  - Updated other related forms to use `FormButton` for better code reusability and maintainability.
+
+### <u>Fixed :</u>
+
+- Prevented duplicate form submissions by ensuring the submit button is properly disabled while processing.
+- Improved user experience by standardizing the loading spinner across multiple forms.
+
+## [1.0.20] - 2025-02-24
+
+### <u>Added :</u>
+
+- **Loading Spinner**: Implemented a spinner animation in the submit button to improve user feedback during form submission.
+
+### <u>Changed :</u>
+
+- **ContactRentalForm**:
+
+  - Replaced static input fields with the shared `InputField` component from `utils/InputField.jsx` for cleaner and more maintainable code.
+  - Integrated `isLoading` state to disable the button and show a loading animation while sending data.
+  - Ensured that form submission logic is handled through `useContactForm.jsx` for better state management.
+
+- **RentalContactSection**:
+  - Updated the component to use the `useContactForm.jsx` hook directly, simplifying form handling and ensuring consistency.
+  - Passed `isLoading` as a prop to `ContactRentalForm` to keep UI feedback in sync.
+
+### <u>Fixed :</u>
+
+- Prevented multiple form submissions by disabling the submit button while the form is processing.
+- Improved user experience by displaying `"Envoi en cours..."` instead of `"Envoyer"` during submission.
+
+#
+
+## [1.0.19] - 2025-02-24
+
+### <u>Changed :</u>
+
+- **Form messages**: Simplified and unified success messages across all forms.
+- **Message handling**: Standardized message display logic for better consistency.
+- **ContactCollab Form**:
+  - Refactored to map input fields dynamically using a configuration array for improved readability and debugging.
+  - Updated the component to use the shared `InputField` component from `utils/InputField.jsx` for DRY code.
+  - Integrated the custom hook `useContactForm.jsx` for centralized form logic and validations.
+  - Added validation to ensure the privacy policy checkbox (conditionsAccepted) must be checked before submission.
+  - Maintained TailwindCSS classes and ensured compatibility with existing project structure.
+- **Contact Page (ContactCollab.jsx)**:
+  - Defined a dynamic array of contact fields to pass to the form component.
+  - Cleaned up the initial state configuration to default `conditionsAccepted` to false.
+
+### <u>Fixed :</u>
+
+- Prevented form submission if the privacy policy checkbox is not selected.
+
+#
+
+## [1.0.18] - 2025-02-24
+
+### <u>Added :</u>
+
+- **ReCAPTCHA safety check**: Added null check for reCAPTCHA reference before accessing getValue() method.
+- **Form state initialization**: Implemented proper initial state handling for newsletter subscription form.
+
+### <u>Refactored :</u>
+
+- **Newsletter structure**: Improved component organization by separating form logic into modular components.
+- **Contact form hook**: Enhanced useContactForm hook with better state management and error handling.
+- **Form validation**: Streamlined form validation process in NewsletterForm component.
+- **Component props**: Implemented comprehensive PropTypes validation for better type safety.
+
+### <u>Changed :</u>
+
+- **Form architecture**: Updated form handling to use shared contact form hook for consistent behavior.
+- **Newsletter layout**: Optimized newsletter component structure for better maintainability.
+
+#
+
+## [1.0.17] - 2025-02-24
+
+### <u>Added :</u>
+
+- Created InputField component: Centralizes input and textarea elements with Tailwind styling.
+- Developed useContactForm hook: Consolidates form logic including state management, validation, and API submission.
+- Implemented ContactForm presentation component: Clean separation of UI and logic for the contact form.
+- Integrated contact page enhancements: Structured ContactUS page to display contact details and form efficiently.
+
+### <u>Changed :</u>
+
+- Updated form event handlers to use functional updates for state consistency.
+- Adjusted file structure: Organized components into dedicated folders for better code maintainability.
+
+### <u>Refactored :</u>
+
+- Separated concerns between logic and presentation by moving API calls and form state management to a custom hook.
+- Improved prop validation using PropTypes across form components for enhanced debugging and type safety.
+
+## [1.0.16] - 2025-02-24
+
+### <u>Added :</u>
+
+- **Contact Choice page**: Created new central hub for managing different contact options with clear navigation paths.
+- **Information Contact page**: Implemented new page for general information inquiries with complete functionality.
+- **Contact navigation system**: Added routing links to Information, Support, and Bug contact pages for improved user flow.
+
+### <u>Changed :</u>
+
+**Contact architecture**: Restructured contact system to use a centralized choice page for better user experience.
+
+#
+
+## [1.0.15] - 2025-02-19
+
+### <u>Added :</u>
+
+- **Factored Event page**: Separated logic into modular components for better maintainability.
+- **Created EventCard component**: Now handles props efficiently with JavaScript default parameters.
+- **Optimized event detection**: Improved performance by debouncing the resize event.
+- **Enhanced prop validation**: Used `PropTypes` for type safety and better debugging.
+- **Better debugging & independence**: Structured files into `components/` and `data/` for easier debugging.
+
+### <u>Changed :</u>
+
+- **Footer**: Updated copyright year from 2024 to 2025.
+
+### <u>Refactored :</u>
+
+- **Rental**: Adjusted icon size in the care office section using Tailwind's `size-6` class for better formatting.
+
+#
+
+## [1.0.14] - 2025-02-10
+
+### <u>Refactored :</u>
+
+- **Optimized `ContactRentalForm` component**:
+  - Moved form state management to `ContactRentalSection` for better separation of concerns.
+  - Passed form fields, handlers, and ReCAPTCHA reference as props for improved modularity.
+  - Implemented PropTypes validation for better debugging and maintainability.
+
+### <u>Changed :</u>
+
+- **Enhanced Code Readability**:
+  - Removed inline form logic from `ContactRentalForm` and centralized it in the parent component.
+  - Improved the reusability of `ContactRentalForm` by making it independent of internal state.
+
+### <u>Improvements :</u>
+
+- **Component Decoupling**:
+  - `ContactRentalForm` now purely renders the UI based on props, making it more flexible.
+  - Future modifications to form logic can be done directly in `ContactRentalSection` without modifying the form component.
+
+### <u>Fixed :</u>
+
+- **State Synchronization Issues**:
+  - Ensured form state resets correctly upon successful submission.
+  - Prevented unnecessary re-renders by optimizing state updates.
+
+#
+
+## [1.0.13] - 2025-02-10
+
+### <u>Refactored :</u>
+
+- **Contact Form (`ContactRentalForm.jsx`)**:
+
+  - Extracted EmailJS logic into a separate file (`feature/emailjs/emailService.js`) for better maintainability.
+  - Improved readability and debugging by passing the email-sending function as a prop.
+  - Replaced repeated input fields with a mapped array structure for cleaner JSX.
+
+- **Newsletter Component**:
+  - Moved the newsletter form to `feature/emailjs/Newsletter.jsx`.
+  - Converted the newsletter logic into a reusable component.
+
+### <u>Changed :</u>
+
+- **General Form Improvements**:
+  - Added validation conditions to the newsletter form.
+  - Ensured better state handling for form submissions.
+
+### <u>Improvements :</u>
+
+- **Code Modularity**:
+
+  - Separated concerns by isolating logic into dedicated files.
+  - Improved future scalability by making components more reusable.
+
+- **Form UX Enhancements**:
+  - Ensured proper form resets after successful submissions.
+  - Improved error handling for failed submissions.
+
+### <u>Fixes :</u>
+
+- **Form Handling Issues**:
+  - Fixed issues with state management causing incorrect form resets.
+  - Ensured `ReCAPTCHA` validation is properly checked before sending emails.
+
+#
+
+## [1.0.12] - 2025-02-10
+
+### <u>Refactored :</u>
+
+- **Optimized `OrganizeEvent` component**:
+  - Replaced repetitive list items with a structured array to improve maintainability.
+  - Extracted icons and texts into an iterable array for cleaner JSX.
+  - Improved readability by reducing redundant class names and structuring the code more effectively.
+  - Added an `alt` attribute to the event image for better accessibility.
+
+### <u>Changed :</u>
+
+- **ImageCarousel Component**:
+  - Refactored `ImageCarousel.jsx` to accept `images` as a prop instead of using hardcoded values.
+  - Improved reusability by allowing dynamic image sources.
+  - Updated `RentalLocalSection.jsx` and `Cabinet.jsx` to pass the correct images as props.
+
+### <u>Improvements :</u>
+
+- **Code Organization**:
+
+  - Increased modularity for future scalability.
+  - Enhanced maintainability by making the feature list easier to modify.
+
+- **Component Reusability**:
+  - `ImageCarousel` can now be used across multiple sections without modification.
+  - Eliminated hardcoded image dependencies, enhancing flexibility.
+
+### <u>Fixes :</u>
+
+- **Image Display Issues**:
+  - Resolved issue where `ImageCarousel` always displayed the same images regardless of the section.
+  - Ensured proper image updates when switching between different rental sections.
+
+#
+
+## [1.0.11] - 2025-02-10
+
+### <u>Added :</u>
+
+- Created the following new component files under `components/`:
+
+  - `RentalCabinetSection.jsx`
+  - `RentalContactSection.jsx`
+  - `RentalEventSection.jsx`
+  - `RentalHeader.jsx`
+  - `RentalLocalSection.jsx`
+  - `CarousselLocal.jsx`
+
+  ### <u>Changed :</u>
+
+- **Carousel component section Rental**:
+  Added propTypes for ArrowButton and ImageCarousel to improve type safety and prevent runtime errors.
+
+- **Rental Page Structure**:
+  - Refactored `Rental/index.jsx` by extracting sections into separate component files
+
+### <u>Improvements :</u>
+
+- **Code Organization**:
+  - Improved modularity by separating concerns into distinct components
+  - Enhanced maintainability by isolating sections for better readability and scalability
+
+### <u>Fixes :</u>
+
+- **Data Management**:
+  - Moved static image and data files under `data/` for better separation of concerns
+  - Created:
+    - `CabinetImages.jsx`
+    - `LocalImages.jsx`
+  - Ensured proper imports across the Rental page to avoid redundancy
+
+## [1.0.10] - 2025-02-07
+
+### <u>Changed :</u>
+
+- **Home Page Data Structure**:
+  - Refactored and reorganized data files for better structure and clarity
+  - Moved the following data into their respective files under `data/`:
+    - `bar-details`
+    - `services-offered`
+    - `event-images`
+    - `events-details`
+    - `faq-section`
+
+### <u>Improvements :</u>
+
+- **Code Organization**:
+  - Improved maintainability by isolating data specific to the Home page into dedicated files
+  - Enhanced data management for easy updates and better scalability
+
+### <u>Fixes :</u>
+
+- **Data Management**:
+  - Removed redundant or outdated data imports
+  - Corrected paths for consistent data retrieval
+
 ## [1.0.9] - 2025-02-06
 
 ### <u>Changed :</u>

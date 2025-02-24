@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 
 import ContactCollabForm from '../../components/form/ContactCollabForm';
-import SocialNetwork from '../../features/social-networks/LinkFooter.jsx';
+import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
 
 import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
 
@@ -126,7 +126,7 @@ export default function ContactCollab() {
                   href="https://www.google.fr/maps/place/LUMINESCENCE/@44.638864,-1.0605077,19z/data=!3m1!4b1!4m6!3m5!1s0xd5499415bca91f7:0x1f53aae507216527!8m2!3d44.638863!4d-1.059864!16s%2Fg%2F11y43t5xvv?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center mx-2 mb-4 cursor-pointer text-zinc-700 w-72 text-wrap md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
+                  className="flex items-center justify-center mx-2 cursor-pointer text-zinc-700 w-72 text-wrap md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
                 >
                   108 Place de la Claire, 2 ème étage (Ascenseur), 33470
                   Gujan-Mestras
@@ -142,13 +142,13 @@ export default function ContactCollab() {
                 <a
                   href="tel:+33 6 46 84 93 52"
                   rel="noreferrer"
-                  className="flex mx-2 mb-4 truncate cursor-pointer text-zinc-700 w-72 tabular-nums md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
+                  className="flex mx-2 truncate cursor-pointer text-zinc-700 w-72 tabular-nums md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
                 >
                   (+33) 06 46 84 93 52
                 </a>
               </p>
               {/* <!-- Email container --> */}
-              <p className="flex items-start -mx-2 cursor-pointer group">
+              <p className="flex items-start -mx-2  group">
                 <MdAttachEmail
                   aria-hidden="true"
                   className="flex-none w-5 h-5 mt-1 text-zinc-800 group-hover:text-sky-600"
@@ -157,13 +157,15 @@ export default function ContactCollab() {
                 <a
                   href="mailto:contact@luminescence33.com"
                   rel="noreferrer"
-                  className="flex mx-2 mb-4 truncate text-zinc-700 w-72 md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
+                  className="flex mx-2 mb-4 truncate cursor-pointer text-zinc-700 w-72 md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
                 >
                   contact@luminescence33.com
                 </a>
               </p>
             </div>
-            <SocialNetwork />
+            <div className="mt-4">
+              <SocialNetwork />
+            </div>
           </div>
         </div>
       </div>

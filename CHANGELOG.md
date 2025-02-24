@@ -1,5 +1,20 @@
 # Change Log
 
+## [1.0.22] - 2025-02-24
+
+### <u>Added :</u>
+
+- **SocialLinks Component**:
+  - Created a reusable `SocialLinks.jsx` component to display social media links.
+  - Designed with TailwindCSS for a consistent look across the project.
+  - Supports dynamic props for flexibility in different pages.
+
+### <u>Changed :</u>
+
+- **ContactCollab Page**:
+  - Integrated the `SocialLinks` component to display social media links on the contact page.
+  - Ensured responsive design and styling consistency with the existing UI.
+
 ## [1.0.21] - 2025-02-24
 
 ### <u>Added :</u>

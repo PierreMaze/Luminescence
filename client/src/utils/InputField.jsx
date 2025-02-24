@@ -23,7 +23,7 @@ export function InputField({
           placeholder={placeholder}
           value={value}
           onChange={onChange}
-          className="block w-full px-5 py-3 mt-2 bg-white border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
+          className="block w-full px-5 py-3 mt-2 bg-sky-50 border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
           {...props}
         />
       ) : (
@@ -35,7 +35,7 @@ export function InputField({
           value={value}
           onChange={onChange}
           required
-          className="block w-full px-5 py-3 mt-2 bg-white border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
+          className="block w-full px-5 py-3 mt-2 bg-sky-50 border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
           {...props}
         />
       )}

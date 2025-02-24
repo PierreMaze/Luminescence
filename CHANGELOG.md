@@ -6,6 +6,19 @@
 
 - **Form messages**: Simplified and unified success messages across all forms.
 - **Message handling**: Standardized message display logic for better consistency.
+- **ContactCollab Form**:
+  - Refactored to map input fields dynamically using a configuration array for improved readability and debugging.
+  - Updated the component to use the shared `InputField` component from `utils/InputField.jsx` for DRY code.
+  - Integrated the custom hook `useContactForm.jsx` for centralized form logic and validations.
+  - Added validation to ensure the privacy policy checkbox (conditionsAccepted) must be checked before submission.
+  - Maintained TailwindCSS classes and ensured compatibility with existing project structure.
+- **Contact Page (ContactCollab.jsx)**:
+  - Defined a dynamic array of contact fields to pass to the form component.
+  - Cleaned up the initial state configuration to default `conditionsAccepted` to false.
+
+### Fixed
+
+- Prevented form submission if the privacy policy checkbox is not selected.
 
 ## [1.0.18] - 2025-02-24
 

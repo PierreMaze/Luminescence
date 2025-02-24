@@ -1,3 +1,4 @@
+// src/hooks/useContactForm.jsx
 import { useState, useRef } from 'react';
 import { sendEmail } from '../features/emailjs/EmailService.jsx';
 
@@ -22,7 +23,16 @@ export function useContactForm(initialState) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Vérification de ReCAPTCHA seulement si présent
+    // Vérification que la politique de confidentialité a bien été acceptée
+    if (!formData.conditionsAccepted) {
+      setMessage({
+        text: 'Vous devez accepter la politique de confidentialité pour continuer.',
+        isSuccess: false,
+      });
+      return;
+    }
+
+    // Vérification du ReCAPTCHA si présent
     if (recaptchaRef.current && !recaptchaRef.current.getValue()) {
       setMessage({ text: 'Veuillez vérifier le Captcha.', isSuccess: false });
       return;

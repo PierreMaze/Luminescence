@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
-import { InputField } from './InputField';
+import { InputField } from '../../utils/InputField.jsx';
 
-export default function ContactForm({
+export default function ContactCollabForm({
+  fields,
   formData,
   onChange,
   onSubmit,
@@ -14,33 +15,21 @@ export default function ContactForm({
   return (
     <div className="p-8 rounded-lg mt-6 lg:mr-24 2xl:mr-80 bg-zinc-800 w-full">
       <form className="space-y-4" onSubmit={onSubmit}>
-        <InputField
-          label="Nom / Entreprise"
-          name="name"
-          type="text"
-          placeholder="John DOE / DOECORP."
-          value={formData.name}
-          onChange={onChange}
-        />
+        {/* Mapping des champs de contact */}
+        {fields.map(({ name, type, placeholder, autoComplete, label }) => (
+          <InputField
+            key={name}
+            name={name}
+            type={type}
+            placeholder={placeholder}
+            autoComplete={autoComplete}
+            value={formData[name] || ''}
+            onChange={onChange}
+            label={label}
+          />
+        ))}
 
-        <InputField
-          label="Email"
-          name="email"
-          type="email"
-          placeholder="johndoe@example.com"
-          value={formData.email}
-          onChange={onChange}
-        />
-
-        <InputField
-          label="N° Téléphone"
-          name="phone"
-          type="text"
-          placeholder="06 06 06 06 06"
-          value={formData.phone}
-          onChange={onChange}
-        />
-
+        {/* Select pour la catégorie */}
         <div className="w-full mt-4">
           <label
             htmlFor="category"
@@ -54,7 +43,7 @@ export default function ContactForm({
             value={formData.category}
             onChange={onChange}
             required
-            className="block w-full px-5 py-3 mt-2 bg-white border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:border-sky-400 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
+            className="block w-full px-5 py-3 mt-2 bg-sky-50 border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:border-sky-400 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
           >
             <option value="atelier">
               Questions sur la création d’atelier.
@@ -70,15 +59,7 @@ export default function ContactForm({
           </select>
         </div>
 
-        <InputField
-          label="Message"
-          name="message"
-          type="textarea"
-          placeholder="Dîtes-nous en plus..."
-          value={formData.message}
-          onChange={onChange}
-        />
-
+        {/* Checkbox pour la politique de confidentialité */}
         <div className="flex items-center mt-4">
           <input
             type="checkbox"
@@ -100,6 +81,7 @@ export default function ContactForm({
           </label>
         </div>
 
+        {/* ReCAPTCHA */}
         <div className="mt-4">
           <ReCAPTCHA
             ref={recaptchaRef}
@@ -108,6 +90,7 @@ export default function ContactForm({
           />
         </div>
 
+        {/* Bouton de soumission */}
         <button
           type="submit"
           disabled={isLoading}
@@ -119,7 +102,9 @@ export default function ContactForm({
 
       {message && (
         <p
-          className={`mt-2 text-sm ${message.isSuccess ? 'text-sky-200' : 'text-orange-500'}`}
+          className={`mt-2 text-sm ${
+            message.isSuccess ? 'text-emerald-500' : 'text-orange-500'
+          }`}
         >
           {message.text}
         </p>
@@ -128,7 +113,16 @@ export default function ContactForm({
   );
 }
 
-ContactForm.propTypes = {
+ContactCollabForm.propTypes = {
+  fields: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      placeholder: PropTypes.string,
+      autoComplete: PropTypes.string,
+      label: PropTypes.string,
+    })
+  ).isRequired,
   formData: PropTypes.object.isRequired,
   onChange: PropTypes.func.isRequired,
   onSubmit: PropTypes.func.isRequired,

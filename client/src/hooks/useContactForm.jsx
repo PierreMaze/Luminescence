@@ -1,10 +1,15 @@
 import { useState, useRef } from 'react';
+import { sendEmail } from '../features/emailjs/EmailService.jsx';
 
-export function useContactForm(initialState, apiUrl) {
-  const [formData, setFormData] = useState(initialState);
+export function useContactForm(initialState) {
+  const [formData, setFormData] = useState({
+    ...initialState,
+    conditionsAccepted: initialState.conditionsAccepted ?? false,
+  });
+
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const recaptchaRef = useRef();
+  const recaptchaRef = useRef(null);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -17,55 +22,24 @@ export function useContactForm(initialState, apiUrl) {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!formData.conditionsAccepted) {
-      setMessage({
-        text: 'Vous devez accepter les politiques de confidentialité.',
-        isSuccess: false,
-      });
-      return;
-    }
-
-    const recaptchaValue = recaptchaRef.current.getValue();
-    if (!recaptchaValue) {
+    // ✅ Vérification de ReCAPTCHA seulement si présent
+    if (recaptchaRef.current && !recaptchaRef.current.getValue()) {
       setMessage({ text: 'Veuillez vérifier le Captcha.', isSuccess: false });
       return;
     }
 
     setIsLoading(true);
-    try {
-      const response = await fetch(`${apiUrl}send-contact`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          category: formData.category,
-          message: formData.message,
-        }),
+
+    const success = await sendEmail(formData, setMessage);
+
+    if (success) {
+      setFormData({
+        ...initialState,
+        conditionsAccepted: initialState.conditionsAccepted ?? false,
       });
-      const data = await response.json();
-      if (data.errors) {
-        setMessage({ text: data.message, isSuccess: false });
-      } else {
-        setMessage({
-          text: 'Nous avons bien reçu votre message. Merci !',
-          isSuccess: true,
-        });
-        setFormData(initialState);
-      }
-    } catch (error) {
-      console.error(error);
-      setMessage({
-        text: "Échec de l'envoi. Veuillez réessayer plus tard.",
-        isSuccess: false,
-      });
-    } finally {
-      setIsLoading(false);
     }
+
+    setIsLoading(false);
   };
 
   return {

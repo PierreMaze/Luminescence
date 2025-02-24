@@ -1,5 +1,24 @@
 # Change Log
 
+## [1.0.18] - 2025-02-24
+
+### Added
+
+- **ReCAPTCHA safety check**: Added null check for reCAPTCHA reference before accessing getValue() method.
+- **Form state initialization**: Implemented proper initial state handling for newsletter subscription form.
+
+### Refactored
+
+- **Newsletter structure**: Improved component organization by separating form logic into modular components.
+- **Contact form hook**: Enhanced useContactForm hook with better state management and error handling.
+- **Form validation**: Streamlined form validation process in NewsletterForm component.
+- **Component props**: Implemented comprehensive PropTypes validation for better type safety.
+
+### Changed
+
+- **Form architecture**: Updated form handling to use shared contact form hook for consistent behavior.
+- **Newsletter layout**: Optimized newsletter component structure for better maintainability.
+
 ## [1.0.17] - 2025-02-24
 
 ### <u>Added :</u>

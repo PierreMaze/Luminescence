@@ -1,41 +1,15 @@
-import { useState } from 'react';
-import { HiCalendarDays, HiArrowPath } from 'react-icons/hi2';
-import { sendEmail } from '../features/emailjs/EmailService.jsx';
-
 import NewsletterForm from './form/NewsletterForm.jsx';
+import { useContactForm } from '../hooks/useContactForm.jsx';
+
+import { HiCalendarDays, HiArrowPath } from 'react-icons/hi2';
 
 export default function Newsletter() {
-  const [formData, setFormData] = useState({
+  const { formData, handleChange, handleSubmit, message } = useContactForm({
     from_name: '',
     email: '',
-    conditionsAccepted: false,
+    conditionsAccepted: true,
   });
 
-  const [message, setMessage] = useState(null);
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const success = await sendEmail(formData, setMessage);
-
-    if (success) {
-      setFormData({
-        from_name: '',
-        email: '',
-        conditionsAccepted: false,
-      });
-    }
-  };
-
-  // 📌 Objet de mapping des champs du formulaire (RESTE DANS `Newsletter.jsx`)
   const newsletterFields = [
     {
       name: 'from_name',
@@ -73,9 +47,10 @@ export default function Newsletter() {
               onChange={handleChange}
               onSubmit={handleSubmit}
             />
+
             {message && (
               <p
-                className={`mt-2 text-sm ${message.isSuccess ? 'text-sky-200' : 'text-orange-500'}`}
+                className={`mt-2 text-sm ${message.isSuccess ? 'text-emerald-500' : 'text-orange-500'}`}
               >
                 {message.text}
               </p>

@@ -41,6 +41,8 @@
 - Prevented duplicate form submissions by ensuring the submit button is properly disabled while processing.
 - Improved user experience by standardizing the loading spinner across multiple forms.
 
+#
+
 ## [1.0.20] - 2025-02-24
 
 ### <u>Added :</u>

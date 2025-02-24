@@ -15,7 +15,10 @@ export const sendEmail = async (formData, setMessage) => {
       VITE_PUBLIC_KEY_EMAILJS
     );
 
-    setMessage({ text: 'Votre message a bien été envoyé.', isSuccess: true });
+    setMessage({
+      text: 'Merci ! Votre demande a été envoyée avec succès.',
+      isSuccess: true,
+    });
 
     return true;
   } catch {

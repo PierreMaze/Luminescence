@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.0.19] - 2025-02-24
+
+### Changed
+
+- **Form messages**: Simplified and unified success messages across all forms.
+- **Message handling**: Standardized message display logic for better consistency.
+
 ## [1.0.18] - 2025-02-24
 
 ### Added

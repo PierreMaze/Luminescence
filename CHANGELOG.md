@@ -1,5 +1,17 @@
 # Change Log
 
+## [1.0.16] - 2025-02-24
+
+### <u>Added :</u>
+
+- **Contact Choice page**: Created new central hub for managing different contact options with clear navigation paths.
+- **Information Contact page**: Implemented new page for general information inquiries with complete functionality.
+- **Contact navigation system**: Added routing links to Information, Support, and Bug contact pages for improved user flow.
+
+### <u>Changed :</u>
+
+**Contact architecture**: Restructured contact system to use a centralized choice page for better user experience.
+
 ## [1.0.15] - 2025-02-19
 
 ### <u>Added :</u>

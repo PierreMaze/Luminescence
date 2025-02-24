@@ -1,5 +1,24 @@
 # Change Log
 
+## [1.0.17] - 2025-02-24
+
+### <u>Added :</u>
+
+- Created InputField component: Centralizes input and textarea elements with Tailwind styling.
+- Developed useContactForm hook: Consolidates form logic including state management, validation, and API submission.
+- Implemented ContactForm presentation component: Clean separation of UI and logic for the contact form.
+- Integrated contact page enhancements: Structured ContactUS page to display contact details and form efficiently.
+
+### <u>Changed :</u>
+
+- Updated form event handlers to use functional updates for state consistency.
+- Adjusted file structure: Organized components into dedicated folders for better code maintainability.
+
+### <u>Refactored :</u>
+
+- Separated concerns between logic and presentation by moving API calls and form state management to a custom hook.
+- Improved prop validation using PropTypes across form components for enhanced debugging and type safety.
+
 ## [1.0.16] - 2025-02-24
 
 ### <u>Added :</u>

@@ -1,65 +1,28 @@
-import { useState, useRef } from 'react';
 import { HiPhone } from 'react-icons/hi2';
 import { BsFillEnvelopeFill } from 'react-icons/bs';
 
 import ContactForm from '../../../components/form/ContactRentalForm.jsx';
-import { sendEmail } from '../../../features/emailjs/EmailService.jsx';
+import { useContactForm } from '../../../hooks/useContactForm.jsx';
 
 export default function ContactRental() {
-  const recaptchaRef = useRef();
   const environment = import.meta.env.VITE_ENV;
   const keyCaptcha = import.meta.env.VITE_CAPTCHA_KEY;
   const fakeKeyCaptcha = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI';
 
-  const [formData, setFormData] = useState({
+  const {
+    formData,
+    handleChange,
+    handleSubmit,
+    recaptchaRef,
+    message,
+    isLoading,
+  } = useContactForm({
     from_name: '',
     email: '',
     phone: '',
     category: 'création atelier',
     message: '',
-    conditionsAccepted: false,
   });
-
-  const [message, setMessage] = useState(null);
-
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!formData.conditionsAccepted) {
-      setMessage({
-        text: 'Vous devez accepter les politiques de confidentialité.',
-        isSuccess: false,
-      });
-      return;
-    }
-
-    const recaptchaValue = recaptchaRef.current.getValue();
-    if (!recaptchaValue) {
-      setMessage({ text: 'Veuillez vérifier le Captcha.', isSuccess: false });
-      return;
-    }
-
-    const success = await sendEmail(formData, setMessage);
-
-    if (success) {
-      setFormData({
-        from_name: '',
-        email: '',
-        phone: '',
-        category: 'création atelier',
-        message: '',
-        conditionsAccepted: false,
-      });
-    }
-  };
 
   return (
     <div className="flex flex-col p-8 text-white bg-zinc-900 md:flex-row md:p-16">
@@ -106,6 +69,7 @@ export default function ContactRental() {
         recaptchaRef={recaptchaRef}
         siteKey={environment === 'production' ? keyCaptcha : fakeKeyCaptcha}
         message={message}
+        isLoading={isLoading}
       />
     </div>
   );

@@ -1,8 +1,33 @@
 # Change Log
 
+## [1.0.20] - 2025-02-24
+
+### <u>Added :</u>
+
+- **Loading Spinner**: Implemented a spinner animation in the submit button to improve user feedback during form submission.
+
+### <u>Changed :</u>
+
+- **ContactRentalForm**:
+
+  - Replaced static input fields with the shared `InputField` component from `utils/InputField.jsx` for cleaner and more maintainable code.
+  - Integrated `isLoading` state to disable the button and show a loading animation while sending data.
+  - Ensured that form submission logic is handled through `useContactForm.jsx` for better state management.
+
+- **RentalContactSection**:
+  - Updated the component to use the `useContactForm.jsx` hook directly, simplifying form handling and ensuring consistency.
+  - Passed `isLoading` as a prop to `ContactRentalForm` to keep UI feedback in sync.
+
+### <u>Fixed :</u>
+
+- Prevented multiple form submissions by disabling the submit button while the form is processing.
+- Improved user experience by displaying `"Envoi en cours..."` instead of `"Envoyer"` during submission.
+
+#
+
 ## [1.0.19] - 2025-02-24
 
-### Changed
+### <u>Changed :</u>
 
 - **Form messages**: Simplified and unified success messages across all forms.
 - **Message handling**: Standardized message display logic for better consistency.
@@ -16,28 +41,32 @@
   - Defined a dynamic array of contact fields to pass to the form component.
   - Cleaned up the initial state configuration to default `conditionsAccepted` to false.
 
-### Fixed
+### <u>Fixed :</u>
 
 - Prevented form submission if the privacy policy checkbox is not selected.
 
+#
+
 ## [1.0.18] - 2025-02-24
 
-### Added
+### <u>Added :</u>
 
 - **ReCAPTCHA safety check**: Added null check for reCAPTCHA reference before accessing getValue() method.
 - **Form state initialization**: Implemented proper initial state handling for newsletter subscription form.
 
-### Refactored
+### <u>Refactored :</u>
 
 - **Newsletter structure**: Improved component organization by separating form logic into modular components.
 - **Contact form hook**: Enhanced useContactForm hook with better state management and error handling.
 - **Form validation**: Streamlined form validation process in NewsletterForm component.
 - **Component props**: Implemented comprehensive PropTypes validation for better type safety.
 
-### Changed
+### <u>Changed :</u>
 
 - **Form architecture**: Updated form handling to use shared contact form hook for consistent behavior.
 - **Newsletter layout**: Optimized newsletter component structure for better maintainability.
+
+#
 
 ## [1.0.17] - 2025-02-24
 
@@ -70,6 +99,8 @@
 
 **Contact architecture**: Restructured contact system to use a centralized choice page for better user experience.
 
+#
+
 ## [1.0.15] - 2025-02-19
 
 ### <u>Added :</u>
@@ -87,6 +118,8 @@
 ### <u>Refactored :</u>
 
 - **Rental**: Adjusted icon size in the care office section using Tailwind's `size-6` class for better formatting.
+
+#
 
 ## [1.0.14] - 2025-02-10
 
@@ -109,7 +142,7 @@
   - `ContactRentalForm` now purely renders the UI based on props, making it more flexible.
   - Future modifications to form logic can be done directly in `ContactRentalSection` without modifying the form component.
 
-### <u>Fixes :</u>
+### <u>Fixed :</u>
 
 - **State Synchronization Issues**:
   - Ensured form state resets correctly upon successful submission.

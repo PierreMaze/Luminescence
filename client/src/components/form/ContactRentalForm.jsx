@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { InputField } from '../../utils/InputField.jsx';
 
 export default function ContactForm({
   fields,
@@ -9,33 +10,21 @@ export default function ContactForm({
   recaptchaRef,
   siteKey,
   message,
+  isLoading,
 }) {
   return (
     <div className="p-8 rounded-lg lg:mx-24 2xl:mr-80 bg-zinc-800 md:w-1/2">
       <form className="space-y-4" onSubmit={onSubmit}>
-        {fields.map(({ name, type, placeholder }) =>
-          type === 'textarea' ? (
-            <textarea
-              key={name}
-              name={name}
-              placeholder={placeholder}
-              value={formData[name]}
-              onChange={onChange}
-              className="w-full p-2 bg-gray-700 border border-gray-600 rounded"
-            />
-          ) : (
-            <input
-              key={name}
-              name={name}
-              type={type}
-              placeholder={placeholder}
-              value={formData[name]}
-              onChange={onChange}
-              required
-              className="w-full p-2 bg-gray-700 border border-gray-600 rounded"
-            />
-          )
-        )}
+        {fields.map(({ name, type, placeholder }) => (
+          <InputField
+            key={name}
+            name={name}
+            type={type}
+            placeholder={placeholder}
+            value={formData[name]}
+            onChange={onChange}
+          />
+        ))}
 
         <div className="flex items-center">
           <input
@@ -54,17 +43,47 @@ export default function ContactForm({
           className="-ml-8 scale-75 lg:ml-0 lg:scale-100"
         />
 
+        {/* Bouton avec Spinner */}
         <button
           type="submit"
-          className="w-full p-2 mt-4 rounded bg-sky-600 hover:bg-sky-700"
+          disabled={isLoading}
+          className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform rounded-md text-zinc-50 bg-sky-500 hover:bg-sky-600 focus:outline-none focus:ring focus:ring-sky-300 focus:ring-opacity-40 disabled:opacity-50 flex justify-center items-center"
         >
-          Envoyer
+          {isLoading ? (
+            <>
+              <svg
+                className="w-5 h-5 mr-2 text-zinc-50 animate-spin"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8v4l3.5-3.5L12 0 8.5 3.5V0a8 8 0 00-8 8h4z"
+                />
+              </svg>
+              Envoi en cours…
+            </>
+          ) : (
+            'Envoyer'
+          )}
         </button>
       </form>
 
       {message && (
         <p
-          className={`mt-2 text-sm ${message.isSuccess ? 'text-sky-200' : 'text-orange-500'}`}
+          className={`mt-2 text-sm ${
+            message.isSuccess ? 'text-emerald-500' : 'text-orange-500'
+          }`}
         >
           {message.text}
         </p>
@@ -90,4 +109,5 @@ ContactForm.propTypes = {
     text: PropTypes.string.isRequired,
     isSuccess: PropTypes.bool.isRequired,
   }),
+  isLoading: PropTypes.bool.isRequired,
 };

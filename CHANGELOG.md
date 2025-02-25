@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.0.23] - 2025-02-25
+
+### <u>Added :</u>
+
+- **Reclamation Form**:
+  - Implemented a structured form for users to submit complaints related to rentals or events.
+  - Included fields for detailed issue description, booking details, and contact information.
+  - Ensured a responsive and user-friendly design.
+
+### <u>Changed :</u>
+
+- **General Improvements**:
+  - Refined form validation and error handling for a smoother user experience.
+  - Adjusted styling to maintain consistency across the platform.
+
+#
+
 ## [1.0.22] - 2025-02-24
 
 ### <u>Added :</u>

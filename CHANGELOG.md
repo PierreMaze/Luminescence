@@ -1,5 +1,18 @@
 # Change Log
 
+## [1.0.26] - 2025-02-25
+
+### <u>Added :</u>
+
+- **Legal Notice:** Created the `LegalNotice.jsx` page detailing the site's legal information.
+- **Privacy Policy:** Created the `PolicyConfidentiality.jsx` page outlining data collection and usage practices.
+
+### <u>Changed :</u>
+
+- **Navigation:** Updated the navigation menu to include links to the new legal pages.
+
+#
+
 ## [1.0.25] - 2025-02-25
 
 ### <u>Added :</u>

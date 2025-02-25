@@ -1,5 +1,24 @@
 # Change Log
 
+## [1.0.25] - 2025-02-25
+
+### <u>Added :</u>
+
+- **OptimizedImage Component**:
+  - Created a global `OptimizedImage` component for handling images across the project.
+  - Implemented lazy loading for improved performance.
+  - Added responsive support with customizable `className` prop.
+  - Integrated PropTypes for better type safety.
+
+### <u>Changed :</u>
+
+- **Refactored AboutUs Page**:
+  - Replaced all `<img>` tags with the `OptimizedImage` component.
+  - Improved code maintainability and reduced redundancy.
+  - Enhanced UI consistency for images across different screen sizes.
+
+#
+
 ## [1.0.24] - 2025-02-25
 
 ### <u>Added :</u>

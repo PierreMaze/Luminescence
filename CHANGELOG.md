@@ -1,5 +1,22 @@
 # Change Log
 
+## [1.0.24] - 2025-02-25
+
+### <u>Added :</u>
+
+- **Complaint Form**:
+  - Added a form for reporting issues related to reservations, events, or bugs.
+  - Integrated a field for uploading screenshots with image preview.
+  - Added various options to categorize complaints (display bug, payment issues, etc.).
+
+### <u>Changed :</u>
+
+- **UI Improvements**:
+  - Updated the form to include smoother file handling (image uploads).
+  - Improved user experience with conditional fields based on inputs.
+
+#
+
 ## [1.0.23] - 2025-02-25
 
 ### <u>Added :</u>

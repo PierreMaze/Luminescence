@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import ContactSupportForm from '../../components/form/ContactSupportForm.jsx';
+import ContactBugForm from '../../components/form/ContactBugForm.jsx';
 import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
 
 import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
@@ -8,7 +8,7 @@ import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
 import { useContactForm } from '../../hooks/useContactForm.jsx';
 // import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-export default function ContactSupport() {
+export default function ContactBug() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -56,6 +56,15 @@ export default function ContactSupport() {
       autoComplete: 'off',
       label: 'Message',
     },
+    {
+      name: 'bug_screenshot',
+      type: 'file',
+      label: "Joindre une capture d'écran (facultatif)",
+      accept: 'image/*',
+      buttonText: "Importer une capture d'écran",
+      onClick: () => document.getElementById('bug_screenshot').click(),
+      hidden: true,
+    },
   ];
 
   const {
@@ -74,15 +83,15 @@ export default function ContactSupport() {
           {/* Formulaire */}
           <div className="lg:w-1/2 lg:pr-10">
             <h1 className="text-2xl font-semibold font-kreon text-zinc-800 lg:text-3xl">
-              Une réclamation concernant votre réservation ou votre événement ?
+              Un bug à signaler ?
             </h1>
             <p className="mt-4 text-zinc-500">
-              Votre satisfaction est notre priorité. <br />
-              Merci de remplir le formulaire ci-dessous en détaillant votre
-              situation.
+              Si vous avez rencontré un problème technique, merci de remplir le
+              formulaire ci-dessous en décrivant la situation avec le plus de
+              détails possible.
             </p>
 
-            <ContactSupportForm
+            <ContactBugForm
               fields={contactFields}
               formData={formData}
               onChange={handleChange}
@@ -100,7 +109,7 @@ export default function ContactSupport() {
           <div className="lg:w-1/2 lg:pl-10">
             <div className="pt-10">
               <iframe
-                src="https://lottie.host/embed/2e2beaa8-cf1c-4f98-b224-daeead2c7c87/rEZJ8J5qqX.lottie"
+                src="https://lottie.host/embed/bbcd323e-c774-4864-baa4-f427f9e36c63/Sv3BxLgS9O.lottie"
                 className="h-full lg:scale-200 mb-10"
               ></iframe>
             </div>
@@ -145,11 +154,11 @@ export default function ContactSupport() {
                 />
 
                 <a
-                  href="mailto:support@luminescence33.com"
+                  href="mailto:devteam@luminescence33.com"
                   rel="noreferrer"
                   className="flex mx-2 mb-4 truncate cursor-pointer text-zinc-700 w-72 md:justify-start group-hover:underline group-hover:underline-offset-2 group-hover:decoration-2 group-hover:decoration-sky-600"
                 >
-                  support@luminescence33.com
+                  devteam@luminescence33.com
                 </a>
               </p>
             </div>

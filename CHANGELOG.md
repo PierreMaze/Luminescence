@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.27] - 2025-02-26
+
+### <u>Added :</u>
+
+- **Error Page:** Created the `Error.jsx` page inside `pages/Errors/` to handle unexpected errors with a user-friendly message and a redirect button.
+
+#
+
 ## [1.0.26] - 2025-02-25
 
 ### <u>Added :</u>

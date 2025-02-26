@@ -46,12 +46,12 @@ export default function BarLounge() {
               l&apos;ambiance de notre lieu avec un grand “L”.
             </p>
           </div>{' '}
-          <div className="lg:p-12 lg:-mt-12 lg:-ml-12 lg:sticky lg:top-20 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+          <div className="lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <img
               loading="lazy"
               alt="Picture Bar"
               src={PictureBar}
-              className="lg:w-[40rem] lg:max-w-none 2xl:w-[80rem] rounded-xl bg-zinc-900 shadow-xl ring-1 ring-zinc-400/10 sm:w-[57rem]"
+              className="w-full lg:mt-16 2xl:mt-32  bg-zinc-900 shadow-xl rounded-xl"
             />
           </div>
           <div className="lg:pr-4 max-w-xl text-base leading-7 text-zinc-700 lg:max-w-lg">

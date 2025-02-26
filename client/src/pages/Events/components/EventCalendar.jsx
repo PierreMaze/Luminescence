@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { calendarUrls } from '../data/eventData';
+import { calendarUrls } from './data/eventData';
 
 export default function EventCalendar() {
   const isMobile = useMemo(() => window.innerWidth <= 768, []);

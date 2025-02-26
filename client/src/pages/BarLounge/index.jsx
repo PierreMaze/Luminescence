@@ -32,8 +32,8 @@ export default function BarLounge() {
         </div>
       </section>
 
-      <section className="relative px-8 lg:px-16 py-12 overflow-hidden isolate  lg:overflow-visible">
-        <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 2xl:mx-80">
+      <section className="relative px-8 lg:px-16 py-12 overflow-hidden isolate lg:overflow-visible">
+        <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 2xl:ml-80 2xl:mr-32">
           <div className="lg:pr-4" id="a-propos-bar-lounge">
             <p className="text-base font-semibold leading-7 text-sky-600">
               A propos du
@@ -45,13 +45,13 @@ export default function BarLounge() {
               Prenez un verre, détendez-vous et laissez-vous emporter par
               l&apos;ambiance de notre lieu avec un grand “L”.
             </p>
-          </div>{' '}
+          </div>
           <div className="lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
             <img
               loading="lazy"
               alt="Picture Bar"
               src={PictureBar}
-              className="w-full lg:mt-16 2xl:mt-32  bg-zinc-900 shadow-xl rounded-xl"
+              className="w-full lg:mt-16 2xl:mt-32 bg-zinc-900 shadow-xl rounded-xl"
             />
           </div>
           <div className="lg:pr-4 max-w-xl text-base leading-7 text-zinc-700 lg:max-w-lg">

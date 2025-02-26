@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function PoliticyConfidentiality() {
   return (
-    <div className="w-full px-8 pt-12 sm:px-6 lg:px-14 2xl:mx-80 bg-sky-50 -mb-4">
+    <div className="w-full px-8 pt-12 lg:px-16 bg-sky-50">
       <section id="confidentialite" className="mt-20 ">
         <h5 className="text-sm">DERNIÈRE MISE À JOUR : 25-02-2025</h5>
         <h2 className="py-2 mb-4 text-3xl font-bold border-b-2 border-gray-200 font-kreon">

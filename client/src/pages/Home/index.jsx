@@ -228,7 +228,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!--Divider Section--> */}
-      <section className="relative -mt-1 flex flex-row 2xl:-mb-20">
+      <section className="relative py-8 lg:py-16 2xl:py-32 flex flex-row 2xl:-mb-20">
         <div className="absolute top-0 left-0 right-0 flex items-center justify-center">
           <div className="flex-grow border-t border-zinc-800"></div>
           <span className="mx-4 scale-150 text-sky-500">+</span>

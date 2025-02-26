@@ -15,7 +15,7 @@ const stats = [
 
 const RentalHeader = () => {
   return (
-    <div className="relative px-8 lg:px-16  pb-12 overflow-hidden lg:py-34 2xl:h-[40rem] lg:h-screen bg-zinc-900 isolate sm:pt-32">
+    <div className="relative px-8 lg:px-16 pb-12 overflow-hidden lg:py-34 h-full bg-zinc-900 isolate sm:pt-32">
       <img
         alt="Background"
         src={BgRental}

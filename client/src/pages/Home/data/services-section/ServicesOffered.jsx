@@ -6,6 +6,8 @@ import {
 import { FaPuzzlePiece, FaSquareParking } from 'react-icons/fa6';
 import { BiHandicap } from 'react-icons/bi';
 
+import { Link } from 'react-router-dom';
+
 const servicesOffered = [
   {
     name: 'Espaces entièrement modulables',
@@ -49,12 +51,12 @@ const servicesOffered = [
           FAQ
         </a>
         , si vous ne trouvez pas de réponse,{' '}
-        <a
-          href="/contact/contacter-nous"
+        <Link
+          to="/contact/collaborer"
           className="text-sky-400 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
         >
           contactez-nous
-        </a>{' '}
+        </Link>{' '}
         directement !
       </>
     ),

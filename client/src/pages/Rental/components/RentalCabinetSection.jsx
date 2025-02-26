@@ -38,7 +38,7 @@ export default function Cabinet() {
         >
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-600">
+              <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-800">
                 Privatisez
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 font-kreon sm:text-4xl">

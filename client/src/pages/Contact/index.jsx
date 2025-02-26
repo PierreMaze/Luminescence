@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function ContactChoice() {
   return (
-    <div className="px-4 pt-6 pb-2 bg-sky-50 lg:m-0 lg:h-screen">
+    <div className="px-4 pt-6 pb-2 bg-sky-50 lg:m-0">
       <div className="h-full max-w-2xl mr-8 lg:mx-auto mt-32 mb-12">
         <div className="flex flex-col content-center space-y-8 2xl:mt-40 2xl:space-y-20 ">
           <div className="flex items-start space-x-4">

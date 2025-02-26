@@ -25,7 +25,7 @@ export default function ContactRental() {
   });
 
   return (
-    <div className="flex flex-col p-8 text-white bg-zinc-900 md:flex-row md:p-16">
+    <div className="flex flex-col px-8 py-12 text-white bg-zinc-900 md:flex-row lg:px-16">
       <div className="mb-8 lg:mx-24 md:w-1/2 md:mb-0">
         <div id="votre-devis-personnalisé" className="2xl:ml-48 lg:max-w-lg">
           <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-500">
@@ -53,6 +53,10 @@ export default function ContactRental() {
             <BsFillEnvelopeFill className="flex-none w-5 h-5 mt-1 mr-2 text-sky-500" />
             <span>contact@luminescence33.com</span>
           </div>
+          <iframe
+            src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
+            className="h-full  scale-125 lg:scale-200 mt-8 lg:mt-16"
+          ></iframe>
         </div>
       </div>
 

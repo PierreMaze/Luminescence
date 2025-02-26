@@ -31,7 +31,7 @@ export default function RentalLocalSection() {
         >
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-sky-600 2xl:text-lg">
+              <p className="text-base font-semibold leading-7 text-sky-800 2xl:text-lg">
                 Privatisez
               </p>
               <h2 className="mt-2 text-3xl font-bold tracking-tight font-kreon text-zinc-900 sm:text-4xl">

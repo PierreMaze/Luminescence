@@ -221,11 +221,7 @@ export default function Home() {
             ))}
           </div>
           <div className="flex items-center justify-center">
-            <LinkButton
-              to="/bar-lounge/#la-carte"
-              label="Consulter notre carte du bar-lounge"
-              className="mt-14"
-            >
+            <LinkButton to="/location" label="Contactez-nous" className="mt-14">
               Votre devis personnalisé
             </LinkButton>
           </div>
@@ -318,7 +314,7 @@ export default function Home() {
           <LinkButton
             to="/contact/collaborer"
             label="Contactez-nous"
-            className="mt-10"
+            className="mb-10"
           >
             Contactez-nous
           </LinkButton>

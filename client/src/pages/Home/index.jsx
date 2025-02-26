@@ -175,12 +175,12 @@ export default function Home() {
             </div>
 
             {/* <!--Picture Rooftop container--> */}
-            <div className="lg:max-w-lg 2xl:max-w-full lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+            <div className="lg:h-full lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
               <img
                 src={Rooftop}
                 loading="lazy"
                 alt="Rooftop(= Terasse sur le toit) de luminescence."
-                className="w-full h-full bg-zinc-900 shadow-xl rounded-xl"
+                className="w-full  bg-zinc-900 shadow-xl rounded-xl"
               />
             </div>
           </div>

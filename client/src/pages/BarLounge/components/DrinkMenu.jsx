@@ -8,7 +8,7 @@ export default function DrinkMenu() {
         {[TarifsBoissonsP1, TarifsBoissonsP2].map((img, index) => (
           <div
             key={index}
-            className="w-full mx-auto lg:w-7xl 2xl:w-xl lg:mr-20"
+            className="w-full mx-auto lg:w-7xl 2xl:w-xl lg:pr-20"
           >
             <img
               src={img}

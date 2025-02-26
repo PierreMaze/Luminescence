@@ -26,7 +26,7 @@ export default function ContactRental() {
 
   return (
     <div className="flex flex-col px-8 py-12 text-white bg-zinc-900 md:flex-row lg:px-16">
-      <div className="mb-8 lg:mx-24 md:w-1/2 md:mb-0 2xl:mx-80">
+      <div className="lg:mx-24 md:w-1/2 2xl:mx-40">
         <div id="votre-devis-personnalisé" className="lg:max-w-lg">
           <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-500">
             Comment peut-on
@@ -44,8 +44,8 @@ export default function ContactRental() {
             .
           </p>
         </div>
-        <div className="pt-4 space-y-4 2xl:ml-48">
-          <div className="flex items-start">
+        <div className="pt-4 space-y-4">
+          <div className="flex items-center">
             <HiPhone className="flex-none w-5 h-5 mt-1 mr-2 text-sky-500" />
             <span>+33 6 46 84 93 52</span>
           </div>
@@ -56,25 +56,30 @@ export default function ContactRental() {
         </div>
         <iframe
           src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
-          className="h-full mx-auto scale-125 lg:scale-200 xl:scale-100 mt-8"
+          className="h-full mx-auto scale-125 pt-4"
         ></iframe>
       </div>
-
-      <ContactForm
-        fields={[
-          { name: 'from_name', type: 'text', placeholder: 'Nom / Entreprise' },
-          { name: 'email', type: 'email', placeholder: 'Email' },
-          { name: 'phone', type: 'tel', placeholder: 'N° Téléphone' },
-          { name: 'message', type: 'textarea', placeholder: 'Message' },
-        ]}
-        formData={formData}
-        onChange={handleChange}
-        onSubmit={handleSubmit}
-        recaptchaRef={recaptchaRef}
-        siteKey={environment === 'production' ? keyCaptcha : fakeKeyCaptcha}
-        message={message}
-        isLoading={isLoading}
-      />
+      <div className="lg:mx-24 md:w-1/2 2xl:mx-40">
+        <ContactForm
+          fields={[
+            {
+              name: 'from_name',
+              type: 'text',
+              placeholder: 'Nom / Entreprise',
+            },
+            { name: 'email', type: 'email', placeholder: 'Email' },
+            { name: 'phone', type: 'tel', placeholder: 'N° Téléphone' },
+            { name: 'message', type: 'textarea', placeholder: 'Message' },
+          ]}
+          formData={formData}
+          onChange={handleChange}
+          onSubmit={handleSubmit}
+          recaptchaRef={recaptchaRef}
+          siteKey={environment === 'production' ? keyCaptcha : fakeKeyCaptcha}
+          message={message}
+          isLoading={isLoading}
+        />
+      </div>
     </div>
   );
 }

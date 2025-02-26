@@ -56,7 +56,7 @@ export default function ContactRental() {
         </div>
         <iframe
           src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
-          className="mx-auto scale-125 pt-4"
+          className="mx-auto scale-125 xl:200 pt-4"
         ></iframe>
       </div>
       <div className="lg:mx-24 md:w-1/2 2xl:mx-40">

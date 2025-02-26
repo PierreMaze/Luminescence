@@ -180,7 +180,7 @@ export default function Home() {
                 src={Rooftop}
                 loading="lazy"
                 alt="Rooftop(= Terasse sur le toit) de luminescence."
-                className="w-full h-full bg-zinc-900 shadow-xl rounded-xl"
+                className="w-full bg-zinc-900 shadow-xl rounded-xl"
               />
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function Home() {
         </div>
       </section>
       {/* <!--Divider Section--> */}
-      <section className="relative py-8 lg:py-16 2xl:py-32 flex flex-row 2xl:-mb-20">
+      <section className="relative bg-zinc-900 flex flex-row">
         <div className="absolute top-0 left-0 right-0 flex items-center justify-center">
           <div className="flex-grow border-t border-zinc-800"></div>
           <span className="mx-4 scale-150 text-sky-500">+</span>
@@ -236,8 +236,8 @@ export default function Home() {
         </div>
       </section>
       {/* Section des événements */}
-      <section className="py-12 lg:py-24 bg-zinc-900">
-        <div className="px-8 lg:px-16 mx-auto max-w-7xl 2xl:max-w-full 2xl:mx-80">
+      <section className="p-8 lg:p-16 bg-zinc-900">
+        <div className="mx-auto max-w-7xl 2xl:max-w-full 2xl:mx-80">
           {/* Header section */}
           <div className="text-center">
             <h2 className="text-lg font-semibold leading-7 text-sky-500">

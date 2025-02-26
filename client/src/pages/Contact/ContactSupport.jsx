@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import ContactSupportForm from '../../../components/form/ContactSupportForm.jsx';
-import SocialNetwork from '../../../features/social-networks/LinkForm.jsx';
+import ContactSupportForm from '../../components/form/ContactSupportForm.jsx';
+import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
 
 import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
 
-import { useContactForm } from '../../../hooks/useContactForm.jsx';
+import { useContactForm } from '../../hooks/useContactForm.jsx';
 // import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function ContactSupport() {

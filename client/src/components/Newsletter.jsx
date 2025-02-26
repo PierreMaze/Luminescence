@@ -1,6 +1,6 @@
 import NewsletterForm from './form/NewsletterForm.jsx';
 import { useContactForm } from '../hooks/useContactForm.jsx';
-
+import { Link } from 'react-router-dom';
 import { HiCalendarDays, HiArrowPath } from 'react-icons/hi2';
 
 export default function Newsletter() {
@@ -59,14 +59,14 @@ export default function Newsletter() {
             <p className="pt-2 text-xs">
               En soumettant ce formulaire, j&apos;accepte que Luminescence
               collecte, traite et conserve mes données conformément à sa{' '}
-              <a
-                href="/politique-confidentialite"
+              <Link
+                to="/politique-confidentialite"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sky-400 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
               >
                 Politique de Confidentialité
-              </a>
+              </Link>
               .
             </p>
             <p className="text-xs mt-2 italic text-sky-50">

@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
 
-import ContactSupportForm from '../../components/form/ContactSupportForm.jsx';
-import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
+import ContactSupportForm from '../../../components/form/ContactSupportForm.jsx';
+import SocialNetwork from '../../../features/social-networks/LinkForm.jsx';
 
 import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
 
-import { useContactForm } from '../../hooks/useContactForm.jsx';
+import { useContactForm } from '../../../hooks/useContactForm.jsx';
 // import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 export default function ContactSupport() {
@@ -69,7 +69,7 @@ export default function ContactSupport() {
 
   return (
     <section className="min-h-screen bg-sky-50">
-      <div className="container px-6 py-10 mx-auto">
+      <div className="container px-8 lg:px-16 py-10 mx-auto">
         <div className="mt-24 lg:mt-32 lg:flex lg:items-start lg:justify-between">
           {/* Formulaire */}
           <div className="lg:w-1/2 lg:pr-10">
@@ -105,7 +105,7 @@ export default function ContactSupport() {
               ></iframe>
             </div>
             {/* <!-- Contact details container --> */}
-            <div className="mt-6 space-y-8 md:mt-20">
+            <div className="mt-6 space-y-8 md:mt-20 px-2 lg:px-3">
               {/* <!-- Adresse container --> */}
               <p className="flex items-start -mx-2 group">
                 <MdLocationPin

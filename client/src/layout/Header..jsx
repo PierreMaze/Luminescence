@@ -80,7 +80,7 @@ export default function Header() {
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
-            A propos
+            À propos
           </Link>
         </PopoverGroup>
       </nav>
@@ -150,7 +150,7 @@ export default function Header() {
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <MdContactSupport className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
-                    A propos
+                    À propos
                   </Link>
                 </div>
               </div>

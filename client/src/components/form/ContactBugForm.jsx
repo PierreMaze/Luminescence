@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
+import { Link } from 'react-router-dom';
 import { InputField } from '../../utils/InputField.jsx';
 import FormButton from '../button/FormButton.jsx';
 
@@ -14,13 +15,13 @@ export default function ContactCollabForm({
   isLoading,
 }) {
   return (
-    <div className="p-8 rounded-lg mt-6 lg:mr-24 2xl:mr-80 bg-zinc-800 w-full">
+    <div className="p-8 rounded-lg mt-6 lg:mr-24 2xl:mr-80 bg-zinc-200 w-full">
       <form className="space-y-4" onSubmit={onSubmit}>
         {/* Select pour la catégorie */}
         <div className="w-full mt-4">
           <label
             htmlFor="category"
-            className="block mb-2 text-sm text-zinc-400"
+            className="block mb-2 text-sm text-zinc-600"
           >
             Quel est votre sujet ?
           </label>
@@ -30,7 +31,7 @@ export default function ContactCollabForm({
             value={formData.category}
             onChange={onChange}
             required
-            className="block w-full px-5 py-3 mt-2 bg-sky-50 border rounded-md text-zinc-700 placeholder-zinc-400 border-zinc-200 focus:border-sky-400 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
+            className="block w-full px-5 py-3 mt-2 bg-sky-50 border rounded-md text-zinc-600 placeholder-zinc-400 border-zinc-200 focus:border-sky-400 focus:ring-sky-400 focus:outline-none focus:ring focus:ring-opacity-40"
           >
             <option value="affichage">
               Problème d’affichage ou mise en page incorrecte.
@@ -78,13 +79,14 @@ export default function ContactCollabForm({
           />
           <label className="text-sm text-zinc-600">
             J&apos;accepte et je comprends la{' '}
-            <a
-              href="/politique-confidentialite"
+            <Link
+              to="/politique-confidentialite"
               rel="noopener noreferrer"
+              target="_blank"
               className="duration-300 ease-linear delay-75 hover:underline hover:text-sky-600 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600 text-sky-600"
             >
               politique de confidentialité
-            </a>
+            </Link>
             .
           </label>
         </div>

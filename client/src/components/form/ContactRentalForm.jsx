@@ -16,14 +16,16 @@ export default function ContactForm({
   return (
     <div className="p-8 rounded-lg lg:mx-24 2xl:mr-80 bg-zinc-800 md:w-1/2">
       <form className="space-y-4" onSubmit={onSubmit}>
-        {fields.map(({ name, type, placeholder }) => (
+        {fields.map(({ name, type, placeholder, autoComplete }) => (
           <InputField
             key={name}
             name={name}
             type={type}
+            autoComplete={autoComplete}
             placeholder={placeholder}
             value={formData[name]}
             onChange={onChange}
+            label={placeholder}
           />
         ))}
 
@@ -35,7 +37,18 @@ export default function ContactForm({
             onChange={onChange}
             className="mr-2"
           />
-          <label>J&apos;accepte la politique de confidentialité.</label>
+          <label className="text-sm text-zinc-400">
+            J&apos;accepte et je comprends la{' '}
+            <a
+              href="/politique-confidentialite"
+              rel="noopener noreferrer"
+              target="_blank"
+              className="duration-300 ease-linear delay-75 hover:underline hover:text-sky-600 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600 text-sky-600"
+            >
+              politique de confidentialité
+            </a>
+            .
+          </label>
         </div>
 
         <ReCAPTCHA

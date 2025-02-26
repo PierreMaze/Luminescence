@@ -25,34 +25,39 @@ const PolitiqueConfidentiality = lazy(
 
 const Rental = lazy(() => import('../pages/Rental/index'));
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <RootLayout />,
+      errorElement: <Error />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'bar-lounge', element: <BarLounge /> },
+        { path: 'location', element: <Rental /> },
+        { path: 'evenements', element: <Events /> },
+        {
+          path: 'contact',
+          children: [
+            { index: true, element: <ContactChoice /> },
+            { path: 'collaborer', element: <ContactCollab /> },
+            { path: 'support', element: <ContactSupport /> },
+            { path: 'signalement-bug', element: <ContactBug /> },
+          ],
+        },
+        { path: 'a-propos', element: <AboutUs /> },
+        { path: 'mentions-legales', element: <MentionLegal /> },
+        {
+          path: 'politique-confidentialite',
+          element: <PolitiqueConfidentiality />,
+        },
+        { path: '*', element: <Error /> },
+      ],
+    },
+  ],
   {
-    path: '/',
-    element: <RootLayout />,
-    errorElement: <Error />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'bar-lounge', element: <BarLounge /> },
-      { path: 'location', element: <Rental /> },
-      { path: 'evenements', element: <Events /> },
-      {
-        path: 'contact',
-        children: [
-          { index: true, element: <ContactChoice /> },
-          { path: 'collaborer', element: <ContactCollab /> },
-          { path: 'support', element: <ContactSupport /> },
-          { path: 'signalement-bug', element: <ContactBug /> },
-        ],
-      },
-      { path: 'a-propos', element: <AboutUs /> },
-      { path: 'mentions-legales', element: <MentionLegal /> },
-      {
-        path: 'politique-confidentialite',
-        element: <PolitiqueConfidentiality />,
-      },
-      { path: '*', element: <Error /> },
-    ],
-  },
-]);
+    scrollRestoration: 'manual',
+  }
+);
 
 export default router;

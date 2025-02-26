@@ -27,7 +27,7 @@ export default function ContactRental() {
   return (
     <div className="flex flex-col px-8 py-12 text-white bg-zinc-900 md:flex-row lg:px-16">
       <div className="lg:mx-24 md:w-1/2 2xl:mx-40">
-        <div id="votre-devis-personnalisé" className="lg:max-w-lg">
+        <div id="votre-devis-personnalisé" className="lg:max-w-lg 2xl:ml-80">
           <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-500">
             Comment peut-on
           </p>

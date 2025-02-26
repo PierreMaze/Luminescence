@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function LegalNotice() {
   return (
     <div className="pt-12 w-full px-8 sm:px-6 lg:px-14 2xl:px-80 bg-sky-50 -mb-4">
@@ -287,13 +289,13 @@ export default function LegalNotice() {
         <p className="mb-4">
           Pour plus d&apos;informations sur la façon dont nous faisons usage des
           cookies, lisez notre{' '}
-          <a
+          <Link
             href="/politique-confidentialite"
             rel="noopener noreferrer"
             className="font-bold hover:underline text-sky-600"
           >
             politique de confidentialité
-          </a>
+          </Link>
           .
         </p>
         <h3 className="mt-8 mb-2 text-xl font-semibold">

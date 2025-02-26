@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import { Link } from 'react-router-dom';
+
 import ContactCollabForm from '../../components/form/ContactCollabForm';
 import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
 
@@ -82,12 +84,12 @@ export default function ContactCollab() {
             </p>
             <p className="mt-4 text-zinc-500">
               Pour un devis personnalisé,{' '}
-              <a
+              <Link
                 className="duration-300 ease-linear delay-75 hover:underline hover:text-sky-600 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600 text-sky-600"
-                href="/location"
+                to="/location/#votre-devis-personnalisé"
               >
                 cliquez ici
-              </a>
+              </Link>
               .
             </p>
 

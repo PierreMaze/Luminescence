@@ -1,6 +1,7 @@
 import { HiBugAnt } from 'react-icons/hi2';
 import { RiLifebuoyFill } from 'react-icons/ri';
 import { FaEnvelopeOpenText } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 export default function ContactChoice() {
   return (
@@ -19,13 +20,13 @@ export default function ContactChoice() {
                 événement, ou simplement obtenir des informations,
                 n&apos;hésitez pas à nous contacter.
               </p>
-              <a
-                href="/contact/contacter-nous"
+              <Link
+                to="/contact/collaborer"
                 rel="noreferrer"
                 className="inline-block mt-2 font-medium text-sky-600"
               >
                 Contacter nous →
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex items-start space-x-4">
@@ -40,14 +41,13 @@ export default function ContactChoice() {
                 Si vous avez rencontré un problème ou si quelque chose n’a pas
                 répondu à vos attentes, nous sommes à votre écoute.
               </p>
-              <a
-                href="mailto:support@luminescence33.com"
+              <Link
+                to="/contact/support"
                 rel="noreferrer"
-                target="_blank"
                 className="inline-block mt-2 font-medium text-sky-600"
               >
                 Faire une réclamation →
-              </a>
+              </Link>
             </div>
           </div>
           <div className="flex items-start space-x-4">
@@ -62,14 +62,13 @@ export default function ContactChoice() {
                 Si vous avez rencontré un bug ou un problème technique sur notre
                 site, nous vous remercions de nous le signaler.
               </p>
-              <a
-                href="mailto:devteam@luminescence33.com"
+              <Link
+                to="/contact/signalement-bug"
                 rel="noreferrer"
-                target="_blank"
                 className="inline-block mt-2 font-medium text-sky-600"
               >
                 Signaler un bug →
-              </a>
+              </Link>
             </div>
           </div>
         </div>

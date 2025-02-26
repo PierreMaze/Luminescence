@@ -2,6 +2,7 @@ import AboutPageAccueil from '../../assets/img/AboutPageAccueil.webp';
 import AboutPageLocal from '../../assets/img/AboutPageLocal.webp';
 import AboutPageRooftop from '../../assets/img/AboutPageRooftop.webp';
 import OptimizedImage from '../../components/OptimizedImage';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
@@ -77,11 +78,11 @@ const AboutUs = () => {
         <p className="italic font-semibold 2xl:mx-80">
           Vous avez des questions ?
         </p>
-        <a href="/contact/contacter-nous" rel="noreferrer">
+        <Link to="/contact/collaborer" rel="noreferrer">
           <button className="my-4 px-4 py-2.5 text-sm font-semibold text-white bg-sky-500 rounded-md shadow-sm transition duration-300 ease-in-out hover:bg-sky-600 hover:ring hover:ring-sky-600 focus:outline-none">
             Contactez-nous !
           </button>
-        </a>
+        </Link>
       </div>
     </div>
   );

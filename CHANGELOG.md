@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.0.28] - 2025-02-26
+
+### Added:
+
+- **React Router DOM Integration:** Integrated react-router-dom v6 with lazy loading to enhance routing performance and user experience.
+- **Routing Optimization:** Refactored the route configuration for improved clarity, maintainability, and scalability.
+
+#
+
 ## [1.0.27] - 2025-02-26
 
 ### <u>Added :</u>

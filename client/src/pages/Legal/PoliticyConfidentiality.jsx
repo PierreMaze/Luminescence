@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function PoliticyConfidentiality() {
   return (
     <div className="w-full px-8 pt-12 sm:px-6 lg:px-14 2xl:mx-80 bg-sky-50 -mb-4">
@@ -7,13 +9,13 @@ export default function PoliticyConfidentiality() {
           POLITIQUE DE CONFIDENTIALITÉ
         </h2>
         <p className="mb-4 font-bold">
-          <a
-            href="/"
+          <Link
+            to="/"
             rel="noopener noreferrer"
             className="font-bold hover:underline text-sky-600"
           >
             https://luminescence33.com
-          </a>
+          </Link>
         </p>
         <p className="mb-4 font-bold">LUMINESCENCE</p>
         <p className="mb-4 ">

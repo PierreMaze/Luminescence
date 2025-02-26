@@ -11,6 +11,8 @@ import { HiArrowRightCircle } from 'react-icons/hi2';
 import { parse, format } from 'date-fns';
 import { fr } from 'date-fns/locale';
 
+import { Link } from 'react-router-dom';
+
 // Hook
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 
@@ -19,8 +21,6 @@ import detailsBar from './data/services-section/BarDetails.jsx';
 import servicesOffered from './data/services-section/ServicesOffered.jsx';
 import events from './data/events-section/EventsDetails.jsx';
 import faqs from './data/FaqSection.jsx';
-
-import { AnchorButton } from '../../components/button/AnchorButton.jsx';
 
 // Components Lazy Loading.
 const CardEvent = lazy(() => import('./components/CardEvent.jsx'));
@@ -163,13 +163,13 @@ export default function Home() {
                   ))}
                 </dl>
                 {/* <!--Action button--> */}
-                <AnchorButton
-                  href="/bar-lounge/#la-carte"
+                <Link
+                  to="/bar-lounge/#la-carte"
                   label="Consulter notre carte du bar-lounge"
                   className="mt-10 w-full md:w-50"
                 >
                   Consulter notre Carte
-                </AnchorButton>
+                </Link>
               </div>
             </div>
             {/* <!--Picture Rooftop container--> */}
@@ -219,13 +219,13 @@ export default function Home() {
             ))}
           </div>
           <div className="flex items-center justify-center">
-            <AnchorButton
-              href="/bar-lounge/#la-carte"
+            <Link
+              to="/bar-lounge/#la-carte"
               label="Consulter notre carte du bar-lounge"
               className="mt-14 w-full md:w-60"
             >
               Votre devis personnalisé
-            </AnchorButton>
+            </Link>
           </div>
         </div>
       </section>
@@ -270,14 +270,14 @@ export default function Home() {
               )}
             </Suspense>
             {/* Card Button - Ne pas toucher */}
-            <a
-              href="/evenements"
+            <Link
+              to="/evenements"
               rel="noreferrer"
               className="flex flex-row items-center justify-center gap-2 px-0 py-6 shadow-lg group bg-sky-700 hover:bg-sky-800 text-sky-200 bg-clip-border rounded-xl sm:grid-cols-2 xl:text-xl"
             >
               Voir tous nos événements
               <HiArrowRightCircle className="ml-2 duration-300 ease-in-out delay-100 border-none rounded-full size-5 ring animate-pulse group-hover:ring-sky-300" />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -313,13 +313,13 @@ export default function Home() {
           <p className="italic">
             Vous ne trouvez pas votre réponse dans la FAQ ?
           </p>
-          <AnchorButton
-            href="/bar-lounge/#la-carte"
+          <Link
+            to="/bar-lounge/#la-carte"
             label="Consulter notre carte du bar-lounge"
             className="flex justify-center  mt-10 w-full md:w-50"
           >
             Contactez-nous
-          </AnchorButton>
+          </Link>
         </div>
       </section>
       {/* <!--Divider section--> */}

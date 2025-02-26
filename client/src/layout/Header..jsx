@@ -12,6 +12,8 @@ import { RiHomeSmile2Fill } from 'react-icons/ri';
 import { HiBars3BottomRight } from 'react-icons/hi2';
 import { GiKeyCard } from 'react-icons/gi';
 
+import { Link } from 'react-router-dom';
+
 import Logo from '../components/Logo';
 
 export default function Header() {
@@ -38,48 +40,48 @@ export default function Header() {
         </div>
         {/* <!--Links container--> */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
-          <a
-            href="/"
+          <Link
+            to="/"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 "
           >
             <RiHomeSmile2Fill className="w-5 h-5 mr-3 transition duration-300 ease-in-out delay-150 xl:w-6 xl:h-6 hover:text-sky-500" />
-          </a>
-          <a
-            href="/bar-lounge"
+          </Link>
+          <Link
+            to="/bar-lounge"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
             Bar-Lounge
-          </a>
-          <a
-            href="/location"
+          </Link>
+          <Link
+            to="/location"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
             Location
-          </a>
-          <a
-            href="/evenements"
+          </Link>
+          <Link
+            to="/evenements"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
             Événements
-          </a>
-          <a
-            href="/contact"
+          </Link>
+          <Link
+            to="/contact"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
             Contact
-          </a>
-          <a
-            href="/a-propos"
+          </Link>
+          <Link
+            to="/a-propos"
             rel="noreferrer"
             className="text-sm font-semibold leading-6 text-gray-100 xl:text-lg hover:underline hover:underline-offset-4 hover:decoration-2 hover:decoration-sky-600"
           >
             A propos
-          </a>
+          </Link>
         </PopoverGroup>
       </nav>
       {/* <!--Mobile Navbar--> */}
@@ -91,65 +93,65 @@ export default function Header() {
             <div className="flow-root mt-6 text-4xl">
               <div className="-my-6 divide-y divide-gray-500/10">
                 <div className="py-10 space-y-3 ">
-                  <a
-                    href="/"
+                  <Link
+                    to="/"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-6 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <RiHomeSmile2Fill className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     Accueil
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/bar-lounge"
+                  <Link
+                    to="/bar-lounge"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-7 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <MdLocalBar className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     Bar-Lounge
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/location"
+                  <Link
+                    to="/location"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-7 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <GiKeyCard className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     Location
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/evenements"
+                  <Link
+                    to="/evenements"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-7 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <MdEventNote className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     Événements
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-7 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <MdOutlineContactPhone className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     Contact
-                  </a>
+                  </Link>
 
-                  <a
-                    href="/a-propos"
+                  <Link
+                    to="/a-propos"
                     rel="noreferrer"
                     className="flex px-3 py-2 -mx-3 text-xl font-semibold leading-7 text-gray-100 rounded-lg hover:bg-sky-600"
                     onClick={() => setMobileMenuOpen(false)}
                   >
                     <MdContactSupport className="w-5 h-5 mt-1 mr-3 xl:w-6 xl:h-6 text-sky-500" />{' '}
                     A propos
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

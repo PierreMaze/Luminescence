@@ -5,7 +5,7 @@ export default function StatsList() {
     {
       name: (
         <a
-          href="https://www.facebook.com/votre-page-facebook"
+          href="https://www.facebook.com/profile.php?id=61560269117702"
           target="_blank"
           rel="noopener noreferrer"
           className="text-nowrap underline hover:text-sky-200 hover:underline-offset-2"

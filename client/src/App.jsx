@@ -1,15 +1,13 @@
-import FindUs from './components/FindUs';
-import { Footer } from './layout/Footer';
-import Header from './layout/Header.';
-import Home from './pages/Home/index.jsx';
+import { Suspense } from 'react';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/index';
 
-export default function App() {
+function App() {
   return (
-    <>
-      <Header />
-      <Home />
-      <FindUs />
-      <Footer />
-    </>
+    <Suspense fallback={<div>Chargement...</div>}>
+      <RouterProvider router={router} />
+    </Suspense>
   );
 }
+
+export default App;

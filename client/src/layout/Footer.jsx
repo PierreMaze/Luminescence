@@ -1,11 +1,13 @@
 import { MdLocalPhone, MdEmail } from 'react-icons/md';
 
+import { Link } from 'react-router-dom';
+
 import LogoLumi from '../assets/img/Lumi.svg';
 
 import Newsletter from '../components/Newsletter.jsx';
 import LinkFooter from '../features/social-networks/LinkFooter';
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <footer className="gap-3 text-center bg-zinc-950 text-neutral-50 lg:text-left">
       <div className="relative py-1 overflow-hidden z-10 bg-zinc-950 isolate sm:py-14 lg:py-10">
@@ -40,68 +42,68 @@ export const Footer = () => {
             <h6 className="mb-4 font-semibold uppercase text-sky-500">
               Navigation
             </h6>
-            <a
-              href="/"
+            <Link
+              to="/"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Accueil
-            </a>
-            <a
-              href="/bar-lounge"
+            </Link>
+            <Link
+              to="/bar-lounge"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Bar-Lounge
-            </a>
-            <a
-              href="/location"
+            </Link>
+            <Link
+              to="/location"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Location
-            </a>
-            <a
-              href="/evenements"
+            </Link>
+            <Link
+              to="/evenements"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Événements
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Contact
-            </a>
-            <a
-              href="/a-propos"
+            </Link>
+            <Link
+              to="/a-propos"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               A propos
-            </a>
+            </Link>
           </div>
           {/* <!-- LEGAL section --> */}
           <div className="flex flex-col justify-center md:justify-start">
             <h6 className="mb-4 font-semibold uppercase text-sky-500 ">
               Legal
             </h6>
-            <a
-              href="mentions-legales"
+            <Link
+              to="mentions-legales"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Mentions légales
-            </a>
-            <a
-              href="politique-confidentialite"
+            </Link>
+            <Link
+              to="politique-confidentialite"
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
               Politique de confidentialité
-            </a>
+            </Link>
           </div>
           {/* <!-- CONTACT section --> */}
           <div className="flex flex-col justify-center md:justify-start">
@@ -153,4 +155,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}

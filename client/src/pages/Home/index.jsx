@@ -316,8 +316,8 @@ export default function Home() {
             Vous ne trouvez pas votre réponse dans la FAQ ?
           </p>
           <LinkButton
-            to="/bar-lounge/#la-carte"
-            label="Consulter notre carte du bar-lounge"
+            to="/contact/collaborer"
+            label="Contactez-nous"
             className="mt-10"
           >
             Contactez-nous

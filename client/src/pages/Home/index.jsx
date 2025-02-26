@@ -180,9 +180,7 @@ export default function Home() {
                 src={Rooftop}
                 loading="lazy"
                 alt="Rooftop(= Terasse sur le toit) de luminescence."
-                width={2432}
-                height={1442}
-                className="w-full lg:mt-16 2xl:mt-32 bg-zinc-900 shadow-xl rounded-xl"
+                className="w-full bg-zinc-900 shadow-xl rounded-xl"
               />
             </div>
           </div>

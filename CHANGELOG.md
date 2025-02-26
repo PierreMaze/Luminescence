@@ -98,6 +98,8 @@
   - Integrated the `SocialLinks` component to display social media links on the contact page.
   - Ensured responsive design and styling consistency with the existing UI.
 
+#
+
 ## [1.0.21] - 2025-02-24
 
 ### <u>Added :</u>
@@ -121,6 +123,8 @@
 
 - Prevented duplicate form submissions by ensuring the submit button is properly disabled while processing.
 - Improved user experience by standardizing the loading spinner across multiple forms.
+
+#
 
 ## [1.0.20] - 2025-02-24
 

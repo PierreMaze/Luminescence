@@ -45,7 +45,7 @@ export default function ContactRental() {
           </p>
         </div>
         <div className="pt-4 space-y-4 2xl:ml-48">
-          <div className="flex items-center">
+          <div className="flex items-start">
             <HiPhone className="flex-none w-5 h-5 mt-1 mr-2 text-sky-500" />
             <span>+33 6 46 84 93 52</span>
           </div>
@@ -56,7 +56,7 @@ export default function ContactRental() {
         </div>
         <iframe
           src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
-          className="h-full mx-auto scale-125 lg:scale-200 xl:scale-100 mt-8 lg:mt-16"
+          className="h-full mx-auto scale-125 lg:scale-200 xl:scale-100 mt-8"
         ></iframe>
       </div>
 

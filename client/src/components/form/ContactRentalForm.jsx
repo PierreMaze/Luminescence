@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import ReCAPTCHA from 'react-google-recaptcha';
 import { InputField } from '../../utils/InputField.jsx';
+import { Link } from 'react-router-dom';
 import FormButton from '../button/FormButton.jsx';
 
 export default function ContactForm({
@@ -39,14 +40,14 @@ export default function ContactForm({
           />
           <label className="text-sm text-zinc-400">
             J&apos;accepte et je comprends la{' '}
-            <a
-              href="/politique-confidentialite"
+            <Link
+              to="/politique-confidentialite"
               rel="noopener noreferrer"
               target="_blank"
               className="duration-300 ease-linear delay-75 hover:underline hover:text-sky-600 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600 text-sky-600"
             >
               politique de confidentialité
-            </a>
+            </Link>
             .
           </label>
         </div>

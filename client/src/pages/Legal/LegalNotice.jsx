@@ -290,7 +290,8 @@ export default function LegalNotice() {
           Pour plus d&apos;informations sur la façon dont nous faisons usage des
           cookies, lisez notre{' '}
           <Link
-            href="/politique-confidentialite"
+            to="/politique-confidentialite"
+            target="_blank"
             rel="noopener noreferrer"
             className="font-bold hover:underline text-sky-600"
           >

@@ -196,7 +196,7 @@ export default function PoliticyConfidentiality() {
           <li>Formulaire d&apos;entreprise</li>
           <li>Formulaire de newsletter</li>
         </ul>
-        <p className="mb-4">
+        <p>
           Veuillez noter que nous ne collectons que les données qui nous aident
           à atteindre l’objectif énoncé dans cette politique de confidentialité.
           Nous ne recueillerons pas de données supplémentaires sans vous en

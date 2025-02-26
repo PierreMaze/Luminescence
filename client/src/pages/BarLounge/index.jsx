@@ -12,14 +12,14 @@ import BgBarlounge from '../../assets/img/Bar-Lounge.webp';
 export default function BarLounge() {
   return (
     <div className="bg-sky-50">
-      <section className="relative h-full px-8 py-12 lg:px-16 lg:h-screen bg-zinc-900 lg:pt-32">
+      <section className="relative h-full px-8 lg:px-16 py-12 lg:h-screen bg-zinc-900 lg:pt-32">
         <img
           alt="Picture Background Bar-lounge"
           src={BgBarlounge}
           loading="lazy"
           className="absolute z-0 inset-0 object-cover w-full h-full"
         />
-        <div className="relative px-6 pt-35 md:pt-20 z-10 mx-auto max-w-7xl lg:px-12">
+        <div className="relative pt-35 md:pt-20 z-10 mx-auto max-w-7xl">
           <h1 className="text-4xl font-bold tracking-tight text-sky-50 sm:text-6xl">
             Découvrez notre Bar
           </h1>
@@ -32,7 +32,7 @@ export default function BarLounge() {
         </div>
       </section>
 
-      <section className="relative mx-6 md:mx-0 py-24 overflow-hidden isolate sm:py-32 lg:overflow-visible lg:pl-12">
+      <section className="relative px-8 lg:px-16 py-12  overflow-hidden isolate  lg:overflow-visible lg:pl-12">
         <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
           <div className="lg:pr-4" id="a-propos-bar-lounge">
             <p className="text-base font-semibold leading-7 text-sky-600">
@@ -81,12 +81,12 @@ export default function BarLounge() {
               moment convivial autour de nos tables.
             </p>
           </div>
-          <div className="flex justify-center lg:justify-start">
+          <div className=" -mt-8 lg:mt-0 mb-4 flex justify-center lg:justify-start">
             <a
               href="tel:+33 6 46 84 93 52"
               target="_blank"
               aria-label="Appeler l'entreprise."
-              className="mt-8 justify-center inline-flex w-full lg:w-fit text-center px-6 py-3 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
+              className="justify-center inline-flex w-full lg:w-fit text-center px-6 py-3 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
             >
               Nous appeler
               <IoCall className="size-4 mt-0.5 ml-4 text-sky-50" />
@@ -95,7 +95,7 @@ export default function BarLounge() {
         </div>
       </section>
 
-      <section className="mx-6 lg:mx-12">
+      <section className="px-8 lg:px-16">
         <div className="lg:max-w-xl" id="la-carte-des-boissons">
           <p className="text-base font-semibold text-sky-600">La Carte des</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

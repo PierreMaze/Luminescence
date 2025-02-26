@@ -2,12 +2,12 @@ import { useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import ContactCollabForm from '../../components/form/ContactCollabForm';
+import ContactCollabForm from '../../components/form/ContactCollabForm.jsx';
 import SocialNetwork from '../../features/social-networks/LinkForm.jsx';
 
 import { MdAttachEmail, MdLocationPin, MdPhoneInTalk } from 'react-icons/md';
 
-import { useContactForm } from '../../hooks/useContactForm';
+import { useContactForm } from '../../hooks/useContactForm.jsx';
 import ContactPicture from '../../assets/img/ContactPicture.svg';
 
 export default function ContactCollab() {

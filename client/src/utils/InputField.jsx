@@ -12,7 +12,10 @@ export function InputField({
   return (
     <div className="w-full mt-4">
       {label && (
-        <label htmlFor={name} className="block mb-2 text-sm text-zinc-600">
+        <label
+          htmlFor={name}
+          className="block mb-2 text-sm text-zinc-600 dark:text-zinc-400"
+        >
           {label}
         </label>
       )}

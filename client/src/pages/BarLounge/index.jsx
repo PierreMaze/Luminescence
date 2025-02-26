@@ -32,8 +32,8 @@ export default function BarLounge() {
         </div>
       </section>
 
-      <section className="relative px-8 lg:px-16 py-12  overflow-hidden isolate  lg:overflow-visible lg:pl-12">
-        <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+      <section className="relative px-8 lg:px-16 py-12 overflow-hidden isolate  lg:overflow-visible">
+        <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10 2xl:mx-80">
           <div className="lg:pr-4" id="a-propos-bar-lounge">
             <p className="text-base font-semibold leading-7 text-sky-600">
               A propos du
@@ -95,8 +95,8 @@ export default function BarLounge() {
         </div>
       </section>
 
-      <section className="px-8 lg:px-16">
-        <div className="lg:max-w-xl" id="la-carte-des-boissons">
+      <section className="px-8 lg:px-16 py-12">
+        <div className="lg:max-w-xl 2xl:mx-80" id="la-carte-des-boissons">
           <p className="text-base font-semibold text-sky-600">La Carte des</p>
           <h2 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             BOISSONS

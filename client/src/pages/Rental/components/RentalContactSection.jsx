@@ -53,11 +53,11 @@ export default function ContactRental() {
             <BsFillEnvelopeFill className="flex-none w-5 h-5 mt-1 mr-2 text-sky-500" />
             <span>contact@luminescence33.com</span>
           </div>
-          <iframe
-            src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
-            className="h-full  scale-125 lg:scale-200 mt-8 lg:mt-16"
-          ></iframe>
         </div>
+        <iframe
+          src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
+          className="h-full mx-auto scale-125 lg:scale-200 mt-8 lg:mt-16"
+        ></iframe>
       </div>
 
       <ContactForm

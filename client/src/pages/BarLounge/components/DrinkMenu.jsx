@@ -6,7 +6,10 @@ export default function DrinkMenu() {
     <>
       <div className="flex flex-col p-8 lg:p-16 2xl:p-32 lg:flex-row">
         {[TarifsBoissonsP1, TarifsBoissonsP2].map((img, index) => (
-          <div key={index} className="w-full mx-auto lg:w-7xl 2xl:w-xl lg:pr-8">
+          <div
+            key={index}
+            className="w-full mx-auto lg:w-7xl 2xl:w-2xl lg:pr-8"
+          >
             <img
               src={img}
               alt={`Tarifs Boissons partie ${index + 1}`}

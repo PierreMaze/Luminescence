@@ -1,8 +1,22 @@
 # Change Log
 
+### <u>Added :</u>
+
+- A `_redirects` file in the `public/` folder with the rule `/* /index.html 200` to ensure proper routing on Netlify.
+
+### <u>Configured :</u>
+
+- Netlify to handle client-side routing for the single-page application, allowing react-router-dom to manage navigation.
+
+### <u>Resolved :</u>
+
+- 404 errors on page refresh or direct access to routes other than the home page.
+
+#
+
 ## [1.0.28] - 2025-02-26
 
-### Added:
+### <u>Added :</u>
 
 - **React Router DOM Integration:** Integrated react-router-dom v6 with lazy loading to enhance routing performance and user experience.
 - **Routing Optimization:** Refactored the route configuration for improved clarity, maintainability, and scalability.

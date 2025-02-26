@@ -131,8 +131,8 @@ export default function Home() {
       </section>
       {/* <!--Bar Section--> */}
       <section className="py-12 overflow-hidden sm:py-24">
-        <div className="mx-auto max-w-7xl px-8 lg:px-16">
-          <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-8 lg:px-16 2xl:mx-80">
+          <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 2xl:gap-x-32 lg:max-w-none lg:grid-cols-2">
             {/* <!--details container--> */}
             <div className="lg:pr-8 lg:pt-4 2xl:-ml-32 2xl:mr-19 min-[1900px]:-ml-64 min-[1900px]:mr-40 min-[2000px]:-ml-80 min-[2000px]:mr-30">
               <div className=" lg:max-w-lg 2xl:max-w-full">
@@ -205,7 +205,7 @@ export default function Home() {
             </p>
           </div>
           {/* <!--Services offered section--> */}
-          <div className="grid grid-cols-1 gap-16 mt-20 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-16 mt-20 md:grid-cols-2 lg:grid-cols-3 2xl:mx-80">
             {servicesOffered.map((service) => (
               <div key={service.name} className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-sky-500">
@@ -237,7 +237,7 @@ export default function Home() {
       </section>
       {/* Section des événements */}
       <section className="py-12 lg:py-24 bg-zinc-900">
-        <div className="px-8 lg:px-16 mx-auto max-w-7xl 2xl:max-w-full 2xl:m-20">
+        <div className="px-8 lg:px-16 mx-auto max-w-7xl 2xl:max-w-full 2xl:mx-80">
           {/* Header section */}
           <div className="text-center">
             <h2 className="text-lg font-semibold leading-7 text-sky-500">

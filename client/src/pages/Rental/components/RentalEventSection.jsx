@@ -9,7 +9,7 @@ export default function OrganizeEvent() {
         {/* <!-- Header section --> */}
         <div
           id="organiser-un-evenement"
-          className=" 2xl:mx-80 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
+          className=" 2xl:mx-80 lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8"
         >
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">

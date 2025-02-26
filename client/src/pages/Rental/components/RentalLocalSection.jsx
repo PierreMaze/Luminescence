@@ -22,12 +22,12 @@ const localImages = [
 
 export default function RentalLocalSection() {
   return (
-    <div className="relative px-8 lg:px-16  py-12 overflow-hidden lg:py-24 bg-zinc-50 isolate lg:overflow-visible">
+    <div className="relative px-8 lg:px-16 py-12 overflow-hidden lg:py-24 bg-zinc-50 isolate lg:overflow-visible">
       <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-6 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
         {/* <!-- Header section --> */}
         <div
           id="privatiser-le-local"
-          className="lg:col-span-2 2xl:mx-80 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8"
+          className="lg:col-span-2 2xl:mx-80 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8"
         >
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">

@@ -15,7 +15,7 @@ export default function ContactForm({
   isLoading,
 }) {
   return (
-    <div className="p-8 rounded-lg lg:mx-24 2xl:mr-80 bg-zinc-800 md:w-1/2">
+    <div className="p-8 rounded-lg 2xl:mr-80 bg-zinc-800 w-full">
       <form className="space-y-4" onSubmit={onSubmit}>
         {fields.map(({ name, type, placeholder, autoComplete }) => (
           <InputField

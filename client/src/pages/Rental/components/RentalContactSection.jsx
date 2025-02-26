@@ -26,7 +26,7 @@ export default function ContactRental() {
 
   return (
     <div className="flex flex-col px-8 py-12 text-white bg-zinc-900 md:flex-row lg:px-16">
-      <div className="lg:mx-24 md:w-1/2 2xl:mx-40">
+      <div className="md:w-1/2 2xl:mx-40">
         <div id="votre-devis-personnalisé" className="lg:max-w-lg">
           <p className="text-base font-semibold leading-7 2xl:text-lg text-sky-500">
             Comment peut-on
@@ -56,10 +56,10 @@ export default function ContactRental() {
         </div>
         <iframe
           src="https://lottie.host/embed/e7152349-9d83-4f7c-9d17-328de40712a0/BlOq0HrMqd.lottie"
-          className="mx-auto scale-125 xl:scale-200 pt-4"
+          className="mx-auto w-full scale-110 lg:scale-150 2xl:scale-250 py-8 lg:py-16"
         ></iframe>
       </div>
-      <div className="lg:mx-24 md:w-1/2 2xl:mx-40">
+      <div className="md:w-1/2 lg:mx-32 2xl:mx-40">
         <ContactForm
           fields={[
             {

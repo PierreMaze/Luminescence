@@ -130,8 +130,8 @@ export default function Home() {
         </div>
       </section>
       {/* <!--Bar Section--> */}
-      <section className="py-12 overflow-hidden sm:py-24">
-        <div className="mx-auto max-w-7xl px-8 lg:px-16 2xl:mx-80">
+      <section className="relative p-8 lg:p-16 overflow-hidden isolate lg:overflow-visible">
+        <div className="mx-auto max-w-7xl 2xl:mx-80">
           <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 2xl:gap-x-32 lg:max-w-none lg:grid-cols-2">
             {/* <!--details container--> */}
             <div className="lg:pr-8 lg:pt-4 2xl:-ml-32 2xl:mr-19 min-[1900px]:-ml-64 min-[1900px]:mr-40 min-[2000px]:-ml-80 min-[2000px]:mr-30">
@@ -175,20 +175,22 @@ export default function Home() {
               </div>
             </div>
             {/* <!--Picture Rooftop container--> */}
-            <img
-              src={Rooftop}
-              loading="lazy"
-              alt="Rooftop(= Terasse sur le toit) de luminescence."
-              width={2432}
-              height={1442}
-              className="w-[24rem] max-w-full rounded-xl shadow-xl ring-1 ring-zinc-400/10 lg:max-w-none sm:w-[50rem] md:-ml-4 lg:-ml-20 min-[2000px]:w-[60rem] "
-            />
+            <div className="lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
+              <img
+                src={Rooftop}
+                loading="lazy"
+                alt="Rooftop(= Terasse sur le toit) de luminescence."
+                width={2432}
+                height={1442}
+                className="w-full lg:mt-16 2xl:mt-32 bg-zinc-900 shadow-xl rounded-xl"
+              />
+            </div>
           </div>
         </div>
       </section>
       {/* <!--Rental Section--> */}
-      <section className="py-12 text-white lg:py-24 bg-zinc-900">
-        <div className="px-8 lg:px-16 mx-3 max-w-8xl">
+      <section className="p-8 lg:p-16 text-white lg:py-24 bg-zinc-900">
+        <div className="2xl:mx-80 max-w-8xl">
           {/* <!--Header section--> */}
           <div className="text-start">
             <h2 className="text-lg font-semibold text-sky-400">
@@ -205,7 +207,7 @@ export default function Home() {
             </p>
           </div>
           {/* <!--Services offered section--> */}
-          <div className="grid grid-cols-1 gap-16 mt-20 md:grid-cols-2 lg:grid-cols-3 2xl:mx-80">
+          <div className="grid grid-cols-1 gap-16 mt-20 md:grid-cols-2 lg:grid-cols-3">
             {servicesOffered.map((service) => (
               <div key={service.name} className="relative">
                 <div className="absolute flex items-center justify-center w-12 h-12 text-white rounded-md bg-sky-500">

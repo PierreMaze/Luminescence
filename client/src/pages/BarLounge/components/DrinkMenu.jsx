@@ -4,12 +4,9 @@ import TarifsBoissonsP2 from '../../../assets/img/TarifsBoissonsP2.webp';
 export default function DrinkMenu() {
   return (
     <>
-      <div className="flex flex-col py-8 lg:py-16 lg:flex-row">
+      <div className="flex flex-col p-8 lg:p-16 2xl:p-32 lg:flex-row">
         {[TarifsBoissonsP1, TarifsBoissonsP2].map((img, index) => (
-          <div
-            key={index}
-            className="w-full mx-auto lg:w-7xl 2xl:w-xl lg:pr-20"
-          >
+          <div key={index} className="w-full mx-auto lg:w-7xl 2xl:w-xl lg:pr-8">
             <img
               src={img}
               alt={`Tarifs Boissons partie ${index + 1}`}

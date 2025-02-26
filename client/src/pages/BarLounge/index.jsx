@@ -12,7 +12,7 @@ import BgBarlounge from '../../assets/img/Bar-Lounge.webp';
 export default function BarLounge() {
   return (
     <div className="bg-sky-50">
-      <section className="relative h-full px-8 lg:px-16 py-12 bg-zinc-900 lg:pt-32">
+      <section className="relative h-full mx-auto px-8 lg:px-16 2xl:px-32 py-12 bg-zinc-900 lg:pt-32">
         <img
           alt="Picture Background Bar-lounge"
           src={BgBarlounge}

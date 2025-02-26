@@ -24,7 +24,7 @@ export default function Events() {
             </p>
           </div>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <div className="mt-12 mx-auto max-w-7xl grid grid-cols-1 gap-8 md:grid-cols-3">
           {cards.map((card, index) => (
             <EventCard key={index} {...card} Icon={card.icon} />
           ))}

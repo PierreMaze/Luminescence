@@ -131,49 +131,49 @@ export default function Home() {
       </section>
       {/* <!--Bar Section--> */}
       <section className="relative p-8 lg:p-16 overflow-hidden isolate lg:overflow-visible">
-        <div className="mx-auto max-w-7xl 2xl:mx-80">
+        <div className="max-w-7xl 2xl:mx-80">
           <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 2xl:gap-x-32 lg:max-w-none lg:grid-cols-2">
             {/* <!--details container--> */}
-            <div className="lg:pr-8 lg:pt-4 2xl:-ml-32 2xl:mr-19 min-[1900px]:-ml-64 min-[1900px]:mr-40 min-[2000px]:-ml-80 min-[2000px]:mr-30">
-              <div className=" lg:max-w-lg 2xl:max-w-full">
-                {/* <!--Header section--> */}
-                <div>
-                  <h2 className="text-lg font-semibold leading-7 text-sky-800">
-                    Nos services de
-                  </h2>
-                  <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 font-kreon sm:text-4xl">
-                    BAR-LOUNGE
-                  </p>
-                  <p className="mt-6 mr-6 leading-8 text-zinc-600 text-md">
-                    Profitez de notre service de bar-lounge avec notre
-                    Open-space et Rooftop.
-                  </p>
-                </div>
-                {/* <!--Services offered sections--> */}
-                <dl className="max-w-xl mt-10 space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
-                  {detailsBar.map((details) => (
-                    <div key={details.name} className="relative mr-6 pl-9">
-                      <dt className="inline font-semibold text-zinc-900 ">
-                        <details.icon
-                          aria-hidden="true"
-                          className="absolute size-5 text-sky-600 left-1 top-1 "
-                        />
-                        {details.name}
-                      </dt>{' '}
-                      <dd className="inline">{details.description}</dd>
-                    </div>
-                  ))}
-                </dl>
-                {/* <!--Action button--> */}
-                <LinkButton
-                  to="/bar-lounge/#la-carte"
-                  label="Consulter notre carte du bar-lounge"
-                  className="mt-10"
-                >
-                  Consulter notre Carte
-                </LinkButton>
+
+            <div className=" lg:max-w-lg 2xl:max-w-full">
+              {/* <!--Header section--> */}
+              <div>
+                <h2 className="text-lg font-semibold leading-7 text-sky-800">
+                  Nos services de
+                </h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-zinc-900 font-kreon sm:text-4xl">
+                  BAR-LOUNGE
+                </p>
+                <p className="mt-6 mr-6 leading-8 text-zinc-600 text-md">
+                  Profitez de notre service de bar-lounge avec notre Open-space
+                  et Rooftop.
+                </p>
               </div>
+              {/* <!--Services offered sections--> */}
+              <div className="max-w-xl mt-10 space-y-8 text-base leading-7 text-zinc-600 lg:max-w-none">
+                {detailsBar.map((details) => (
+                  <div key={details.name} className="relative mr-6 pl-9">
+                    <dt className="inline font-semibold text-zinc-900 ">
+                      <details.icon
+                        aria-hidden="true"
+                        className="absolute size-5 text-sky-600 left-1 top-1 "
+                      />
+                      {details.name}
+                    </dt>{' '}
+                    <dd className="inline">{details.description}</dd>
+                  </div>
+                ))}
+              </div>
+              {/* <!--Action button--> */}
+              <LinkButton
+                to="/bar-lounge/#la-carte"
+                label="Consulter notre carte du bar-lounge"
+                className="mt-10"
+              >
+                Consulter notre Carte
+              </LinkButton>
             </div>
+
             {/* <!--Picture Rooftop container--> */}
             <div className="lg:sticky lg:top-32 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
               <img

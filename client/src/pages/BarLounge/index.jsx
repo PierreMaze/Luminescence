@@ -12,7 +12,7 @@ import BgBarlounge from '../../assets/img/Bar-Lounge.webp';
 export default function BarLounge() {
   return (
     <div className="bg-sky-50">
-      <section className="relative h-full pb-12 lg:h-screen bg-zinc-900 sm:pt-32">
+      <section className="relative h-full px-8 py-12 lg:px-16 lg:h-screen bg-zinc-900 lg:pt-32">
         <img
           alt="Picture Background Bar-lounge"
           src={BgBarlounge}
@@ -81,15 +81,17 @@ export default function BarLounge() {
               moment convivial autour de nos tables.
             </p>
           </div>
-          <a
-            href="tel:+33 6 46 84 93 52"
-            target="_blank"
-            aria-label="Appeler l'entreprise."
-            className="flex flex-row   md:mt-0 justify-center items-center -mt-8 w-full md:w-52 text-center py-2.5 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
-          >
-            Nous appeler
-            <IoCall className="size-4 ml-4 text-sky-50" />
-          </a>
+          <div className="flex justify-center lg:justify-start">
+            <a
+              href="tel:+33 6 46 84 93 52"
+              target="_blank"
+              aria-label="Appeler l'entreprise."
+              className="mt-8 justify-center inline-flex w-full lg:w-fit text-center px-6 py-3 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
+            >
+              Nous appeler
+              <IoCall className="size-4 mt-0.5 ml-4 text-sky-50" />
+            </a>
+          </div>
         </div>
       </section>
 

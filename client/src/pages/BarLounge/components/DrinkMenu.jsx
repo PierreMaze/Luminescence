@@ -21,7 +21,7 @@ export default function DrinkMenu() {
         <a
           href="/docs/Luminescence_Tarifs_Boissons.pdf"
           download="Luminescence_Tarifs_Boissons.pdf"
-          className="mt-10 w-full md:w-52 text-center py-2.5 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
+          className="mt-8 justify-center inline-flex w-full lg:w-fit text-center px-6 py-3 text-sm font-semibold text-white bg-sky-500 rounded-md hover:bg-sky-600"
         >
           Télécharger notre Carte
         </a>

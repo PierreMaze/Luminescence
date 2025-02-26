@@ -14,7 +14,7 @@ export default function ContactCollabForm({
   isLoading,
 }) {
   return (
-    <div className="p-8 rounded-lg mt-6 lg:mr-24 2xl:mr-80 bg-zinc-800 w-full">
+    <div className="p-8 rounded-lg mt-6 lg:mr-24 2xl:mr-80 bg-zinc-200 w-full">
       <form className="space-y-4" onSubmit={onSubmit}>
         {/* Select pour la catégorie */}
         <div className="w-full mt-4">
@@ -76,6 +76,7 @@ export default function ContactCollabForm({
             <a
               href="/politique-confidentialite"
               rel="noopener noreferrer"
+              target="_blank"
               className="duration-300 ease-linear delay-75 hover:underline hover:text-sky-600 hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600 text-sky-600"
             >
               politique de confidentialité

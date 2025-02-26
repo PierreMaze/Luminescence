@@ -13,6 +13,8 @@ import { fr } from 'date-fns/locale';
 
 import { Link } from 'react-router-dom';
 
+import LinkButton from '../../components/button/LinkButton';
+
 // Hook
 import { useState, useEffect, useMemo, lazy, Suspense } from 'react';
 
@@ -129,7 +131,7 @@ export default function Home() {
       </section>
       {/* <!--Bar Section--> */}
       <section className="py-12 overflow-hidden sm:py-24">
-        <div className="px-6 mx-auto max-w-7xl md:px-8 lg:px-10 xl:px-14 2xl:px-18">
+        <div className="mx-auto max-w-7xl px-8 lg:px-16">
           <div className="grid max-w-2xl grid-cols-1 mx-auto gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
             {/* <!--details container--> */}
             <div className="lg:pr-8 lg:pt-4 2xl:-ml-32 2xl:mr-19 min-[1900px]:-ml-64 min-[1900px]:mr-40 min-[2000px]:-ml-80 min-[2000px]:mr-30">
@@ -163,13 +165,13 @@ export default function Home() {
                   ))}
                 </dl>
                 {/* <!--Action button--> */}
-                <Link
+                <LinkButton
                   to="/bar-lounge/#la-carte"
                   label="Consulter notre carte du bar-lounge"
-                  className="mt-10 w-full md:w-50"
+                  className="mt-10"
                 >
                   Consulter notre Carte
-                </Link>
+                </LinkButton>
               </div>
             </div>
             {/* <!--Picture Rooftop container--> */}
@@ -186,7 +188,7 @@ export default function Home() {
       </section>
       {/* <!--Rental Section--> */}
       <section className="py-12 text-white lg:py-24 bg-zinc-900">
-        <div className="px-6 mx-3 max-w-8xl md:px-8 lg:px-10 xl:px-14 2xl:mx-80">
+        <div className="px-8 lg:px-16 mx-3 max-w-8xl">
           {/* <!--Header section--> */}
           <div className="text-start">
             <h2 className="text-lg font-semibold text-sky-400">
@@ -219,13 +221,13 @@ export default function Home() {
             ))}
           </div>
           <div className="flex items-center justify-center">
-            <Link
+            <LinkButton
               to="/bar-lounge/#la-carte"
               label="Consulter notre carte du bar-lounge"
-              className="mt-14 w-full md:w-60"
+              className="mt-14"
             >
               Votre devis personnalisé
-            </Link>
+            </LinkButton>
           </div>
         </div>
       </section>
@@ -239,7 +241,7 @@ export default function Home() {
       </section>
       {/* Section des événements */}
       <section className="py-12 lg:py-24 bg-zinc-900">
-        <div className="px-6 mx-auto max-w-7xl lg:px-8 2xl:max-w-full 2xl:m-20">
+        <div className="px-8 lg:px-16 mx-auto max-w-7xl 2xl:max-w-full 2xl:m-20">
           {/* Header section */}
           <div className="text-center">
             <h2 className="text-lg font-semibold leading-7 text-sky-500">
@@ -313,13 +315,13 @@ export default function Home() {
           <p className="italic">
             Vous ne trouvez pas votre réponse dans la FAQ ?
           </p>
-          <Link
+          <LinkButton
             to="/bar-lounge/#la-carte"
             label="Consulter notre carte du bar-lounge"
-            className="flex justify-center  mt-10 w-full md:w-50"
+            className="mt-10"
           >
             Contactez-nous
-          </Link>
+          </LinkButton>
         </div>
       </section>
       {/* <!--Divider section--> */}

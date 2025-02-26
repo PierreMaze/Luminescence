@@ -82,7 +82,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="mb-4 text-sky-50 hover:underline hover:underline-offset-2 hover:decoration-2 hover:decoration-sky-600"
             >
-              A propos
+              À propos
             </Link>
           </div>
           {/* <!-- LEGAL section --> */}

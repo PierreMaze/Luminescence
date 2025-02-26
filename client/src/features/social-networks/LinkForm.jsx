@@ -42,7 +42,7 @@ const LinkFooter = () => {
           target="_blank"
           rel="noreferrer"
           aria-label={`Page ${label}`}
-          className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-zinc-50/90 text-zinc-950 lg:bg-zinc-50/60 hover:bg-sky-400"
+          className="p-1 transition duration-300 ease-in-out delay-150 rounded-md lg:hover:-translate-y-1 lg:hover:scale-125 bg-sky-200 text-zinc-950 lg:bg-zinc-50/60 lg:hover:bg-sky-200"
         >
           <Icon />
         </a>

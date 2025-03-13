@@ -86,20 +86,3 @@ Ce fichier contient un historique des modifications apportées au projet. Chaque
 Ce fichier sert à lister les tâches à accomplir pour le projet. Il contient un suivi des fonctionnalités à ajouter, des corrections à effectuer, et des améliorations à apporter. Ce fichier permet de garder une vue d'ensemble sur les objectifs du projet et d'aider à organiser les prochaines étapes de développement.
 
 - [TODO LIST](TODO.md)
-
-## Contact
-
-- Site web : https://luminescence33.com/
-- Email de collaboration : contact@luminescence33.com
-- Email de réclamation : support@luminescence33.com
-- Email pour signalé un bug : devteam@luminescence33.com
-
-- Réseaux sociaux :
-
-  - Facebook : https://www.facebook.com/people/Luminescence33/61560269117702/,
-
-  - Instagram : https://www.instagram.com/luminescence333,
-
-  - Tik Tok : https://www.tiktok.com/@luminescence.gujan?_t=8nIvyDlMPVR&_r=1,
-
-  - Linkedin : https://www.linkedin.com/in/frederique-caignard-609a22159/

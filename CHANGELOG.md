@@ -1,5 +1,7 @@
 # Change Log
 
+## [1.0.29] - 2025-02-28
+
 ### <u>Added :</u>
 
 - A `_redirects` file in the `public/` folder with the rule `/* /index.html 200` to ensure proper routing on Netlify.
